@@ -292,15 +292,18 @@ h1, h2, h3, h4, h5, h6,
 .gauge__num i { font-size: 15px; font-style: normal; color: var(--on-dark-soft); }
 
 /* 라이브 피드 */
-.livefeed { background: var(--card-dark); border: 1px solid rgba(255,255,255,.07); border-radius: 16px; padding: 22px 24px; text-align: left; }
+.livefeed { background: #1a2134; border: 1px solid rgba(255,255,255,.07); border-radius: 16px; padding: 22px 24px; text-align: left; }
 .livefeed__head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 .livefeed__label { font-weight: 700; color: #fff; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; }
 .livefeed__label em { font-style: normal; font-size: 10px; font-weight: 600; color: #9fb0ff; background: rgba(91,111,214,.18); padding: 3px 8px; border-radius: 20px; }
 .livefeed__note { font-size: 12px; color: var(--on-dark-soft); }
-.livefeed__list { display: flex; flex-direction: column; }
-.livefeed__list li { display: grid; grid-template-columns: 1.3fr 1.4fr 1fr 1.6fr .9fr; align-items: center; gap: 10px; padding: 15px 16px; border-radius: 10px; font-size: 14px; color: #d6ddea; border: 1px solid transparent; }
+.livefeed__list { display: flex; flex-direction: column; max-height: 210px; overflow-y: auto; }
+.livefeed__list::-webkit-scrollbar { width: 6px; }
+.livefeed__list::-webkit-scrollbar-track { background: rgba(255,255,255,.04); border-radius: 8px; }
+.livefeed__list::-webkit-scrollbar-thumb { background: rgba(255,255,255,.2); border-radius: 8px; }
+.livefeed__list li { display: grid; grid-template-columns: 110px 160px 95px 150px 1fr; align-items: center; gap: 10px; padding: 15px 16px; border-radius: 10px; font-size: 14px; color: #d6ddea; border: 1px solid transparent; }
 .livefeed__list li + li { border-top: 1px solid rgba(255,255,255,.05); border-radius: 0; }
-.livefeed__list li.is-active { background: rgba(91,111,214,.1); border: 1px solid rgba(91,111,214,.5); border-radius: 10px; }
+.livefeed__list li.is-active { background: rgba(255,255,255,.05); border: 1px solid rgba(91,111,214,.55); border-radius: 10px; }
 .lf-time { color: var(--on-dark-soft); display: flex; align-items: center; gap: 6px; }
 .tag-new { font-size: 9px; background: #5b6fd6; color: #fff; padding: 2px 6px; border-radius: 10px; font-weight: 700; }
 .lf-state { text-align: right; font-weight: 700; color: #7fd6a6; }
