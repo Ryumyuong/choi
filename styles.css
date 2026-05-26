@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6,
 .gauge__num i { font-size: 15px; font-style: normal; color: var(--on-dark-soft); }
 
 /* 라이브 피드 */
-.livefeed { background: #1a2134; border: 1px solid rgba(255,255,255,.07); border-radius: 16px; padding: 22px 24px; text-align: left; }
+.livefeed { background: #1a2134; border: 1px solid rgba(255,255,255,.07); border-radius: 16px; padding: 22px 24px; text-align: left; max-width: 900px; margin: 0 auto; }
 .livefeed__head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 .livefeed__label { font-weight: 700; color: #fff; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; }
 .livefeed__label em { font-style: normal; font-size: 10px; font-weight: 600; color: #9fb0ff; background: rgba(91,111,214,.18); padding: 3px 8px; border-radius: 20px; }
