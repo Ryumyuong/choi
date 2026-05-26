@@ -440,8 +440,10 @@ h1, h2, h3, h4, h5, h6,
 .rcard__no { font-size: 12px; font-weight: 700; color: var(--gold-d); letter-spacing: .04em; }
 .rcard h4 { font-size: 17px; margin: 8px 0 14px; font-family: var(--font-head); }
 .rcard p { font-size: 13px; color: rgba(0,0,0,0.8); line-height: 1.75; flex: 1; }
-.rcard__chips { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
-.rcard__chips span { background: #333a73; color: #fff; border-radius: 8px; padding: 9px 10px; text-align: center; }
+.rcard__chips { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 20px; }
+.rcard__chips span { background: #333a73; color: #fff; padding: 9px 10px; text-align: center; }
+.rcard__chips span:first-child { border-radius: 8px 0 0 8px; }
+.rcard__chips span:last-child { border-radius: 0 8px 8px 0; border-left: 1px solid rgba(255,255,255,0.08); }
 .rcard__chips small { display: block; font-size: 10px; opacity: .7; }
 .rcard__chips b { font-size: 15px; font-family: var(--font-head); }
 
