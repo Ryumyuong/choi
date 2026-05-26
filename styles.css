@@ -432,6 +432,7 @@ h1, h2, h3, h4, h5, h6,
 .pill { display: inline-block; background: #e0e3f3; color: #4b51a8; font-size: 13px; font-weight: 600; padding: 8px 18px; border-radius: 30px; margin-bottom: 22px; }
 .diagnosis__illust { width: 230px; margin: 40px auto 36px; }
 .diagnosis .btn { box-shadow: 0 14px 34px rgba(30,39,72,.3); }
+.diagnosis .btn--navy { background: #1d2348; border-radius: 5px; }
 
 /* ============== CASE 검토 ============== */
 .review__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 50px; text-align: left; }
