@@ -80,7 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let current = 0;
     const goTo = (i) => {
       current = (i + slides.length) % slides.length; // 순환
-      slides[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      const sl = slides[current];
+      const target = sl.offsetLeft + sl.offsetWidth / 2 - numTrack.clientWidth / 2;
+      numTrack.scrollTo({ left: target, behavior: 'smooth' });
     };
     // 가장 가까운 슬라이드로 스냅 + 활성 인덱스 동기화
     const snapToNearest = () => {
@@ -91,8 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const d = Math.abs(c - center);
         if (d < minDist) { minDist = d; nearest = i; }
       });
-      current = nearest;
-      slides[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      goTo(nearest);
     };
 
     // 자동 슬라이드 (5초)
