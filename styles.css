@@ -358,8 +358,7 @@ h1, h2, h3, h4, h5, h6,
 .nationwide__copy .btn { margin-top: 32px; }
 .nationwide__copy .btn--navy { background: #1e2244; border-radius: 5px; }
 .nationwide__map { display: flex; justify-content: center; }
-.korea-map { position: relative; width: 360px; max-width: 100%; }
-.korea-map img { width: 100%; }
+.korea-map { display: block; width: auto; max-width: 100%; height: auto; }
 .korea-map__fallback { display: none; position: relative; }
 .korea-map__fallback svg { width: 100%; }
 .kmap-dot { position: absolute; transform: translate(-50%,-50%); font-size: 12px; color: #4a5878; font-weight: 600; white-space: nowrap; }
