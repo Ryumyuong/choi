@@ -420,21 +420,18 @@ h1, h2, h3, h4, h5, h6,
 .realtime__foot .btn--navy { border-radius: 5px; }
 
 /* ============== 결과는 숫자로 (CAROUSEL) ============== */
-.numcards__track { display: flex; gap: 20px; overflow-x: auto; padding: 50px 24px 40px; scroll-snap-type: x mandatory; max-width: 1080px; margin: 0 auto; }
-.numcards__track::-webkit-scrollbar { height: 6px; }
-.numcards__track::-webkit-scrollbar-thumb { background: #c8cde0; border-radius: 6px; }
-.numcard { flex: 0 0 300px; scroll-snap-align: center; background: #fff; border: 1px solid #e6e9f2; border-radius: 18px; padding: 40px 30px; text-align: center; box-shadow: 0 12px 36px rgba(20,30,60,.07); }
-.numcard h4 { font-size: 16px; color: var(--text-soft); font-weight: 600; margin-bottom: 14px; font-family: var(--font-body); }
-.numcard__big { font-family: var(--font-head); font-size: 56px; font-weight: 700; color: var(--text); display: block; }
-.numcard__big--sm { font-size: 38px; }
-.numcard__chip { display: inline-block; margin-top: 14px; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 20px; }
-.numcard__chip--purple { background: #e7e8fb; color: #5256d4; }
-.numcard__chip--teal { background: #ddf3f1; color: #2f8f8f; }
-.numcard--chart { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; color: var(--text-soft); }
-.minibars { display: flex; align-items: flex-end; gap: 12px; height: 110px; }
-.minibars i { width: 26px; background: linear-gradient(180deg,#d9a94d,#c2a15f); border-radius: 5px 5px 0 0; display: block; }
-.numcard--multi { display: flex; gap: 18px; justify-content: center; }
-.numcard--multi small { color: var(--text-soft); font-size: 13px; }
+.numcards__slider { position: relative; max-width: 100%; margin: 50px auto 26px; }
+.numcards__track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 24px max(8vw, calc((100% - 880px) / 2)); scrollbar-width: none; }
+.numcards__track::-webkit-scrollbar { display: none; }
+.numslide { flex: 0 0 880px; max-width: 100%; scroll-snap-align: center; }
+.numslide img { width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 12px 36px rgba(20,30,60,.07); }
+.numcards__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; background: #fff; border: 1px solid #e6e9f2; box-shadow: 0 6px 14px rgba(20,30,60,.12); display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; color: var(--navy-btn); font-size: 28px; line-height: 1; padding: 0; font-family: var(--font-head); }
+.numcards__nav--prev { left: 3%; }
+.numcards__nav--next { right: 3%; }
+.numcards__nav:hover { background: #f5f6fb; }
+.numcards__dots { display: flex; justify-content: center; gap: 8px; margin-bottom: 36px; }
+.numcards__dot { width: 8px; height: 8px; border-radius: 50%; background: #c8cde0; cursor: pointer; border: 0; padding: 0; transition: width .25s, background .2s; }
+.numcards__dot.is-active { background: #1d2348; width: 24px; border-radius: 4px; }
 
 /* ============== 30초 셀프진단 ============== */
 .pill { display: inline-block; background: #e0e3f3; color: #4b51a8; font-size: 13px; font-weight: 600; padding: 8px 18px; border-radius: 30px; margin-bottom: 22px; }

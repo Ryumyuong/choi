@@ -333,25 +333,19 @@
         개인별 감면 가능성과 변제 방향을 검토합니다.
       </p>
     </div>
-    <div class="numcards__track" id="numTrack">
-      <div class="numcard numcard--chart">
-        <div class="minibars"><i style="height:40%"></i><i style="height:65%"></i><i style="height:85%"></i><i style="height:55%"></i></div>
-        <span>사안별 감면 분포</span>
+    <div class="numcards__slider">
+      <button class="numcards__nav numcards__nav--prev" type="button" aria-label="이전">‹</button>
+      <div class="numcards__track" id="numTrack">
+        <div class="numslide"><img src="./images/numcard-trend.png" alt="최근 상담·사례 추이 — 월간 신규 상담 건수 / 최근 12개월. 12개월 누계 1,282건 (↑18%)" /></div>
+        <div class="numslide"><img src="./images/numcard-rates.png" alt="최대감면율 94% BEST · 평균감면율 90% ABG" /></div>
+        <div class="numslide"><img src="./images/numcard-cases.png" alt="사건 유형별 감면율 — 배우자 모르게 91% · 주택경매 없이 87% · 재회생 84% · 최근대출 82% · 도박·주식·코인 78%" /></div>
       </div>
-      <div class="numcard">
-        <h4>최대감면율</h4>
-        <strong class="numcard__big">94%</strong>
-        <span class="numcard__chip numcard__chip--purple">BEST</span>
-      </div>
-      <div class="numcard">
-        <h4>평균감면율</h4>
-        <strong class="numcard__big">90%</strong>
-        <span class="numcard__chip numcard__chip--teal">AVG</span>
-      </div>
-      <div class="numcard numcard--multi">
-        <div><small>배우자 모르게</small><strong class="numcard__big numcard__big--sm">91%</strong></div>
-        <div><small>주택경매</small><strong class="numcard__big numcard__big--sm">87%</strong></div>
-      </div>
+      <button class="numcards__nav numcards__nav--next" type="button" aria-label="다음">›</button>
+    </div>
+    <div class="numcards__dots" id="numDots">
+      <button class="numcards__dot is-active" type="button" data-i="0" aria-label="슬라이드 1"></button>
+      <button class="numcards__dot" type="button" data-i="1" aria-label="슬라이드 2"></button>
+      <button class="numcards__dot" type="button" data-i="2" aria-label="슬라이드 3"></button>
     </div>
     <div class="center"><a href="#diagnosis" class="btn btn--navy">내 감면 가능성 확인 →</a></div>
   </section>

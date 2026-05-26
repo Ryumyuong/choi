@@ -72,4 +72,40 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('상담 신청이 접수되었습니다.\n빠른 시일 내에 연락드리겠습니다.\n(데모: 실제 전송 연동 필요)');
     });
   });
+
+  /* 6) numcards 슬라이드 캐러셀 */
+  const numTrack = document.getElementById('numTrack');
+  const numDots = document.querySelectorAll('#numDots .numcards__dot');
+  const numPrev = document.querySelector('.numcards__nav--prev');
+  const numNext = document.querySelector('.numcards__nav--next');
+  if (numTrack && numDots.length) {
+    const slides = numTrack.querySelectorAll('.numslide');
+    let current = 0;
+    const goTo = (i) => {
+      current = Math.max(0, Math.min(slides.length - 1, i));
+      slides[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      numDots.forEach((d, j) => d.classList.toggle('is-active', j === current));
+    };
+    numPrev?.addEventListener('click', () => goTo(current - 1));
+    numNext?.addEventListener('click', () => goTo(current + 1));
+    numDots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+    // 스크롤/스와이프 시 활성 도트 동기화
+    let scrollTimer;
+    numTrack.addEventListener('scroll', () => {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        const center = numTrack.scrollLeft + numTrack.clientWidth / 2;
+        let nearest = 0, minDist = Infinity;
+        slides.forEach((sl, i) => {
+          const slCenter = sl.offsetLeft + sl.offsetWidth / 2;
+          const dist = Math.abs(slCenter - center);
+          if (dist < minDist) { minDist = dist; nearest = i; }
+        });
+        if (nearest !== current) {
+          current = nearest;
+          numDots.forEach((d, j) => d.classList.toggle('is-active', j === current));
+        }
+      }, 100);
+    });
+  }
 });
