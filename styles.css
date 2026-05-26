@@ -441,7 +441,7 @@ h1, h2, h3, h4, h5, h6,
 .rcard h4 { font-size: 17px; margin: 8px 0 14px; font-family: var(--font-head); }
 .rcard p { font-size: 13px; color: var(--text-soft); line-height: 1.75; flex: 1; }
 .rcard__chips { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 20px; }
-.rcard__chips span { background: var(--navy-btn); color: #fff; border-radius: 8px; padding: 9px 10px; text-align: center; }
+.rcard__chips span { background: #333a73; color: #fff; border-radius: 8px; padding: 9px 10px; text-align: center; }
 .rcard__chips small { display: block; font-size: 10px; opacity: .7; }
 .rcard__chips b { font-size: 15px; font-family: var(--font-head); }
 
