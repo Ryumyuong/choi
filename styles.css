@@ -378,7 +378,7 @@ h1, h2, h3, h4, h5, h6,
 .counter-card small { display: block; margin-top: 8px; color: var(--on-dark-soft); font-size: 14px; }
 .counter-card__live { text-align: center; margin-top: 12px; font-size: 13px; color: var(--on-dark-soft); display: flex; align-items: center; justify-content: center; gap: 7px; }
 .realtime__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-.rt-panel { background: #101828; border: 1px solid rgba(255,255,255,.05); border-radius: 14px; padding: 22px; }
+.rt-panel { background: #101828; border: 1px solid rgba(255,255,255,.05); border-radius: 14px; padding: 22px; aspect-ratio: 384 / 437; }
 .rt-panel__head { font-weight: 700; color: #fff; font-size: 15px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
 .rt-panel__head em { font-style: normal; font-size: 10px; font-weight: 600; color: #9fb0ff; background: rgba(91,111,214,.18); padding: 3px 8px; border-radius: 20px; }
 .rt-panel__head--col { flex-direction: column; align-items: flex-start; gap: 2px; }
