@@ -311,7 +311,10 @@ h1, h2, h3, h4, h5, h6,
 .livefeed__foot { margin-top: 16px; font-size: 12px; color: var(--on-dark-soft); text-align: left; padding-left: 36px; }
 
 /* ============== 개인회생 소개 ============== */
-.intro__illust { width: 200px; margin: 40px auto 26px; }
+.intro__illust { width: 280px; margin: 40px auto 26px; }
+.intro .section__title { font-size: clamp(32px, 4.2vw, 48px); }
+.intro .section__lead { font-size: clamp(18px, 2.2vw, 23px); }
+.intro .section__desc { font-size: clamp(15px, 1.8vw, 18px); }
 .baf { position: relative; background: #f5f6fb; border: 1px solid #e6e9f2; border-radius: 18px; padding: 40px 130px 40px 36px; margin-top: 48px; text-align: left; }
 .baf__rows { display: flex; flex-direction: column; gap: 26px; }
 .baf__row { display: grid; grid-template-columns: 86px 200px 1fr 140px; align-items: center; gap: 16px; }
@@ -325,10 +328,7 @@ h1, h2, h3, h4, h5, h6,
 .baf__fill--after { width: 16%; min-width: 120px; background: linear-gradient(90deg,#4b51c9,#6f7fe0); }
 .baf__amt { text-align: right; font-size: 14px; color: var(--text-soft); }
 .baf__amt b { font-size: 22px; color: var(--text); font-family: var(--font-head); }
-.baf__circle { position: absolute; right: -18px; top: 50%; transform: translateY(-50%); width: 134px; height: 134px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #6f7fe0, #3b3fb0); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: 0 16px 40px rgba(75,81,201,.4); }
-.baf__circle span { font-size: 10px; opacity: .85; }
-.baf__circle strong { font-family: var(--font-head); font-size: 30px; font-weight: 700; margin-top: 4px; }
-.baf__circle strong i { font-size: 13px; font-style: normal; display: block; font-weight: 500; }
+.baf__circle { position: absolute; right: -30px; top: 50%; transform: translateY(-50%); width: 220px; height: auto; }
 
 /* ============== 3 STEP ============== */
 .steps3__grid { display: flex; align-items: stretch; gap: 10px; }
