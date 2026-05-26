@@ -342,7 +342,7 @@ h1, h2, h3, h4, h5, h6,
 .baf__circle { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 220px; height: auto; }
 
 /* ============== 3 STEP ============== */
-.steps3__grid { display: flex; align-items: stretch; gap: 10px; }
+.steps3__grid { display: flex; align-items: stretch; gap: 10px; max-width: 900px; margin: 0 auto; }
 .step3 { flex: 1; background: #fff; border: 1px solid #e6e9f2; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(20,30,60,.05); }
 .step3__head { background: #969abd; color: #fff; padding: 13px 20px; font-size: 14px; font-weight: 600; }
 .step3__head span { font-weight: 700; border-left: 1px solid rgba(255,255,255,.45); padding-left: 12px; margin-left: 6px; }
