@@ -372,10 +372,10 @@ h1, h2, h3, h4, h5, h6,
 .realtime { background: #0b1220; }
 .realtime__top { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; margin-bottom: 44px; }
 .realtime__copy .section__title { text-align: left; margin-bottom: 20px; }
-.counter-card { background: #000000; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; padding: 26px 40px; text-align: center; position: relative; }
-.counter-card .counter { font-family: var(--font-head); font-size: 58px; font-weight: 700; color: #fff; line-height: 1; }
-.counter-card__up { position: absolute; top: 30px; right: 26px; color: #7fd6a6; font-size: 13px; font-weight: 700; }
-.counter-card small { display: block; margin-top: 8px; color: var(--on-dark-soft); font-size: 14px; }
+.counter-card { background: #000000; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; padding: 44px 68px; text-align: center; position: relative; min-width: 220px; }
+.counter-card .counter { font-family: var(--font-head); font-size: 86px; font-weight: 700; color: #fff; line-height: 1; }
+.counter-card__up { position: absolute; top: 50%; transform: translateY(-30%); right: 22px; color: #ff6b6b; font-size: 14px; font-weight: 700; }
+.counter-card small { display: block; margin-top: 14px; color: var(--on-dark-soft); font-size: 16px; }
 .counter-card__live { text-align: center; margin-top: 12px; font-size: 13px; color: var(--on-dark-soft); display: flex; align-items: center; justify-content: center; gap: 7px; }
 .realtime__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
 .rt-panel { background: #101828; border: 1px solid rgba(255,255,255,.05); border-radius: 14px; padding: 22px; aspect-ratio: 384 / 437; }
