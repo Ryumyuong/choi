@@ -315,20 +315,28 @@ h1, h2, h3, h4, h5, h6,
 .intro .section__title { font-size: clamp(32px, 4.2vw, 48px); }
 .intro .section__lead { font-size: clamp(18px, 2.2vw, 23px); }
 .intro .section__desc { font-size: clamp(15px, 1.8vw, 18px); }
-.baf { position: relative; background: #f5f6fb; border: 1px solid #e6e9f2; border-radius: 18px; padding: 40px 130px 40px 36px; margin-top: 48px; text-align: left; }
+.baf { position: relative; background: #f5f6fb; border: 1px solid #e6e9f2; border-radius: 18px; padding: 40px 130px 40px 80px; margin-top: 48px; text-align: left; }
+.baf__arrow { position: absolute; left: 28px; top: 50%; transform: translateY(-50%); width: 36px; height: 110px; pointer-events: none; }
 .baf__rows { display: flex; flex-direction: column; gap: 26px; }
 .baf__row { display: grid; grid-template-columns: 86px 200px 1fr 140px; align-items: center; gap: 16px; }
 .baf__badge { background: #8a94a8; color: #fff; font-size: 12px; font-weight: 700; padding: 5px 0; border-radius: 6px; text-align: center; }
 .baf__badge--after { background: var(--navy-btn); }
 .baf__info b { display: block; font-size: 15px; }
 .baf__info small { color: var(--text-mute); font-size: 12px; }
-.baf__bar { height: 30px; background: #e6e8f0; border-radius: 6px; overflow: hidden; }
+.baf__bar { height: 30px; background: #e2e5ee; border-radius: 6px; overflow: hidden; }
 .baf__fill { display: flex; align-items: center; justify-content: center; height: 100%; color: #fff; font-size: 13px; font-weight: 700; border-radius: 6px; }
 .baf__fill--before { width: 100%; background: #d2d6e0; }
-.baf__fill--after { width: 16%; min-width: 120px; background: linear-gradient(90deg,#4b51c9,#6f7fe0); }
+.baf__bar--after { background: transparent; overflow: visible; display: flex; align-items: center; gap: 6px; }
+.baf__sq { width: 30px; height: 30px; background: #2e367c; border-radius: 4px; flex: none; }
+.baf__line { flex: 1; height: 30px; position: relative; display: flex; align-items: center; justify-content: center; }
+.baf__line::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; border-top: 2px dashed #c8cdd9; }
+.baf__line span { position: relative; z-index: 1; background: #f5f6fb; padding: 0 14px; color: #4857d8; font-weight: 700; font-size: 15px; }
+.baf__line span b { font-weight: 700; }
 .baf__amt { text-align: right; font-size: 14px; color: var(--text-soft); }
 .baf__amt b { font-size: 22px; color: var(--text); font-family: var(--font-head); }
-.baf__circle { position: absolute; right: -30px; top: 50%; transform: translateY(-50%); width: 220px; height: auto; }
+.baf__amt--after b { color: #c0853d; }
+.baf__badge--after { background: #1d2348; }
+.baf__circle { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 220px; height: auto; }
 
 /* ============== 3 STEP ============== */
 .steps3__grid { display: flex; align-items: stretch; gap: 10px; }
