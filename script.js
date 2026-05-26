@@ -25,11 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const val = +el.dataset.value;
     const color = el.dataset.color;
     const fg = el.querySelector('.gauge__fg');
-    const num = el.querySelector('.gauge__num');
-    if (color) {
-      fg.style.stroke = color;
-      if (num) num.style.color = color;
-    }
+    if (color) fg.style.stroke = color;
     fg.style.strokeDashoffset = 157 * (1 - val / 100);
   };
 

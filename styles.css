@@ -288,7 +288,7 @@ h1, h2, h3, h4, h5, h6,
 .gauge svg { width: 100%; height: 100%; }
 .gauge__bg { fill: none; stroke: rgba(255,255,255,.12); stroke-width: 10; stroke-linecap: butt; }
 .gauge__fg { fill: none; stroke: #5b6fd6; stroke-width: 10; stroke-linecap: butt; stroke-dasharray: 157; stroke-dashoffset: 157; transition: stroke-dashoffset 1.4s ease; }
-.gauge__num { position: absolute; left: 0; right: 0; bottom: 2px; text-align: center; font-family: var(--font-head); font-weight: 700; font-size: 30px; color: #fff; }
+.gauge__num { position: absolute; left: 0; right: 0; bottom: 2px; text-align: center; font-family: var(--font-head); font-weight: 700; font-size: 30px; color: #4857D8; }
 .gauge__num i { font-size: 15px; font-style: normal; color: inherit; }
 
 /* 라이브 피드 */
