@@ -424,6 +424,7 @@ h1, h2, h3, h4, h5, h6,
 .numcards__track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 24px max(8vw, calc((100% - 880px) / 2)); scrollbar-width: none; cursor: grab; user-select: none; }
 .numcards__track::-webkit-scrollbar { display: none; }
 .numcards__track.is-dragging { cursor: grabbing; scroll-behavior: auto; }
+.numcards .btn--navy { border-radius: 5px; }
 .numslide { flex: 0 0 880px; max-width: 100%; scroll-snap-align: center; }
 .numslide img { width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 12px 36px rgba(20,30,60,.07); pointer-events: none; }
 
