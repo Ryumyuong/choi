@@ -189,7 +189,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* 섹션 배경 오버라이드 */
-.section { padding: 110px 0; }
+.section { padding: 150px 0; }
 .section--white { background: #fff; }
 .section--light { background: var(--bg-lav); }
 .section--dark { background: var(--bg-dark); color: var(--on-dark); }
@@ -571,7 +571,7 @@ h1, h2, h3, h4, h5, h6,
 .br-m { display: none; }
 
 @media (max-width: 1024px) {
-  .section { padding: 80px 0; }
+  .section { padding: 100px 0; }
   .nav { display: none; }
   .nav.is-open {
     display: flex; flex-direction: column; gap: 0;
