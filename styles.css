@@ -348,7 +348,7 @@ h1, h2, h3, h4, h5, h6,
 .step3__head span { font-weight: 700; border-left: 1px solid rgba(255,255,255,.45); padding-left: 12px; margin-left: 6px; }
 .step3__head--mid { background: #585e96; }
 .step3__head--navy { background: #2e367c; }
-.step3 p { padding: 22px 20px 26px; color: var(--text-soft); font-size: 14px; line-height: 1.7; }
+.step3 p { padding: 22px 20px 26px; color: #141414; font-size: 14px; line-height: 1.7; text-align: center; }
 .step3__arrow { display: flex; align-items: center; color: #b9c0d4; font-size: 26px; font-weight: 700; }
 
 /* ============== 전국 MAP ============== */
