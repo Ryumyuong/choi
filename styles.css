@@ -354,7 +354,9 @@ h1, h2, h3, h4, h5, h6,
 /* ============== 전국 MAP ============== */
 .nationwide__inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; }
 .nationwide__copy .section__title { margin-bottom: 26px; }
+.nationwide__copy .section__desc { color: #000000; }
 .nationwide__copy .btn { margin-top: 32px; }
+.nationwide__copy .btn--navy { background: #1e2244; border-radius: 5px; }
 .nationwide__map { display: flex; justify-content: center; }
 .korea-map { position: relative; width: 360px; max-width: 100%; }
 .korea-map img { width: 100%; }
