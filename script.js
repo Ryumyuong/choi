@@ -73,39 +73,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* 6) numcards 슬라이드 캐러셀 */
+  /* 6) numcards 자동 슬라이드 캐러셀 */
   const numTrack = document.getElementById('numTrack');
-  const numDots = document.querySelectorAll('#numDots .numcards__dot');
   const numPrev = document.querySelector('.numcards__nav--prev');
   const numNext = document.querySelector('.numcards__nav--next');
-  if (numTrack && numDots.length) {
+  if (numTrack) {
     const slides = numTrack.querySelectorAll('.numslide');
     let current = 0;
     const goTo = (i) => {
-      current = Math.max(0, Math.min(slides.length - 1, i));
+      current = (i + slides.length) % slides.length; // 순환
       slides[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      numDots.forEach((d, j) => d.classList.toggle('is-active', j === current));
     };
-    numPrev?.addEventListener('click', () => goTo(current - 1));
-    numNext?.addEventListener('click', () => goTo(current + 1));
-    numDots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
-    // 스크롤/스와이프 시 활성 도트 동기화
-    let scrollTimer;
-    numTrack.addEventListener('scroll', () => {
-      clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(() => {
-        const center = numTrack.scrollLeft + numTrack.clientWidth / 2;
-        let nearest = 0, minDist = Infinity;
-        slides.forEach((sl, i) => {
-          const slCenter = sl.offsetLeft + sl.offsetWidth / 2;
-          const dist = Math.abs(slCenter - center);
-          if (dist < minDist) { minDist = dist; nearest = i; }
-        });
-        if (nearest !== current) {
-          current = nearest;
-          numDots.forEach((d, j) => d.classList.toggle('is-active', j === current));
-        }
-      }, 100);
-    });
+    numPrev?.addEventListener('click', () => { goTo(current - 1); restart(); });
+    numNext?.addEventListener('click', () => { goTo(current + 1); restart(); });
+    // 슬라이드 클릭으로도 이동
+    slides.forEach((sl, i) => sl.addEventListener('click', () => { if (i !== current) { goTo(i); restart(); } }));
+    // 자동 슬라이드 (5초)
+    let timer = setInterval(() => goTo(current + 1), 5000);
+    const restart = () => { clearInterval(timer); timer = setInterval(() => goTo(current + 1), 5000); };
+    // hover 시 일시정지
+    const slider = numTrack.closest('.numcards__slider');
+    slider?.addEventListener('mouseenter', () => clearInterval(timer));
+    slider?.addEventListener('mouseleave', restart);
   }
 });
