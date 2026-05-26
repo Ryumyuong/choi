@@ -279,7 +279,7 @@ h1, h2, h3, h4, h5, h6,
 .quickbar__submit small { font-size: 12px; font-weight: 400; color: #aeb8cc; margin-top: 2px; }
 
 /* ============== 데이터 증명 (DARK) ============== */
-.proof__stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin: 56px 0 34px; }
+.proof__stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin: 56px auto 34px; max-width: 900px; }
 .pstat { background: var(--card-dark); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 30px 20px; text-align: center; aspect-ratio: 251 / 281; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .pstat h3 { font-size: 18px; font-weight: 600; color: rgba(255,255,255,0.8); font-family: var(--font-head); }
 .pstat small { display: block; margin-top: 14px; font-size: 11px; color: var(--on-dark-soft); }
