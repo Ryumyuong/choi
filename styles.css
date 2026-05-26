@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6,
 .btn--gold { background: linear-gradient(95deg, #d3af84, #ba803a); color: #fff; }
 .btn--gold:hover { filter: brightness(1.06); }
 .btn--lg { padding: 18px 56px; font-size: 17px; }
-.btn--outline-light { background: transparent; color: var(--on-dark); border: 1px solid rgba(255,255,255,.28); margin-top: 44px; }
+.btn--outline-light { background: transparent; color: var(--on-dark); border: 1px solid rgba(255,255,255,.28); border-radius: 5px; margin-top: 44px; }
 .btn--outline-light:hover { background: rgba(255,255,255,.08); }
 
 .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; }
