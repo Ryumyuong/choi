@@ -308,7 +308,7 @@ h1, h2, h3, h4, h5, h6,
 .tag-new { font-size: 9px; background: #5b6fd6; color: #fff; padding: 2px 6px; border-radius: 10px; font-weight: 700; }
 .lf-state { text-align: right; font-weight: 700; color: #7fd6a6; }
 .lf-state--ing { color: #ffcf6b; }
-.livefeed__foot { margin-top: 16px; font-size: 12px; color: var(--on-dark-soft); text-align: center; }
+.livefeed__foot { margin-top: 16px; font-size: 12px; color: var(--on-dark-soft); text-align: left; }
 
 /* ============== 개인회생 소개 ============== */
 .intro__illust { width: 200px; margin: 40px auto 26px; }
