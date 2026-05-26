@@ -73,10 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* 6) numcards 자동 슬라이드 캐러셀 */
+  /* 6) numcards 자동 + 드래그 슬라이드 */
   const numTrack = document.getElementById('numTrack');
-  const numPrev = document.querySelector('.numcards__nav--prev');
-  const numNext = document.querySelector('.numcards__nav--next');
   if (numTrack) {
     const slides = numTrack.querySelectorAll('.numslide');
     let current = 0;
@@ -84,16 +82,78 @@ document.addEventListener('DOMContentLoaded', () => {
       current = (i + slides.length) % slides.length; // 순환
       slides[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     };
-    numPrev?.addEventListener('click', () => { goTo(current - 1); restart(); });
-    numNext?.addEventListener('click', () => { goTo(current + 1); restart(); });
-    // 슬라이드 클릭으로도 이동
-    slides.forEach((sl, i) => sl.addEventListener('click', () => { if (i !== current) { goTo(i); restart(); } }));
+    // 가장 가까운 슬라이드로 스냅 + 활성 인덱스 동기화
+    const snapToNearest = () => {
+      const center = numTrack.scrollLeft + numTrack.clientWidth / 2;
+      let nearest = 0, minDist = Infinity;
+      slides.forEach((sl, i) => {
+        const c = sl.offsetLeft + sl.offsetWidth / 2;
+        const d = Math.abs(c - center);
+        if (d < minDist) { minDist = d; nearest = i; }
+      });
+      current = nearest;
+      slides[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    };
+
     // 자동 슬라이드 (5초)
     let timer = setInterval(() => goTo(current + 1), 5000);
     const restart = () => { clearInterval(timer); timer = setInterval(() => goTo(current + 1), 5000); };
+    const pause = () => clearInterval(timer);
+
     // hover 시 일시정지
     const slider = numTrack.closest('.numcards__slider');
-    slider?.addEventListener('mouseenter', () => clearInterval(timer));
+    slider?.addEventListener('mouseenter', pause);
     slider?.addEventListener('mouseleave', restart);
+
+    // 드래그(마우스) 슬라이드
+    let isDown = false, startX = 0, startScroll = 0, moved = 0;
+    numTrack.addEventListener('mousedown', (e) => {
+      isDown = true; moved = 0;
+      startX = e.pageX;
+      startScroll = numTrack.scrollLeft;
+      numTrack.classList.add('is-dragging');
+      pause();
+      e.preventDefault();
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      const dx = e.pageX - startX;
+      moved = dx;
+      numTrack.scrollLeft = startScroll - dx;
+    });
+    window.addEventListener('mouseup', () => {
+      if (!isDown) return;
+      isDown = false;
+      numTrack.classList.remove('is-dragging');
+      // 드래그 거리에 따라 다음/이전/현재로 스냅
+      if (Math.abs(moved) > 60) {
+        if (moved < 0) goTo(current + 1); else goTo(current - 1);
+      } else {
+        snapToNearest();
+      }
+      restart();
+    });
+
+    // 드래그 종료 후 슬라이드 클릭(짧은 드래그)은 해당 슬라이드로 이동
+    slides.forEach((sl, i) => sl.addEventListener('click', (e) => {
+      if (Math.abs(moved) > 5) { e.preventDefault(); return; }
+      if (i !== current) { goTo(i); restart(); }
+    }));
+
+    // 터치(모바일) — 브라우저 기본 가로 스크롤 사용, 끝나면 스냅·동기화
+    let touchTimer;
+    numTrack.addEventListener('scroll', () => {
+      clearTimeout(touchTimer);
+      touchTimer = setTimeout(() => {
+        const center = numTrack.scrollLeft + numTrack.clientWidth / 2;
+        let nearest = 0, minDist = Infinity;
+        slides.forEach((sl, i) => {
+          const c = sl.offsetLeft + sl.offsetWidth / 2;
+          const d = Math.abs(c - center);
+          if (d < minDist) { minDist = d; nearest = i; }
+        });
+        current = nearest;
+      }, 120);
+    });
   }
 });
