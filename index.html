@@ -3,661 +3,645 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- 사이트 인증 코드 (발급 후 채워넣으세요) -->
   <meta name="google-site-verification" content="" />
   <meta name="msvalidate.01" content="" />
   <meta name="naver-site-verification" content="" />
   <title>최의곤법률사무소 | 개인회생·개인파산·도산 전문 | 부산·전국 비대면 상담</title>
-  <meta name="description" content="부산 해운대 센텀 기반, 전국 비대면 개인회생 상담. 최대 감면율 94%, 평균 90%의 실제 사례 데이터로 회생 가능성을 검토합니다. 무서류 30초 비밀진단 · 24시간 상담 010-9942-1150." />
+  <meta name="description" content="부산 해운대 센텀 기반, 전국 비대면 개인회생 상담. 최대 감면율 90%, 평균 62%의 실제 사례 데이터로 회생 가능성을 검토합니다. 무서류 30초 비밀진단 · 24시간 상담 010-9942-1150." />
   <meta name="keywords" content="개인회생, 개인파산, 채무조정, 재회생, 도산 전문 변호사, 부산 개인회생, 전국 비대면 상담, 감면율, 예상 변제금, 무서류 상담, 추심정지, 면책결정" />
   <meta name="author" content="최의곤법률사무소" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="googlebot" content="index, follow" />
   <link rel="canonical" href="https://example.com/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="최의곤법률사무소" />
   <meta property="og:title" content="최의곤법률사무소 | 개인회생·도산 전문 · 전국 비대면 상담" />
-  <meta property="og:description" content="최대 감면율 94%, 평균 90%의 실제 사례 데이터로 회생 가능성을 검토합니다. 무서류 30초 비밀진단 · 24시간 상담 010-9942-1150." />
+  <meta property="og:description" content="최대 감면율 90%, 평균 62%의 실제 사례 데이터로 회생 가능성을 검토합니다. 무서류 30초 비밀진단 · 24시간 상담 010-9942-1150." />
   <meta property="og:url" content="https://example.com/" />
   <meta property="og:image" content="https://example.com/images/logo.png" />
   <meta property="og:locale" content="ko_KR" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="최의곤법률사무소 | 개인회생·도산 전문 · 전국 비대면 상담" />
-  <meta name="twitter:description" content="최대 감면율 94%, 평균 90%의 실제 사례 데이터로 회생 가능성을 검토합니다. 무서류 30초 비밀진단." />
+  <meta name="twitter:description" content="최대 감면율 90%, 평균 62%의 실제 사례 데이터로 회생 가능성을 검토합니다. 무서류 30초 비밀진단." />
   <meta name="twitter:image" content="https://example.com/images/logo.png" />
 
-  <link rel="icon" type="image/png" href="./images/favicon.png" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <script type="module" src="/src/main.js"></script>
 </head>
-<body>
+<body class="overflow-x-hidden">
 
   <!-- ============== HEADER ============== -->
-  <header class="header" id="header">
-    <div class="header__inner container">
-      <a href="#top" class="logo" aria-label="최의곤법률사무소">
-        <svg class="logo__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-          <path d="M24 5 L41 14.5 V33.5 L24 43 L7 33.5 V14.5 Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M7 14.5 L24 24 L41 14.5" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M24 24 V43" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
-        </svg>
-        <span class="logo__text">
-          <b>최의곤법률사무소</b>
-          <em>CHOI EUI GON Law Office</em>
-        </span>
+  <header class="header fixed top-0 left-0 right-0 z-[100] bg-transparent text-white transition-[background,box-shadow,color] duration-300" id="header">
+    <div class="max-w-[1200px] mx-auto px-6 flex items-center justify-between h-[72px] gap-6">
+      <a href="#top" class="logo flex items-center gap-[11px]" aria-label="최의곤법률사무소">
+        <img class="h-[30px] w-auto flex-none object-contain" src="/images/logo-mark.png" alt="최의곤법률사무소 로고" />
       </a>
-      <nav class="nav" id="nav">
-        <a href="#about">개인회생</a>
-        <a href="#cases">성공사례</a>
-        <a href="#nationwide">전국접수</a>
-        <a href="#numbers">감면율 데이터</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">문의하기</a>
+      <nav class="nav flex gap-[34px] max-lg:hidden" id="nav">
+        <a href="#about" class="text-[15px] font-semibold opacity-[0.92] hover:opacity-100 transition-opacity">개인회생</a>
+        <a href="#cases" class="text-[15px] font-semibold opacity-[0.92] hover:opacity-100 transition-opacity">성공사례</a>
+        <a href="#nationwide" class="text-[15px] font-semibold opacity-[0.92] hover:opacity-100 transition-opacity">전국접수</a>
+        <a href="#numbers" class="text-[15px] font-semibold opacity-[0.92] hover:opacity-100 transition-opacity">감면율 데이터</a>
+        <a href="#faq" class="text-[15px] font-semibold opacity-[0.92] hover:opacity-100 transition-opacity">FAQ</a>
+        <a href="#contact" class="text-[15px] font-semibold opacity-[0.92] hover:opacity-100 transition-opacity">문의하기</a>
       </nav>
-      <div class="header__cta">
-        <a href="tel:010-9942-1150" class="header__phone">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>
-          010-9942-1150
+      <div class="flex items-center gap-[18px]">
+        <a href="tel:010-9942-1150" class="inline-flex items-center gap-2 font-extrabold text-[19px] [font-family:var(--font-head)]">
+          <img class="w-[18px] h-[18px] flex-none object-contain" src="/images/ic-phone-header.png" alt="전화" />
+          <span class="max-md:hidden">010-9942-1150</span>
         </a>
-        <a href="#contact" class="btn btn--purple header__diag">30초 비밀진단</a>
-        <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+        <a href="#contact" class="inline-flex items-center justify-center bg-[#242954] hover:bg-[#2e3470] text-white px-[22px] py-[11px] rounded-full text-[14px] font-semibold whitespace-nowrap transition-colors max-md:hidden">30초 비밀진단</a>
+        <button class="navToggle hidden max-lg:flex flex-col gap-[5px] p-1.5" id="navToggle" aria-label="메뉴 열기">
+          <span class="block w-6 h-[2px] bg-current rounded-sm"></span>
+          <span class="block w-6 h-[2px] bg-current rounded-sm"></span>
+          <span class="block w-6 h-[2px] bg-current rounded-sm"></span>
+        </button>
       </div>
     </div>
   </header>
 
   <!-- ============== HERO ============== -->
-  <section class="hero" id="top">
-    <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="">
-      <source src="./videos/hero-bg.mp4" type="video/mp4" />
+  <section class="relative min-h-[80vh] flex items-center text-white overflow-hidden bg-[#161b25] max-md:min-h-0" id="top">
+    <video class="absolute inset-0 w-full h-full object-cover opacity-20" autoplay muted loop playsinline preload="auto" poster="">
+      <source src="/videos/hero-bg.mp4" type="video/mp4" />
     </video>
-    <div class="container hero__inner">
-      <p class="hero__tag">도산 · 개인회생 · 개인파산 전문</p>
-      <h1 class="hero__title">
+    <div class="max-w-[1200px] mx-auto px-6 relative text-center pt-[90px] pb-[200px] max-md:pt-[130px] max-md:pb-[60px] w-full">
+      <p class="text-[15px] font-semibold tracking-[0.02em] text-[#d7dce6] mb-[22px]">도산 · 개인회생 · 개인파산 전문</p>
+      <h1 class="[font-family:var(--font-head)] font-bold text-[clamp(34px,5.4vw,58px)] leading-[1.28] tracking-[-0.01em] [text-shadow:0_4px_24px_rgba(0,0,0,0.35)]">
         <span class="grad-gold">도산 전문 변호사</span>는<br />
         시작부터 다릅니다
       </h1>
-      <p class="hero__desc">최의곤 법률사무소가 회생 가능성을 데이터로 검토합니다</p>
-      <div class="hero__btns">
-        <a href="#diagnosis" class="btn btn--gold">내 변제금 30초 확인</a>
-        <a href="#contact" class="btn btn--navy">무서류 비대면 상담</a>
+      <p class="mt-6 text-[clamp(16px,2vw,21px)] text-[#e2e6ee] font-medium">최의곤 법률사무소가 회생 가능성을 데이터로 검토합니다</p>
+      <div class="mt-10 flex gap-3.5 justify-center flex-wrap">
+        <a href="#diagnosis" class="inline-flex items-center justify-center bg-[#ba803a] text-white px-[34px] py-4 rounded-[5px] font-semibold text-[16px] whitespace-nowrap hover:brightness-110 transition-all">내 변제금 30초 확인</a>
+        <a href="#contact" class="inline-flex items-center justify-center bg-[#101820] text-white px-[34px] py-4 rounded-[5px] font-semibold text-[16px] whitespace-nowrap hover:brightness-110 transition-all">무서류 비대면 상담</a>
       </div>
     </div>
 
     <!-- 플로팅 진단 바 -->
-    <div class="quickbar">
-      <div class="container quickbar__inner">
-        <div class="quickbar__title">
-          <strong>무서류 · 비대면</strong>
-          <span class="grad-gold">1차 진단 가능</span>
+    <div class="fixed left-0 right-0 bottom-0 z-50 bg-[#1e2244] shadow-[0_-8px_30px_rgba(0,0,0,0.35)] max-md:static max-md:shadow-none">
+      <div class="max-w-[1440px] mx-auto px-6 flex items-center gap-[22px] py-[22px] flex-wrap max-md:flex-col max-md:items-stretch">
+        <div class="text-white leading-[1.3] flex-none [font-family:var(--font-head)]">
+          <strong class="block text-[23px] font-bold">무서류 · 비대면</strong>
+          <span class="grad-gold text-[26px] font-bold">1차 진단 가능</span>
         </div>
-        <form class="quickbar__form" onsubmit="return false;">
-          <label class="ql">상담분야</label>
-          <select class="qi"><option>개인회생</option><option>개인파산</option><option>재회생</option><option>채무조정</option></select>
-          <label class="ql">신용채무액</label>
-          <select class="qi"><option>4,000 ~ 6,000만 원</option><option>~ 2,000만 원</option><option>2,000 ~ 4,000만 원</option><option>6,000 ~ 1억 원</option><option>1억 원 이상</option></select>
-          <label class="ql">상여포함 세전연봉</label>
-          <select class="qi"><option>4,000 ~ 6,000만 원</option><option>~ 2,000만 원</option><option>2,000 ~ 4,000만 원</option><option>6,000만 원 이상</option></select>
-          <label class="ql">이름</label>
-          <input class="qi" type="text" placeholder="홍길동" />
-          <label class="ql">연락처</label>
-          <input class="qi" type="tel" placeholder="010-0000-0000" />
-          <label class="qf__agree"><input type="checkbox" /> 개인정보 수집 및 활용 동의</label>
+        <form class="lead-form grid grid-cols-[auto_minmax(150px,1fr)_auto_minmax(150px,1fr)_auto_minmax(150px,1fr)] gap-[14px] items-center flex-1 max-md:grid-cols-[auto_1fr]" onsubmit="return false;">
+          <label class="text-[15px] font-semibold text-[#aeb8cc] whitespace-nowrap">상담분야</label>
+          <select class="h-10 w-full px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[14px]"><option>개인회생</option><option>개인파산</option><option>재회생</option><option>채무조정</option></select>
+          <label class="text-[15px] font-semibold text-[#aeb8cc] whitespace-nowrap">신용채무액</label>
+          <select class="h-10 w-full px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[14px]"><option>~ 2,000만 원</option><option>2,000 ~ 4,000만 원</option><option>4,000 ~ 6,000만 원</option><option>6,000 ~ 1억 원</option><option>1억 원 이상</option></select>
+          <label class="text-[15px] font-semibold text-[#aeb8cc] whitespace-nowrap">상여포함 세전연봉</label>
+          <select class="h-10 w-full px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[14px]"><option>~ 2,000만 원</option><option>2,000 ~ 4,000만 원</option><option>4,000 ~ 6,000만 원</option><option>6,000만 원 이상</option></select>
+          <label class="text-[15px] font-semibold text-[#aeb8cc] whitespace-nowrap">이름</label>
+          <input class="h-10 w-full px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[14px]" type="text" placeholder="홍길동" />
+          <label class="text-[15px] font-semibold text-[#aeb8cc] whitespace-nowrap">연락처</label>
+          <input class="h-10 w-full px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[14px]" type="tel" placeholder="010-0000-0000" />
+          <label class="col-start-5 col-end-7 max-md:col-start-1 max-md:col-end-3 flex items-center gap-[7px] text-[12px] text-[#aeb8cc]"><input type="checkbox" /> 개인정보 수집 및 활용 동의</label>
         </form>
-        <button class="quickbar__submit">30초 비밀진단<small>상담 비밀보장 · 무서류 가능</small></button>
+        <button class="quickbar__submit flex-none bg-[#0e1626] text-white rounded-[9px] px-[30px] py-3.5 font-bold text-[21px] [font-family:var(--font-head)] flex flex-col items-center leading-[1.3] max-md:w-full">30초 비밀진단<small class="text-[12px] font-normal text-[#aeb8cc] mt-0.5">상담 비밀보장 · 무서류 가능</small></button>
       </div>
     </div>
   </section>
 
   <!-- ============== 데이터 증명 (DARK) ============== -->
-  <section class="section section--dark proof" id="numbers">
-    <div class="container center">
-      <h2 class="section__title on-dark"><span class="grad-gold-bright">데이터</span>가 증명하는 가능성</h2>
-      <p class="section__desc on-dark-soft">
-        최대 감면율 94%, 평균 감면율 90%의 실제 사례 데이터를 바탕으로<br class="br-d" />
-        배우자 모르게 · 주택경매 없이 · 재회생 · 최근대출 · 도박·주식·코인 채무까지 사안별 가능성을 검토합니다.
+  <section class="bg-[#161b25] text-[#e9edf5] py-[150px] max-lg:py-[100px] scroll-mt-[120px]" id="numbers">
+    <div class="max-w-[1200px] mx-auto px-6 text-center">
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(32px,4.2vw,48px)] leading-[1.34] tracking-[-0.02em] mb-6 text-white"><span class="grad-gold-bright">도산전문 변호사</span>의 상황별 채무 해결 설계</h2>
+      <p class="text-[clamp(17px,2.2vw,22px)] leading-[1.85] text-white">
+        20년간 축적된 실제 상담 데이터를 바탕으로<br class="max-lg:hidden" />
+        도산전문 변호사가 회생·파산·채무자대리인제도까지 함께 검토합니다.
       </p>
 
-      <div class="proof__stats">
-        <div class="pstat">
-          <h3>최대감면율</h3>
-          <div class="gauge" data-value="94" data-color="#2E367C"><svg viewBox="0 0 120 70"><path class="gauge__bg" d="M10 65 A50 50 0 0 1 110 65"/><path class="gauge__fg" d="M10 65 A50 50 0 0 1 110 65"/></svg><span class="gauge__num">94<i>%</i></span></div>
-          <small>실제사례기준 · 무담보채무 원금 대비</small>
+      <div class="grid grid-cols-3 gap-[18px] mt-14 mb-[34px] max-w-[900px] mx-auto max-md:grid-cols-1">
+        <div class="bg-[#29303e] border border-white/5 rounded-2xl px-5 pt-9 pb-[26px] text-center flex flex-col items-center justify-between h-[230px] max-md:h-auto max-md:gap-6">
+          <h3 class="text-[18px] font-semibold text-white/80">최대감면율</h3>
+          <div class="gauge relative w-[150px] h-[88px] mx-auto" data-value="90" data-color="#2E367C">
+            <svg viewBox="0 0 120 70" class="w-full h-full">
+              <path class="gauge__bg fill-none stroke-white/10 [stroke-width:10] [stroke-linecap:butt]" d="M10 65 A50 50 0 0 1 110 65"/>
+              <path class="gauge__fg fill-none stroke-[#5b6fd6] [stroke-width:10] [stroke-linecap:butt] [stroke-dasharray:157] [stroke-dashoffset:157] transition-[stroke-dashoffset] duration-[1.4s] ease-out" d="M10 65 A50 50 0 0 1 110 65"/>
+            </svg>
+            <span class="absolute left-0 right-0 bottom-0.5 text-center [font-family:var(--font-head)] font-bold text-[30px] text-[#BDC4FF]">90<i class="not-italic text-[15px] text-[#4857D8]">%</i></span>
+          </div>
+          <small class="block text-[11px] text-[#9aa6bc]">실제사례기준</small>
         </div>
-        <div class="pstat">
-          <h3>평균감면율</h3>
-          <div class="gauge" data-value="90" data-color="#C0853D"><svg viewBox="0 0 120 70"><path class="gauge__bg" d="M10 65 A50 50 0 0 1 110 65"/><path class="gauge__fg" d="M10 65 A50 50 0 0 1 110 65"/></svg><span class="gauge__num" style="color:#E9AD64">90<i>%</i></span></div>
-          <small>실제사례기준 · 무담보채무 원금 대비</small>
+        <div class="bg-[#29303e] border border-white/5 rounded-2xl px-5 pt-9 pb-[26px] text-center flex flex-col items-center justify-between h-[230px] max-md:h-auto max-md:gap-6">
+          <h3 class="text-[18px] font-semibold text-white/80">누적상담수</h3>
+          <div class="[font-family:var(--font-head)] font-bold text-[52px] leading-none"><span class="text-[#5cd6b0]">1만건</span><i class="not-italic text-[#9aa6bc] text-[34px] align-top">+</i></div>
+          <small class="block text-[11px] text-[#9aa6bc]">도산 전문 분야 누적 상담 수</small>
         </div>
-        <div class="pstat pstat--plain"><h3>전국접수가능</h3></div>
-        <div class="pstat pstat--plain"><h3>재회생 가능</h3></div>
+        <div class="bg-[#29303e] border border-white/5 rounded-2xl px-5 pt-9 pb-[26px] text-center flex flex-col items-center justify-between h-[230px] max-md:h-auto max-md:gap-6">
+          <h3 class="text-[18px] font-semibold text-white/80">누적완료건수</h3>
+          <div class="[font-family:var(--font-head)] font-bold text-[52px] leading-none"><span class="text-[#E9AD64]">2,100</span><i class="not-italic text-[#9aa6bc] text-[34px] align-top">+</i></div>
+          <small class="block text-[11px] text-[#9aa6bc]">회생·파산 완료 건수</small>
+        </div>
       </div>
 
-      <div class="livefeed">
-        <div class="livefeed__head">
-          <span class="livefeed__label"><i class="dot dot--live"></i> LIVE 실시간 상담사례 <em>실시간 업데이트</em></span>
-          <span class="livefeed__note">최근 상담 사례가 실시간으로 업데이트 됩니다.</span>
+      <div class="bg-[#1a2134] border border-white/5 rounded-2xl px-6 py-[22px] text-left max-w-[900px] mx-auto">
+        <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
+          <span class="font-bold text-white text-[15px] inline-flex items-center gap-2"><i class="dot-live"></i> LIVE 실시간 상담사례 <em class="not-italic text-[10px] font-semibold text-[#9fb0ff] bg-[#5b6fd6]/20 px-2 py-[3px] rounded-[20px]">실시간 업데이트</em></span>
+          <span class="text-[12px] text-[#9aa6bc]">최근 상담 사례가 실시간으로 업데이트 됩니다.</span>
         </div>
-        <ul class="livefeed__list">
-          <li class="is-active"><span class="lf-time">1분 전 <b class="tag-new">NEW</b></span><span>서울 · 30대 여성</span><span>자영업자</span><span>주택경매없이</span><span class="lf-state lf-state--ing">접수중</span></li>
-          <li><span class="lf-time">20분 전 <b class="tag-new">NEW</b></span><span>서울 · 50대 여성</span><span>무직</span><span>배우자 모르게</span><span class="lf-state">접수완료</span></li>
-          <li><span class="lf-time">3시간 전</span><span>서울 · 30대 남성</span><span>회사원</span><span>코인 관련 채무</span><span class="lf-state">접수완료</span></li>
-          <li><span class="lf-time">4시간 전</span><span>서울 · 50대 남성</span><span>자영업자</span><span>면책 후 재회생</span><span class="lf-state">접수완료</span></li>
-          <li><span class="lf-time">5시간 전</span><span>경기 · 40대 여성</span><span>주부</span><span>배우자 모르게</span><span class="lf-state">접수완료</span></li>
-          <li><span class="lf-time">6시간 전</span><span>인천 · 30대 남성</span><span>프리랜서</span><span>도박 관련 채무</span><span class="lf-state">접수완료</span></li>
-          <li><span class="lf-time">7시간 전</span><span>부산 · 50대 남성</span><span>자영업자</span><span>주택경매없이</span><span class="lf-state">접수완료</span></li>
-          <li><span class="lf-time">9시간 전</span><span>대구 · 40대 여성</span><span>회사원</span><span>최근대출 다수</span><span class="lf-state">접수완료</span></li>
+        <ul class="livefeed-scroll flex flex-col max-h-[210px] overflow-y-auto">
+          <li class="is-active grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] rounded-[10px] text-[14px] text-[#d6ddea] bg-white/5 ring-1 ring-inset ring-[#5b6fd6]/55 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc] flex items-center gap-1.5">1분 전 <b class="text-[9px] bg-[#5b6fd6] text-white px-1.5 py-0.5 rounded-[10px] font-bold">NEW</b></span><span>서울 · 30대 여성</span><span>자영업자</span><span>주택경매없이</span><span class="text-right font-bold text-[#ffcf6b] max-md:text-left">접수중</span></li>
+          <li class="grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] text-[14px] text-[#d6ddea] border-t border-white/5 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc] flex items-center gap-1.5">20분 전 <b class="text-[9px] bg-[#5b6fd6] text-white px-1.5 py-0.5 rounded-[10px] font-bold">NEW</b></span><span>서울 · 50대 여성</span><span>무직</span><span>배우자 모르게</span><span class="text-right font-bold text-[#7fd6a6] max-md:text-left">접수완료</span></li>
+          <li class="grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] text-[14px] text-[#d6ddea] border-t border-white/5 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc]">3시간 전</span><span>서울 · 30대 남성</span><span>회사원</span><span>최근대출 다수</span><span class="text-right font-bold text-[#7fd6a6] max-md:text-left">접수완료</span></li>
+          <li class="grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] text-[14px] text-[#d6ddea] border-t border-white/5 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc]">4시간 전</span><span>서울 · 50대 남성</span><span>자영업자</span><span>면책 후 재회생</span><span class="text-right font-bold text-[#7fd6a6] max-md:text-left">접수완료</span></li>
+          <li class="grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] text-[14px] text-[#d6ddea] border-t border-white/5 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc]">5시간 전</span><span>경기 · 40대 여성</span><span>주부</span><span>배우자 모르게</span><span class="text-right font-bold text-[#7fd6a6] max-md:text-left">접수완료</span></li>
+          <li class="grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] text-[14px] text-[#d6ddea] border-t border-white/5 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc]">6시간 전</span><span>인천 · 30대 남성</span><span>프리랜서</span><span>주택경매없이</span><span class="text-right font-bold text-[#7fd6a6] max-md:text-left">접수완료</span></li>
+          <li class="grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] text-[14px] text-[#d6ddea] border-t border-white/5 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc]">7시간 전</span><span>부산 · 50대 남성</span><span>자영업자</span><span>주택경매없이</span><span class="text-right font-bold text-[#7fd6a6] max-md:text-left">접수완료</span></li>
+          <li class="grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] text-[14px] text-[#d6ddea] border-t border-white/5 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc]">9시간 전</span><span>대구 · 40대 여성</span><span>회사원</span><span>최근대출 다수</span><span class="text-right font-bold text-[#7fd6a6] max-md:text-left">접수완료</span></li>
         </ul>
-        <p class="livefeed__foot">상담 내용은 철저히 비공개로 보호되며, 개인 정보는 익명으로 처리됩니다.</p>
+        <p class="mt-4 text-[12px] text-[#9aa6bc] text-left pl-9">상담 내용은 철저히 비공개로 보호되며, 개인 정보는 익명으로 처리됩니다.</p>
       </div>
 
-      <a href="#cases" class="btn btn--outline-light">성공사례 살펴보기 ⟶</a>
+      <a href="#cases" class="inline-flex items-center justify-center bg-transparent text-[#e9edf5] border border-white/30 rounded-[5px] px-7 py-3.5 font-semibold text-[15px] whitespace-nowrap hover:bg-white/10 transition-all mt-11">성공사례 살펴보기 ⟶</a>
     </div>
   </section>
 
   <!-- ============== 개인회생 소개 (LIGHT) ============== -->
-  <section class="section section--white intro" id="about">
-    <div class="container narrow center">
-      <h2 class="section__title"><span class="grad-gold">개인회생,</span><br />아직 어렵게만 느껴지시나요?</h2>
-      <img class="intro__illust" src="./images/illust-justice.png" alt="공적 회생제도" onerror="this.style.display='none'" />
-      <p class="section__lead">국가 법원이 마련한 <span class="accent-deep">[공적 회생제도]</span> 입니다</p>
-      <p class="section__desc">
+  <section class="bg-white py-[150px] max-lg:py-[100px] scroll-mt-[120px]" id="about">
+    <div class="max-w-[1080px] mx-auto px-6 text-center">
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(32px,4.2vw,48px)] leading-[1.34] tracking-[-0.02em] mb-6"><span class="grad-gold">개인회생,</span><br />아직 어렵게만 느껴지시나요?</h2>
+      <img class="w-[280px] mx-auto mt-10 mb-[26px]" src="/images/illust-justice.png" alt="공적 회생제도" onerror="this.style.display='none'" />
+      <p class="text-[clamp(18px,2.2vw,23px)] font-semibold my-9 mb-4 text-[#1a1f2e]">국가 법원이 마련한 <span class="text-[#2E367C] font-bold">[공적 회생제도]</span> 입니다</p>
+      <p class="text-[clamp(15px,1.8vw,18px)] leading-[1.85] text-[#171717]">
         개인회생은 빚을 없애는 마법이 아니라,<br />
         현재 소득과 생활비를 기준으로 다시 갚을 수 있는 변제계획을 세우는 법률 절차입니다.
       </p>
 
-      <div class="baf">
-        <svg class="baf__arrow" viewBox="0 0 40 110" aria-hidden="true">
+      <div class="flex items-stretch gap-6 mt-12 max-md:flex-col">
+      <!-- 왼쪽 여백 공간 -->
+      <div class="flex-none w-[90px] max-lg:w-[60px] max-md:w-full max-md:h-[60px]"></div>
+      <div class="relative flex-1 bg-[#f5f6fb] border border-[#e6e9f2] rounded-[18px] px-[80px] pr-[130px] py-10 text-left max-md:px-6 max-md:pb-[130px]">
+        <svg class="absolute left-7 top-1/2 -translate-y-1/2 w-9 h-[110px] pointer-events-none max-md:hidden" viewBox="0 0 40 110" aria-hidden="true">
           <path d="M14 6 L14 84 Q14 96 26 96 L33 96" stroke="#9aa3b8" stroke-width="1.5" fill="none" stroke-linecap="round" />
           <path d="M28 91 L34 96 L28 101" stroke="#9aa3b8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <div class="baf__rows">
-          <div class="baf__row">
-            <div class="baf__row-top">
-              <span class="baf__badge">BEFORE</span>
-              <b>기존 월 납부금</b>
-              <small>월 부담 100%</small>
+        <div class="flex flex-col gap-[22px]">
+          <div class="flex flex-col gap-2.5">
+            <div class="flex items-center gap-3.5">
+              <span class="inline-block bg-[#8a94a8] text-white text-[12px] font-bold px-3.5 py-[5px] rounded-md">BEFORE</span>
+              <b class="text-[15px] font-bold">기존 월 납부금</b>
+              <small class="text-[#8b94a8] text-[12px]">월 부담 100%</small>
             </div>
-            <div class="baf__row-bar">
-              <div class="baf__bar"><span class="baf__fill baf__fill--before"></span></div>
-              <div class="baf__amt">매월 <b>190</b>만원</div>
+            <div class="flex items-center gap-5 max-md:flex-wrap">
+              <div class="flex-1 h-[30px] bg-[#e2e5ee] rounded-md overflow-hidden max-md:w-full max-md:flex-none"><span class="flex items-center justify-center h-full text-white text-[13px] font-bold rounded-md w-full bg-[#d2d6e0]"></span></div>
+              <div class="whitespace-nowrap flex-shrink-0 min-w-[110px] text-right text-[14px] text-[#5a6478] max-md:text-left">매월 <b class="text-[22px] text-[#1a1f2e] [font-family:var(--font-head)]">190</b>만원</div>
             </div>
           </div>
-          <div class="baf__row">
-            <div class="baf__row-top">
-              <span class="baf__badge baf__badge--after">AFTER</span>
-              <b>회생 검토 후 예상 변제금</b>
-              <small>월 부담 약 9%</small>
+          <div class="flex flex-col gap-2.5">
+            <div class="flex items-center gap-3.5">
+              <span class="inline-block bg-[#1d2348] text-white text-[12px] font-bold px-3.5 py-[5px] rounded-md">AFTER</span>
+              <b class="text-[15px] font-bold">회생 검토 후 예상 변제금</b>
+              <small class="text-[#8b94a8] text-[12px]">월 부담 약 44.7%</small>
             </div>
-            <div class="baf__row-bar">
-              <div class="baf__bar baf__bar--after">
-                <span class="baf__sq"></span>
-                <div class="baf__line"><span>약 <b>91%</b> 감면</span></div>
+            <div class="flex items-center gap-5 max-md:flex-wrap">
+              <div class="flex-1 bg-transparent overflow-visible flex items-center gap-1.5 h-[30px] max-md:w-full max-md:flex-none">
+                <span class="w-[30px] h-[30px] bg-[#2e367c] rounded flex-none"></span>
+                <div class="baf-line flex-1 h-[30px] relative flex items-center justify-center"><span class="relative z-[1] bg-[#f5f6fb] px-3.5 text-[#4857d8] font-bold text-[15px]">약 <b class="font-bold">91%</b> 감면</span></div>
               </div>
-              <div class="baf__amt baf__amt--after">매월 <b>13</b>만원</div>
+              <div class="whitespace-nowrap flex-shrink-0 min-w-[110px] text-right text-[14px] text-[#5a6478] max-md:text-left">매월 <b class="text-[22px] text-[#c0853d] [font-family:var(--font-head)]">85</b>만원</div>
             </div>
           </div>
         </div>
-        <img class="baf__circle" src="./images/circle-91.png" alt="현재소득·생활비 기준 변제계획 검토 — 91% 감면" />
+        <img class="absolute -right-[100px] top-1/2 -translate-y-1/2 w-[220px] h-auto max-md:right-1/2 max-md:top-auto max-md:bottom-[18px] max-md:translate-x-1/2" src="/images/circle-91.png" alt="현재소득·생활비 기준 변제계획 검토 — 91% 감면" />
+      </div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-3.5 mt-[26px] max-md:grid-cols-2">
+        <div class="flex items-center justify-center gap-2 bg-[#6666F6] text-white rounded-[5.83px] px-4 py-[12px] text-[15px] font-bold"><span class="text-white/85">✔</span>모든 독촉 금지</div>
+        <div class="flex items-center justify-center gap-2 bg-[#6666F6] text-white rounded-[5.83px] px-4 py-[12px] text-[15px] font-bold"><span class="text-white/85">✔</span>완료 시까지 책임 관리</div>
+        <div class="flex items-center justify-center gap-2 bg-[#6666F6] text-white rounded-[5.83px] px-4 py-[12px] text-[15px] font-bold"><span class="text-white/85">✔</span>수임료 분납 서비스 (6개월)</div>
+        <div class="flex items-center justify-center gap-2 bg-[#6666F6] text-white rounded-[5.83px] px-4 py-[12px] text-[15px] font-bold"><span class="text-white/85">✔</span>성공률 99%</div>
       </div>
     </div>
   </section>
 
   <!-- ============== 3 STEP (LIGHT) ============== -->
-  <section class="section section--light steps3">
-    <div class="container">
-      <div class="steps3__grid">
-        <div class="step3">
-          <div class="step3__head">Step 1 <span>현재상황확인</span></div>
-          <p>채무 · 소득 · 재산을 정리해<br />객관적으로 점검합니다.</p>
+  <section class="bg-[#f1f2f9] py-[150px] max-lg:py-[100px]">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(28px,3.6vw,42px)] leading-[1.34] tracking-[-0.02em] text-center mb-[50px] max-lg:mb-9">복잡한 절차는 모두 줄였습니다.</h2>
+      <div class="flex items-stretch gap-4 max-w-[1200px] mx-auto max-md:flex-col">
+        <div class="flex-1 bg-white border border-[#e6e9f2] rounded-md overflow-hidden shadow-[0_8px_24px_rgba(20,30,60,0.05)]">
+          <div class="bg-[#969abd] text-white px-6 py-[18px] text-[18px] font-semibold whitespace-nowrap text-center">Step 1 <span class="font-bold border-l border-white/45 pl-5 ml-3">현재상황확인</span></div>
+          <p class="px-6 pt-[28px] pb-[32px] text-[#141414] text-[17px] leading-[1.7] text-center">채무 · 소득 · 재산을 정리해<br />객관적으로 점검합니다.</p>
         </div>
-        <div class="step3__arrow">›</div>
-        <div class="step3">
-          <div class="step3__head step3__head--mid">Step 2 <span>감당 가능한 변제금 설계</span></div>
-          <p>현재 소득 · 생활비를 기준으로<br />변제계획을 세웁니다.</p>
+        <div class="flex items-center text-[#b9c0d4] text-[44px] font-bold max-md:rotate-90 max-md:justify-center max-md:py-1">›</div>
+        <div class="flex-1 bg-white border border-[#e6e9f2] rounded-md overflow-hidden shadow-[0_8px_24px_rgba(20,30,60,0.05)]">
+          <div class="bg-[#585e96] text-white px-6 py-[18px] text-[18px] font-semibold whitespace-nowrap text-center">Step 2 <span class="font-bold border-l border-white/45 pl-5 ml-3">감당 가능한 변제금 설계</span></div>
+          <p class="px-6 pt-[28px] pb-[32px] text-[#141414] text-[17px] leading-[1.7] text-center">현재 소득 · 생활비를 기준으로<br />변제계획을 세웁니다.</p>
         </div>
-        <div class="step3__arrow">›</div>
-        <div class="step3">
-          <div class="step3__head step3__head--navy">Step 3 <span>법원 절차에 따라 재무 정리</span></div>
-          <p>인가 결정 이후 변제계획대로<br />진행 → 면책까지</p>
+        <div class="flex items-center text-[#b9c0d4] text-[44px] font-bold max-md:rotate-90 max-md:justify-center max-md:py-1">›</div>
+        <div class="flex-1 bg-white border border-[#e6e9f2] rounded-md overflow-hidden shadow-[0_8px_24px_rgba(20,30,60,0.05)]">
+          <div class="bg-[#2e367c] text-white px-6 py-[18px] text-[18px] font-semibold whitespace-nowrap text-center">Step 3 <span class="font-bold border-l border-white/45 pl-5 ml-3">법원 절차에 따라 재무 정리</span></div>
+          <p class="px-6 pt-[28px] pb-[32px] text-[#141414] text-[17px] leading-[1.7] text-center">인가 결정 이후 변제계획대로<br />진행 → 면책까지</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============== 전국 상담 MAP (LIGHT) ============== -->
-  <section class="section section--white nationwide" id="nationwide">
-    <div class="container nationwide__inner">
-      <div class="nationwide__copy">
-        <h2 class="section__title">부산에 있어도,<br />상담은 <span class="grad-gold">전국 어디서든</span><br />가능합니다.</h2>
-        <p class="section__desc">
-          최의곤 법률사무소는 부산 해운대 센텀에 위치해 있지만,<br />
-          전화 · 카톡 · 비대면 상담을 통해 전국 어디서든<br />
-          개인회생 상담과 접수 안내가 가능합니다.
+  <section class="bg-white py-[150px] max-lg:py-[100px] scroll-mt-[120px]" id="nationwide">
+    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-2 items-start gap-10 max-lg:grid-cols-1">
+      <div class="max-lg:text-center mt-[71px] max-lg:mt-0">
+        <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(32px,4.2vw,50px)] leading-[1.34] tracking-[-0.02em] mb-[26px] text-[#111]">전국 어디서나<br />비대면 상담이 가능합니다.</h2>
+        <p class="text-[clamp(17px,2.1vw,21px)] leading-[1.85] text-black font-medium">
+          최의곤 법률사무소는 전화·카톡·비대면 상담을 통해<br />
+          전국 어디서든 개인회생 상담과 접수 안내가 가능합니다.
         </p>
-        <a href="#contact" class="btn btn--navy">전국 상담 신청하기 →</a>
+        <a href="#contact" class="inline-flex items-center justify-center bg-white text-[#1e2244] border border-[#1e2244] px-10 py-[18px] rounded-[8px] font-semibold text-[19px] whitespace-nowrap hover:bg-[#1e2244] hover:text-white transition-all mt-[150px] max-lg:mt-12">상담 신청하기 →</a>
       </div>
-      <div class="nationwide__map">
-        <img class="korea-map" src="./images/korea-map.png" alt="전국 상담 가능 지역 — 지금 접수중: 서울·경기·대구·인천" />
+      <div class="flex justify-center">
+        <img class="block w-[502px] h-auto max-w-full" src="/images/korea-map.png" alt="전국 상담 가능 지역 — 지금 접수중: 서울·경기·대구·인천" />
       </div>
     </div>
   </section>
 
   <!-- ============== 실시간 접수 + 차트 (DARK) ============== -->
-  <section class="section section--dark realtime">
-    <div class="container">
-      <div class="realtime__top">
-        <div class="realtime__copy">
-          <h2 class="section__title on-dark">지금도 <span class="accent-blue2">전국</span>에서<br />상담이 접수되고 있습니다.</h2>
-          <p class="section__desc on-dark-soft">
-            배우자 모르게 · 주택경매 없이 · 재회생 · 최근대출 · 도박·주식·코인 채무까지<br />
+  <section class="bg-[#0b1220] text-[#e9edf5] py-[150px] max-lg:py-[100px]">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="grid grid-cols-[1fr_auto] items-center gap-[30px] mb-11 max-lg:grid-cols-1 max-lg:text-center">
+        <div>
+          <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(32px,4.2vw,48px)] leading-[1.34] tracking-[-0.02em] mb-5 text-white text-left max-lg:text-center">지금도 <span class="text-[#6666f6] font-bold">전국</span>에서<br />상담이 접수되고 있습니다.</h2>
+          <p class="text-[clamp(15px,1.8vw,18px)] leading-[1.85] text-white">
+            배우자 모르게 · 주택경매 없이 · 재회생 · 최근대출 채무까지<br />
             다양한 사안의 상담이 실시간으로 접수되고 있습니다.
           </p>
         </div>
-        <div class="realtime__counter">
-          <div class="counter-card">
-            <strong class="counter" data-target="37">0</strong><span class="counter-card__up">+12%</span>
-            <small>오늘신규상담</small>
+        <div>
+          <div class="bg-black border border-white/10 rounded-2xl px-[54px] py-[34px] text-center relative min-w-[200px]">
+            <strong class="counter [font-family:var(--font-head)] text-[70px] font-bold text-white leading-none" data-target="37">0</strong><span class="absolute top-1/2 -translate-y-[30%] right-5 text-[#ff6b6b] text-[13px] font-bold">+12%</span>
+            <small class="block mt-3 text-[#9aa6bc] text-[15px]">오늘신규상담</small>
           </div>
-          <div class="counter-card__live">‹ <i class="dot dot--red"></i> LIVE 실시간 업데이트 중 ›</div>
+          <div class="text-center mt-3 text-[13px] text-[#9aa6bc] flex items-center justify-center gap-[7px]">‹ <i class="dot-red"></i> LIVE 실시간 업데이트 중 ›</div>
         </div>
       </div>
 
-      <div class="realtime__grid">
+      <div class="grid grid-cols-3 gap-[18px] max-lg:grid-cols-1">
         <!-- 익명접수피드 -->
-        <div class="rt-panel">
-          <div class="rt-panel__head">익명접수피드 <em>실시간 업데이트</em></div>
-          <ul class="rt-feed">
-            <li><span class="rt-feed__t">1분 전</span><span class="rt-feed__r">서울</span><span class="rt-feed__m">30대 자영업자<small>최근대출</small></span><span class="rt-feed__s rt-feed__s--gold">가능성 검토중</span></li>
-            <li><span class="rt-feed__t">6분 전</span><span class="rt-feed__r">경기</span><span class="rt-feed__m">50대 가장<small>배우자 모르게</small></span><span class="rt-feed__s">상담예약완료</span></li>
-            <li><span class="rt-feed__t">9분 전</span><span class="rt-feed__r">인천</span><span class="rt-feed__m">20대 프리랜서<small>코인 주식 채무</small></span><span class="rt-feed__s">상담예약완료</span></li>
-            <li><span class="rt-feed__t">14분 전</span><span class="rt-feed__r">광주</span><span class="rt-feed__m">40대 여성<small>재회생</small></span><span class="rt-feed__s">상담예약완료</span></li>
-            <li class="is-fade"><span class="rt-feed__t">19분 전</span><span class="rt-feed__r">대전</span><span class="rt-feed__m">40대 자영업자<small>최근대출</small></span><span class="rt-feed__s">상담접수중</span></li>
+        <div class="bg-[#101828] border border-white/5 rounded-2xl p-[22px] aspect-[384/437] max-lg:aspect-auto">
+          <div class="font-bold text-white text-[15px] mb-4 flex items-center gap-2">익명접수피드 <em class="not-italic text-[10px] font-semibold text-[#9fb0ff] bg-[#5b6fd6]/20 px-2 py-[3px] rounded-[20px]">실시간 업데이트</em></div>
+          <ul class="flex flex-col gap-0.5">
+            <li class="grid grid-cols-[54px_44px_1fr_auto] items-center gap-2.5 px-1 py-[11px] text-[13px]"><span class="text-[#9aa6bc] text-[12px]">1분 전</span><span class="text-white font-bold text-[13px]">서울</span><span class="text-[#cdd5e3]">30대 자영업자<small class="block text-[#9aa6bc] text-[11px] mt-0.5">최근대출</small></span><span class="text-[12px] font-bold text-[#ffcf6b] text-right">가능성 검토중</span></li>
+            <li class="grid grid-cols-[54px_44px_1fr_auto] items-center gap-2.5 px-1 py-[11px] text-[13px] border-t border-white/5"><span class="text-[#9aa6bc] text-[12px]">6분 전</span><span class="text-white font-bold text-[13px]">경기</span><span class="text-[#cdd5e3]">50대 가장<small class="block text-[#9aa6bc] text-[11px] mt-0.5">배우자 모르게</small></span><span class="text-[12px] font-bold text-[#7fd6a6] text-right">상담예약완료</span></li>
+            <li class="grid grid-cols-[54px_44px_1fr_auto] items-center gap-2.5 px-1 py-[11px] text-[13px] border-t border-white/5"><span class="text-[#9aa6bc] text-[12px]">9분 전</span><span class="text-white font-bold text-[13px]">인천</span><span class="text-[#cdd5e3]">20대 프리랜서<small class="block text-[#9aa6bc] text-[11px] mt-0.5">최근대출 다수</small></span><span class="text-[12px] font-bold text-[#7fd6a6] text-right">상담예약완료</span></li>
+            <li class="grid grid-cols-[54px_44px_1fr_auto] items-center gap-2.5 px-1 py-[11px] text-[13px] border-t border-white/5"><span class="text-[#9aa6bc] text-[12px]">14분 전</span><span class="text-white font-bold text-[13px]">광주</span><span class="text-[#cdd5e3]">40대 여성<small class="block text-[#9aa6bc] text-[11px] mt-0.5">재회생</small></span><span class="text-[12px] font-bold text-[#7fd6a6] text-right">상담예약완료</span></li>
+            <li class="grid grid-cols-[54px_44px_1fr_auto] items-center gap-2.5 px-1 py-[11px] text-[13px] border-t border-white/5 opacity-40"><span class="text-[#9aa6bc] text-[12px]">19분 전</span><span class="text-white font-bold text-[13px]">대전</span><span class="text-[#cdd5e3]">40대 자영업자<small class="block text-[#9aa6bc] text-[11px] mt-0.5">최근대출</small></span><span class="text-[12px] font-bold text-[#7fd6a6] text-right">상담접수중</span></li>
           </ul>
         </div>
         <!-- 추이 차트 -->
-        <div class="rt-panel">
-          <div class="rt-panel__head rt-panel__head--col"><b>최근 7일 상담 추이</b><small>일일 신규 상담 접수 건수</small></div>
-          <div class="linechart">
-            <svg viewBox="0 0 320 150" preserveAspectRatio="none">
+        <div class="bg-[#101828] border border-white/5 rounded-2xl p-[22px] aspect-[384/437] max-lg:aspect-auto">
+          <div class="font-bold text-white text-[15px] mb-4 flex flex-col items-start gap-0.5"><b>최근 7일 상담 추이</b><small class="font-normal text-[#9aa6bc] text-[12px]">일일 신규 상담 접수 건수</small></div>
+          <div>
+            <svg viewBox="0 0 320 150" preserveAspectRatio="none" class="w-full h-[130px]">
               <defs><linearGradient id="lcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d9a94d" stop-opacity=".5"/><stop offset="100%" stop-color="#d9a94d" stop-opacity="0"/></linearGradient></defs>
               <polygon fill="url(#lcg)" points="10,110 56,96 102,100 148,78 194,86 240,70 296,40 296,140 10,140"/>
               <polyline fill="none" stroke="#d9a94d" stroke-width="2.5" points="10,110 56,96 102,100 148,78 194,86 240,70 296,40"/>
               <g fill="#d9a94d"><circle cx="10" cy="110" r="3"/><circle cx="56" cy="96" r="3"/><circle cx="102" cy="100" r="3"/><circle cx="148" cy="78" r="3"/><circle cx="194" cy="86" r="3"/><circle cx="240" cy="70" r="3"/><circle cx="296" cy="40" r="3"/></g>
             </svg>
-            <div class="linechart__x"><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span><span>일</span></div>
-            <div class="linechart__foot"><b>7일 평균 30.5건</b><span class="up">+24%</span></div>
+            <div class="flex justify-between text-[#9aa6bc] text-[11px] mt-1"><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span><span>일</span></div>
+            <div class="flex justify-between items-center mt-3.5 pt-3 border-t border-white/5 text-[13px] text-[#d6ddea]"><b class="font-bold">7일 평균 30.5건</b><span class="text-[#ff8a6b] font-bold">+24%</span></div>
           </div>
         </div>
         <!-- 비중 차트 -->
-        <div class="rt-panel">
-          <div class="rt-panel__head rt-panel__head--col"><b>상담 방식 비중</b><small>최근 30일 기준</small></div>
-          <div class="donutwrap">
-            <div class="donut" style="background:conic-gradient(#d9a94d 0 42%,#3aa3a3 42% 76%,#5b6fd6 76% 94%,#7b86a0 94% 100%)"></div>
-            <ul class="donut__legend">
-              <li><i style="background:#d9a94d"></i>방문상담 <b>42%</b></li>
-              <li><i style="background:#3aa3a3"></i>카톡상담 <b>34%</b></li>
-              <li><i style="background:#5b6fd6"></i>비대면 접수 <b>18%</b></li>
-              <li><i style="background:#7b86a0"></i>전화상담 <b>6%</b></li>
+        <div class="bg-[#101828] border border-white/5 rounded-2xl p-[22px] aspect-[384/437] max-lg:aspect-auto">
+          <div class="font-bold text-white text-[15px] mb-4 flex flex-col items-start gap-0.5"><b>상담 방식 비중</b><small class="font-normal text-[#9aa6bc] text-[12px]">최근 30일 기준</small></div>
+          <div class="flex items-center justify-center gap-[18px] mb-[18px]">
+            <div class="donut-mask w-[92px] h-[92px] rounded-full flex-none" style="background:conic-gradient(#d9a94d 0 42%,#3aa3a3 42% 76%,#5b6fd6 76% 94%,#7b86a0 94% 100%)"></div>
+            <ul class="text-[12px] text-[#cdd5e3] flex flex-col gap-[7px]">
+              <li class="flex items-center gap-[7px]"><i class="block w-[9px] h-[9px] rounded-sm" style="background:#d9a94d"></i>방문상담 <b class="ml-auto text-white">42%</b></li>
+              <li class="flex items-center gap-[7px]"><i class="block w-[9px] h-[9px] rounded-sm" style="background:#3aa3a3"></i>카톡상담 <b class="ml-auto text-white">34%</b></li>
+              <li class="flex items-center gap-[7px]"><i class="block w-[9px] h-[9px] rounded-sm" style="background:#5b6fd6"></i>비대면 접수 <b class="ml-auto text-white">18%</b></li>
+              <li class="flex items-center gap-[7px]"><i class="block w-[9px] h-[9px] rounded-sm" style="background:#7b86a0"></i>전화상담 <b class="ml-auto text-white">6%</b></li>
             </ul>
           </div>
-          <div class="topbars">
-            <div class="topbars__title">상담유형 TOP5</div>
-            <div class="topbar topbar--c1"><span>배우자 모르게</span><div class="topbar__track"><i style="width:28%"></i></div><b>28%</b></div>
-            <div class="topbar topbar--c2"><span>주택경매 없이</span><div class="topbar__track"><i style="width:24%"></i></div><b>24%</b></div>
-            <div class="topbar topbar--c3"><span>재회생</span><div class="topbar__track"><i style="width:19%"></i></div><b>19%</b></div>
-            <div class="topbar topbar--c4"><span>최근대출</span><div class="topbar__track"><i style="width:17%"></i></div><b>17%</b></div>
-            <div class="topbar topbar--c5"><span>도박·주식·코인</span><div class="topbar__track"><i style="width:12%"></i></div><b>12%</b></div>
+          <div>
+            <div class="text-[13px] font-bold text-white mb-3">상담유형 TOP4</div>
+            <div class="grid grid-cols-[90px_1fr_36px] items-center gap-2.5 text-[12px] text-[#cdd5e3] mb-2.5"><span>배우자 모르게</span><div class="h-[7px] rounded-[5px] bg-[#343a42] overflow-hidden"><i class="block h-full rounded-[5px] bg-[#ba803a]" style="width:28%"></i></div><b class="text-right text-white">28%</b></div>
+            <div class="grid grid-cols-[90px_1fr_36px] items-center gap-2.5 text-[12px] text-[#cdd5e3] mb-2.5"><span>주택경매 없이</span><div class="h-[7px] rounded-[5px] bg-[#343a42] overflow-hidden"><i class="block h-full rounded-[5px] bg-[#2dd4bf]" style="width:24%"></i></div><b class="text-right text-white">24%</b></div>
+            <div class="grid grid-cols-[90px_1fr_36px] items-center gap-2.5 text-[12px] text-[#cdd5e3] mb-2.5"><span>재회생</span><div class="h-[7px] rounded-[5px] bg-[#343a42] overflow-hidden"><i class="block h-full rounded-[5px] bg-[#0f6c7a]" style="width:19%"></i></div><b class="text-right text-white">19%</b></div>
+            <div class="grid grid-cols-[90px_1fr_36px] items-center gap-2.5 text-[12px] text-[#cdd5e3] mb-2.5"><span>최근대출</span><div class="h-[7px] rounded-[5px] bg-[#343a42] overflow-hidden"><i class="block h-full rounded-[5px] bg-[#475569]" style="width:17%"></i></div><b class="text-right text-white">17%</b></div>
           </div>
         </div>
       </div>
 
-      <div class="realtime__foot">
-        <p>※ 접수 피드의 모든 개인정보는 익명화되어 있으며, 사례 정보는 상담 동의 범위 내에서만 노출됩니다.</p>
-        <a href="#contact" class="btn btn--navy">지금 내 상황도 접수하기 →</a>
+      <div class="flex items-center justify-between gap-5 mt-[30px] flex-wrap max-md:flex-col max-md:items-stretch">
+        <p class="text-[12px] text-[#9aa6bc]">※ 접수 피드의 모든 개인정보는 익명화되어 있으며, 사례 정보는 상담 동의 범위 내에서만 노출됩니다.</p>
+        <a href="#contact" class="inline-flex items-center justify-center bg-[#1e2244] text-white px-7 py-3.5 rounded-[5px] font-semibold text-[15px] whitespace-nowrap hover:brightness-110 transition-all">지금 내 상황도 접수하기 →</a>
       </div>
     </div>
   </section>
 
   <!-- ============== 결과는 숫자로 (CAROUSEL) ============== -->
-  <section class="section section--light numcards">
-    <div class="container center">
-      <h2 class="section__title">결과는 <span class="grad-gold">숫자</span>로<br />확인할 수 있어야 합니다</h2>
-      <p class="section__desc">
+  <section class="bg-[#f1f2f9] py-[150px] max-lg:py-[100px]">
+    <div class="max-w-[1200px] mx-auto px-6 text-center">
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(32px,4.4vw,50px)] leading-[1.34] tracking-[-0.02em] mb-6">모두가 불가능하다고 할 때<br /><span class="grad-gold">의정</span>은 가능성을 증명합니다</h2>
+      <p class="text-[clamp(16px,1.9vw,20px)] leading-[1.85] font-semibold text-[#171717]">
         최의곤 법률사무소는 실제 사례 데이터를 바탕으로<br />
         개인별 감면 가능성과 변제 방향을 검토합니다.
       </p>
     </div>
-    <div class="numcards__slider">
-      <div class="numcards__track" id="numTrack">
-        <div class="numslide"><img src="./images/numcard-trend.png" alt="최근 상담·사례 추이 — 월간 신규 상담 건수 / 최근 12개월. 12개월 누계 1,282건 (↑18%)" draggable="false" /></div>
-        <div class="numslide"><img src="./images/numcard-rates.png" alt="최대감면율 94% BEST · 평균감면율 90% ABG" draggable="false" /></div>
-        <div class="numslide"><img src="./images/numcard-cases.png" alt="사건 유형별 감면율 — 배우자 모르게 91% · 주택경매 없이 87% · 재회생 84% · 최근대출 82% · 도박·주식·코인 78%" draggable="false" /></div>
+    <div class="numcards__slider relative max-w-full mx-auto mt-[50px] mb-[26px]">
+      <div class="numcards__track flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth cursor-grab select-none [scroll-padding:24px_max(8vw,calc((100%-650px)/2))] py-6 px-[max(8vw,calc((100%-650px)/2))]" id="numTrack">
+        <div class="numslide flex-[0_0_650px] max-w-full snap-center max-md:flex-[0_0_80%]"><img src="/images/numcard-trend.png" alt="최근 상담·사례 추이 — 월간 신규 상담 건수 / 최근 12개월. 12개월 누계 1,282건 (↑18%)" draggable="false" class="w-full h-auto block rounded-xl shadow-[0_12px_36px_rgba(20,30,60,0.07)] pointer-events-none" /></div>
+        <div class="numslide flex-[0_0_650px] max-w-full snap-center max-md:flex-[0_0_80%]">
+          <div class="aspect-[650/309] max-md:aspect-[650/340] bg-[#fafafb] border border-[#e9ebf2] rounded-xl shadow-[0_12px_36px_rgba(20,30,60,0.07)] flex flex-col items-center justify-center gap-[18px] px-6 select-none">
+            <p class="text-[clamp(16px,2.2vw,22px)] font-medium text-[#8b94a8]">1% 미만 기각 시에도</p>
+            <p class="[font-family:var(--font-head)] font-bold text-[clamp(48px,8vw,84px)] leading-none text-[#1e2547]">100% 환불</p>
+            <span class="inline-block bg-[#e2e4f8] text-[#4857d8] text-[clamp(14px,1.8vw,18px)] font-bold px-5 py-2 rounded-[30px]">신뢰를 바탕으로 진행합니다</span>
+          </div>
+        </div>
+        <div class="numslide flex-[0_0_650px] max-w-full snap-center max-md:flex-[0_0_80%]">
+          <div class="aspect-[650/309] max-md:aspect-[650/340] bg-[#fafafb] border border-[#e9ebf2] rounded-xl shadow-[0_12px_36px_rgba(20,30,60,0.07)] flex flex-col items-center justify-center gap-[18px] px-6 select-none">
+            <p class="text-[clamp(16px,2.2vw,22px)] font-medium text-[#8b94a8]">도산 전문 분야</p>
+            <p class="[font-family:var(--font-head)] font-bold text-[clamp(48px,8vw,84px)] leading-none text-[#1e2547]">99% 성공률</p>
+            <span class="inline-block bg-[#d7f0ea] text-[#1d9e85] text-[clamp(14px,1.8vw,18px)] font-bold px-5 py-2 rounded-[30px]">숫자가 증명하는 가능성</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="center"><a href="#diagnosis" class="btn btn--navy">내 감면 가능성 확인 →</a></div>
+    <div class="text-center"><a href="#diagnosis" class="inline-flex items-center justify-center bg-gradient-to-br from-[#3f4789] to-[#2f3666] text-white px-10 py-[18px] rounded-[5px] font-semibold text-[18px] whitespace-nowrap hover:brightness-110 transition-all">내 감면 가능성 확인 →</a></div>
   </section>
 
   <!-- ============== 30초 셀프진단 (LIGHT) ============== -->
-  <section class="section section--white diagnosis" id="diagnosis">
-    <div class="container narrow center">
-      <span class="pill">비밀보장 · 비대면 상담 · 전국 접수 · 진행 여부는 선택</span>
-      <h2 class="section__title">내 변제금,<br /><span class="grad-gold">30초 셀프 진단하기</span></h2>
-      <p class="section__desc">
+  <section class="bg-white py-[150px] max-lg:py-[100px] scroll-mt-[120px]" id="diagnosis">
+    <div class="max-w-[880px] mx-auto px-6 text-center">
+      <span class="inline-block bg-[#e0e3f3] text-[#4b51a8] text-[16px] font-semibold px-[24px] py-[10px] rounded-[30px] mb-[26px]">비밀보장 · 비대면 상담 · 전국 접수 · 진행 여부는 선택</span>
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(34px,4.6vw,54px)] leading-[1.34] tracking-[-0.02em] mb-8">내 변제금,<br /><span class="grad-gold">30초 셀프 진단하기</span></h2>
+      <p class="text-[clamp(17px,2.1vw,21px)] leading-[1.85] font-semibold text-[#171717]">
         채무금액, 소득, 부양가족, 재산, 특이사항을 기준으로<br />
         개인회생 가능성과 예상 변제 방향을 먼저 확인합니다.
       </p>
-      <img class="diagnosis__illust" src="./images/illust-diagnosis.png" alt="셀프 진단" onerror="this.style.display='none'" />
-      <a href="#contact" class="btn btn--navy btn--lg">진단 시작 →</a>
+      <img class="w-[300px] mx-auto mt-12 mb-10" src="/images/illust-diagnosis.png" alt="셀프 진단" onerror="this.style.display='none'" />
+      <a href="#contact" class="inline-flex items-center justify-center bg-gradient-to-b from-[#4C55AA] to-[#1E2244] text-white px-[80px] py-[18px] rounded-[6px] font-semibold text-[20px] whitespace-nowrap hover:brightness-110 transition-all shadow-[0_14px_34px_rgba(30,39,72,0.3)] max-md:px-[50px]">진단 시작 →</a>
     </div>
   </section>
 
   <!-- ============== CASE 4종 검토 (LIGHT) ============== -->
-  <section class="section section--light review">
-    <div class="container center">
-      <h2 class="section__title">불가능해 보이는 상황도,<br />먼저 <span class="grad-gold">가능성</span>을 검토합니다.</h2>
-      <p class="section__desc">
-        “이런 상황도 회생이 될까?” 대부분의 어려운 사안도 일단 검토해보면,<br />
+  <section class="bg-[#f1f2f9] py-[150px] max-lg:py-[100px]">
+    <div class="max-w-[1200px] mx-auto px-6 text-center">
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(27px,3.6vw,40px)] leading-[1.34] tracking-[-0.02em] mb-6">불가능해 보이는 상황도,<br />먼저 <span class="grad-gold">가능성</span>을 검토합니다.</h2>
+      <p class="text-[clamp(16px,1.9vw,19px)] leading-[1.85] font-semibold text-[#171717]">
+        "이런 상황도 회생이 될까?" 대부분의 어려운 사안도 일단 검토해보면,<br />
         시도해볼 만한 선택지가 남아 있는 경우가 많습니다.
       </p>
-      <div class="review__grid">
-        <article class="rcard">
-          <span class="rcard__no">CASE 01</span>
-          <h4>배우자 모르게 가능할까?</h4>
-          <p>가족에게 알리기 어려운 상황이라면, 상담 단계에서 비밀 유지와 절차상 체크포인트를 먼저 안내합니다.</p>
-          <div class="rcard__chips"><span><small>상담비밀유지</small><b>100%</b></span><span><small>평균검토기간</small><b>3~5일</b></span></div>
+      <div class="grid grid-cols-3 gap-4 mt-[50px] text-left max-w-[820px] mx-auto max-lg:grid-cols-2 max-md:grid-cols-1">
+        <article class="bg-white border border-[#e6e9f2] rounded-[14px] px-[22px] py-[26px] shadow-[0_8px_24px_rgba(20,30,60,0.05)] flex flex-col aspect-[285/311]">
+          <span class="text-[12px] font-bold text-black/50 tracking-[0.04em]">CASE 01</span>
+          <h4 class="text-[20px] mt-2 mb-4 pb-4 border-b border-[#e6e9f2] font-bold">배우자 모르게 가능할까?</h4>
+          <p class="text-[14px] text-black/80 leading-[1.75] flex-1">가족에게 알리기 어려운 상황이라면,<br />상담 단계에서 비밀 유지와 절차상<br />체크포인트를 먼저 안내합니다.</p>
+          <div class="grid grid-cols-2 mt-5">
+            <span class="bg-gradient-to-b from-[#4C55AA] to-[#1E2244] text-white px-2.5 py-[14px] text-center rounded-l-lg"><small class="block text-[10px] font-[500] opacity-70">상담비밀유지</small><b class="text-[15px] font-[700]">100%</b></span>
+            <span class="bg-gradient-to-b from-[#4C55AA] to-[#1E2244] text-white px-2.5 py-[14px] text-center rounded-r-lg border-l border-white/10"><small class="block text-[10px] font-[500] opacity-70">평균검토기간</small><b class="text-[15px] font-[700]">3~5일</b></span>
+          </div>
         </article>
-        <article class="rcard">
-          <span class="rcard__no">CASE 02</span>
-          <h4>주택경매 없이 가능할까?</h4>
-          <p>주택담보대출이 있더라도 시세, 담보잔액, 연체 여부를 기준으로 경매 위험과 회생 가능성을 함께 검토합니다.</p>
-          <div class="rcard__chips"><span><small>주택보유사례</small><b>35%</b></span><span><small>선검토 필수항목</small><b>6가지</b></span></div>
+        <article class="bg-white border border-[#e6e9f2] rounded-[14px] px-[22px] py-[26px] shadow-[0_8px_24px_rgba(20,30,60,0.05)] flex flex-col aspect-[285/311]">
+          <span class="text-[12px] font-bold text-black/50 tracking-[0.04em]">CASE 02</span>
+          <h4 class="text-[20px] mt-2 mb-4 pb-4 border-b border-[#e6e9f2] font-bold">주택경매 없이 가능할까?</h4>
+          <p class="text-[14px] text-black/80 leading-[1.75] flex-1">주택담보대출이 있더라도 시세,<br />담보잔액, 연체 여부를 기준으로 경매<br />위험과 회생 가능성을 함께 검토합니다.</p>
+          <div class="grid grid-cols-2 mt-5">
+            <span class="bg-gradient-to-b from-[#4C55AA] to-[#1E2244] text-white px-2.5 py-[14px] text-center rounded-l-lg"><small class="block text-[10px] font-[500] opacity-70">주택보유사례</small><b class="text-[15px] font-[700]">35%</b></span>
+            <span class="bg-gradient-to-b from-[#4C55AA] to-[#1E2244] text-white px-2.5 py-[14px] text-center rounded-r-lg border-l border-white/10"><small class="block text-[10px] font-[500] opacity-70">선검토 필수항목</small><b class="text-[15px] font-[700]">6가지</b></span>
+          </div>
         </article>
-        <article class="rcard">
-          <span class="rcard__no">CASE 03</span>
-          <h4>재회생도 가능할까?</h4>
-          <p>과거 면책 또는 회생 이력이 있더라도 기간, 채무 발생 사유, 현재 소득을 기준으로 다시 검토합니다.</p>
-          <div class="rcard__chips"><span><small>재회생 검토</small><b>상시가능</b></span><span><small>고려요소</small><b>5단계</b></span></div>
-        </article>
-        <article class="rcard">
-          <span class="rcard__no">CASE 04</span>
-          <h4>도박·주식·코인 빚도 가능할까?</h4>
-          <p>원인이 불리하게 작용할 수 있지만, 무조건 포기하기보다 소명 방향과 변제계획을 함께 살펴보는 것이 중요합니다.</p>
-          <div class="rcard__chips"><span><small>소명자료검토</small><b>단계별</b></span><span><small>신중검토</small><b>필요</b></span></div>
+        <article class="bg-white border border-[#e6e9f2] rounded-[14px] px-[22px] py-[26px] shadow-[0_8px_24px_rgba(20,30,60,0.05)] flex flex-col aspect-[285/311]">
+          <span class="text-[12px] font-bold text-black/50 tracking-[0.04em]">CASE 03</span>
+          <h4 class="text-[20px] mt-2 mb-4 pb-4 border-b border-[#e6e9f2] font-bold">재회생도 가능할까?</h4>
+          <p class="text-[14px] text-black/80 leading-[1.75] flex-1">과거 면책 또는 회생 이력이 있더라도<br />기간, 채무 발생 사유, 현재 소득을<br />기준으로 다시 검토합니다.</p>
+          <div class="grid grid-cols-2 mt-5">
+            <span class="bg-gradient-to-b from-[#4C55AA] to-[#1E2244] text-white px-2.5 py-[14px] text-center rounded-l-lg"><small class="block text-[10px] font-[500] opacity-70">재회생 검토</small><b class="text-[15px] font-[700]">상시가능</b></span>
+            <span class="bg-gradient-to-b from-[#4C55AA] to-[#1E2244] text-white px-2.5 py-[14px] text-center rounded-r-lg border-l border-white/10"><small class="block text-[10px] font-[500] opacity-70">고려요소</small><b class="text-[15px] font-[700]">5단계</b></span>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ============== 사례 비교 (LIGHT) ============== -->
-  <section class="section section--white casecompare" id="cases">
-    <div class="container center">
-      <h2 class="section__title">얼마나 달라질 수 있는지,<br />사례로 먼저 확인하세요.</h2>
-      <div class="casecompare__grid">
-        <article class="ccard">
-          <div class="ccard__top"><div><span class="ccard__no">CASE 01 배우자 모르게</span><b>40대 / 직장인 / 가족 미고지</b></div><div class="ring" data-value="92"><svg viewBox="0 0 80 80"><circle class="ring__bg" cx="40" cy="40" r="34"/><circle class="ring__fg" cx="40" cy="40" r="34"/></svg><span><i>감면율</i>92%</span></div></div>
-          <div class="ccard__baf">
-            <div class="ccard__col"><span class="ccard__tag">기존 월 납부액</span><b>192만원</b><small>기존채무 8,400만원</small></div>
-            <span class="ccard__arrow">→</span>
-            <div class="ccard__col ccard__col--after"><span class="ccard__tag ccard__tag--after">면책 후 월 납부액</span><b>18만원</b><small>감면된 채무 672만원</small></div>
-          </div>
-        </article>
-        <article class="ccard">
-          <div class="ccard__top"><div><span class="ccard__no">CASE 02 주택경매없이</span><b>40대 / 주택보유 / 자영업</b></div><div class="ring" data-value="88"><svg viewBox="0 0 80 80"><circle class="ring__bg" cx="40" cy="40" r="34"/><circle class="ring__fg" cx="40" cy="40" r="34"/></svg><span><i>감면율</i>88%</span></div></div>
-          <div class="ccard__baf">
-            <div class="ccard__col"><span class="ccard__tag">기존 월 납부액</span><b>248만원</b><small>기존채무 1억 1,200만원</small></div>
-            <span class="ccard__arrow">→</span>
-            <div class="ccard__col ccard__col--after"><span class="ccard__tag ccard__tag--after">면책 후 월 납부액</span><b>37만원</b><small>감면된 채무 1,344만원</small></div>
-          </div>
-        </article>
-        <article class="ccard">
-          <div class="ccard__top"><div><span class="ccard__no">CASE 03 재회생</span><b>50대 / 가장 / 면책이력</b></div><div class="ring" data-value="90"><svg viewBox="0 0 80 80"><circle class="ring__bg" cx="40" cy="40" r="34"/><circle class="ring__fg" cx="40" cy="40" r="34"/></svg><span><i>감면율</i>90%</span></div></div>
-          <div class="ccard__baf">
-            <div class="ccard__col"><span class="ccard__tag">기존 월 납부액</span><b>141만원</b><small>기존채무 6,200만원</small></div>
-            <span class="ccard__arrow">→</span>
-            <div class="ccard__col ccard__col--after"><span class="ccard__tag ccard__tag--after">면책 후 월 납부액</span><b>17만원</b><small>감면된 채무 620만원</small></div>
-          </div>
-        </article>
-        <article class="ccard">
-          <div class="ccard__top"><div><span class="ccard__no">CASE 04 도박·주식·코인</span><b>30대 / 프리랜서 / 투자손실</b></div><div class="ring" data-value="80"><svg viewBox="0 0 80 80"><circle class="ring__bg" cx="40" cy="40" r="34"/><circle class="ring__fg" cx="40" cy="40" r="34"/></svg><span><i>감면율</i>80%</span></div></div>
-          <div class="ccard__baf">
-            <div class="ccard__col"><span class="ccard__tag">기존 월 납부액</span><b>132만원</b><small>기존채무 5,800만원</small></div>
-            <span class="ccard__arrow">→</span>
-            <div class="ccard__col ccard__col--after"><span class="ccard__tag ccard__tag--after">면책 후 월 납부액</span><b>32만원</b><small>감면된 채무 1,160만원</small></div>
-          </div>
-        </article>
+  <section class="bg-white py-[150px] max-lg:py-[100px] scroll-mt-[120px]" id="cases">
+    <div class="max-w-[1200px] mx-auto px-6 text-center">
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(27px,3.6vw,40px)] leading-[1.34] tracking-[-0.02em] mb-6">얼마나 달라질 수 있는지,<br />사례로 먼저 확인하세요.</h2>
+      <div class="grid grid-cols-2 gap-[18px] mt-12 text-left max-md:grid-cols-1 max-w-[1000px] mx-auto">
+        <img src="/images/ccard-1.png" alt="CASE 01 배우자 모르게 — 40대 직장인, 가족 미고지. 감면율 42%. 기존 월 납부액 192만원(기존채무 8,400만원) → 면책 후 월 납부액 152만원(감면된 채무 3,528만원)" class="block w-full h-auto rounded-2xl" />
+        <img src="/images/ccard-2.png" alt="CASE 02 주택경매없이 — 40대 주택보유 자영업. 감면율 65%. 기존 월 납부액 248만원(기존채무 1억 1,200만원) → 면책 후 월 납부액 112만원(감면된 채무 7,280만원)" class="block w-full h-auto rounded-2xl" />
+        <img src="/images/ccard-3.png" alt="CASE 03 재회생 — 50대 가장, 면책이력. 감면율 48%. 기존 월 납부액 141만원(기존채무 6,200만원) → 면책 후 월 납부액 92만원(감면된 채무 2,976만원)" class="block w-full h-auto rounded-2xl" />
+        <img src="/images/ccard-4.png" alt="CASE 04 재회생 — 30대 프리랜서, 투자손실. 감면율 31%. 기존 월 납부액 132만원(기존채무 5,800만원) → 면책 후 월 납부액 85만원(감면된 채무 1,798만원)" class="block w-full h-auto rounded-2xl" />
       </div>
-      <p class="casecompare__note">※ 위 사례는 이해를 돕기 위한 예시이며, 실제 결과는 개인별 상황과 법원 판단에 따라 달라질 수 있습니다.</p>
+      <p class="mt-[60px] text-[12px] text-[#8b94a8] text-center">※ 위 사례는 이해를 돕기 위한 예시이며, 실제 결과는 개인별 상황과 법원 판단에 따라 달라질 수 있습니다.</p>
     </div>
   </section>
 
   <!-- ============== 후기 (DARK) ============== -->
-  <section class="section section--dark reviews">
-    <div class="container">
-      <h2 class="section__title on-dark">먼저 상담받은 분들이<br />전하는 <span class="grad-gold">변화</span></h2>
-      <p class="section__desc on-dark-soft">
+  <section class="bg-[#161b25] text-[#e9edf5] py-[150px] max-lg:py-[100px]">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(32px,4.2vw,48px)] leading-[1.34] tracking-[-0.02em] mb-6 text-white text-left">먼저 상담받은 분들이<br />전하는 <span class="text-[#B9803A]">변화</span></h2>
+      <p class="text-[clamp(15px,1.8vw,18px)] leading-[1.85] text-white text-left">
         혼자 고민하던 분들이 상담 후 가장 많이 말한 것은<br />
-        “생각보다 시작이 어렵지 않았다”는 점입니다.
+        "생각보다 시작이 어렵지 않았다"는 점입니다.
       </p>
-      <p class="reviews__note">※ 개인정보 보호를 위해 상담 내용은 익명화하여 재구성할 수 있습니다.</p>
-      <div class="reviews__grid">
-        <img class="vcard" src="./images/review-1.jpg" alt="상담 후기 — 30대 프리랜서·서울: 부산이 아닌 지역이라 걱정했는데, 비대면으로 상담을 받을 수 있어 부담이 줄었습니다." />
-        <img class="vcard" src="./images/review-2.jpg" alt="상담 후기 — 50대 직장인·대구: 배우자에게 말하지 못해 혼자 끙끙 앓았는데, 상담을 받고 나니 어디서부터 시작해야 할지 보였습니다." />
-        <img class="vcard" src="./images/review-3.jpg" alt="상담 후기 — 50대 가정주부·부산: 주택담보 때문에 집이 넘어갈까 걱정했는데, 먼저 확인해야 할 기준을 알게 됐습니다." />
+      <p class="text-left text-[12px] text-white/30 mt-3.5">※ 개인정보 보호를 위해 상담 내용은 익명화하여 재구성할 수 있습니다.</p>
+      <div class="grid grid-cols-3 gap-[18px] mt-[46px] max-md:grid-cols-1">
+        <img class="block w-full h-auto rounded-2xl" src="/images/review-1.png" alt="상담 후기 — 30대 프리랜서·서울: 부산이 아닌 지역이라 걱정했는데, 비대면으로 상담을 받을 수 있어 부담이 줄었습니다." />
+        <img class="block w-full h-auto rounded-2xl" src="/images/review-2.png" alt="상담 후기 — 50대 직장인·대구: 배우자에게 말하지 못해 혼자 끙끙 앓았는데, 상담을 받고 나니 어디서부터 시작해야 할지 보였습니다." />
+        <img class="block w-full h-auto rounded-2xl" src="/images/review-3.png" alt="상담 후기 — 50대 가정주부·부산: 주택담보 때문에 집이 넘어갈까 걱정했는데, 먼저 확인해야 할 기준을 알게 됐습니다." />
       </div>
     </div>
   </section>
 
   <!-- ============== 무서류 절차 (LIGHT) ============== -->
-  <section class="section section--white noform">
-    <div class="container center">
-      <span class="pill">무서류 · 비대면 · 간단접수</span>
-      <h2 class="section__title">처음부터 서류를<br />준비하지 않아도 됩니다.</h2>
+  <section class="bg-white py-[150px] max-lg:py-[100px]">
+    <div class="max-w-[1200px] mx-auto px-6 text-center">
+      <span class="inline-block bg-[#e0e3f3] text-[#4b51a8] text-[13px] font-semibold px-[18px] py-2 rounded-[30px] mb-[22px]">무서류 · 비대면 · 간단접수</span>
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(27px,3.6vw,40px)] leading-[1.34] tracking-[-0.02em] mb-6">처음부터 서류를<br />준비하지 않아도 됩니다.</h2>
     </div>
-    <div class="container noform__inner">
-      <div class="noform__steps">
-        <div class="nstep">
-          <div class="nstep__head">Step 1 <span>무서류 1차 진단</span></div>
-          <p>성함 · 연락처 · 채무금액 · 소득만으로 먼저 가능성을 확인합니다.</p>
-        </div>
-        <div class="nstep">
-          <div class="nstep__head">Step 2 <span>비대면 상담</span></div>
-          <p>부산이 아니어도 전화 · 카톡으로 상담을 시작할 수 있습니다.</p>
-        </div>
-        <div class="nstep">
-          <div class="nstep__head">Step 3 <span>서류 단계별 안내</span></div>
-          <p>진행이 필요한 경우에만 필요한 서류를 순서대로 안내합니다.</p>
-        </div>
+    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-2 gap-[50px] items-center mt-10 max-lg:grid-cols-1">
+      <div class="flex flex-col gap-4">
+        <img src="/images/nstep-1.png" alt="Step 1 무서류 1차 진단 — 성함·연락처·채무금액·소득만으로 먼저 가능성을 확인합니다." class="block w-full h-auto" />
+        <img src="/images/nstep-2.png" alt="Step 2 비대면 상담 — 부산이 아니어도 전화·카톡으로 상담을 시작할 수 있습니다." class="block w-full h-auto" />
+        <img src="/images/nstep-3.png" alt="Step 3 서류 단계별 안내 — 진행이 필요한 경우에만 필요한 서류를 순서대로 안내합니다." class="block w-full h-auto" />
       </div>
-      <div class="noform__phone">
-        <div class="phone">
-          <span class="phone__badge phone__badge--1">진행율 <b>57%</b><small>4 / 7 단계</small></span>
-          <span class="phone__badge phone__badge--2">진행율 <b>87%</b><small>6 / 7 단계</small></span>
-          <div class="phone__screen">
-            <div class="phone__logo">
-              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 5 L41 14.5 V33.5 L24 43 L7 33.5 V14.5 Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M7 14.5 L24 24 L41 14.5" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 24 V43" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
-              <span>최의곤법률사무소</span>
-            </div>
-            <div class="phone__step">STEP 01</div>
-            <h5>무서류 1차 진단<small>약 30초 소요 / 비밀보장</small></h5>
-            <div class="phone__field"><span>채무금액</span><b>4,000~6,000만원</b></div>
-            <div class="phone__field"><span>세전연봉</span><b>3,200만원</b></div>
-            <div class="phone__field"><span>특이사항</span><b>주택경매없이 · 배우자 모르게</b></div>
-            <div class="phone__field"><span>예상변제방향</span><b>개인회생 검토우선</b></div>
-            <button class="phone__cta">무서류 1차 진단 시작 →</button>
-          </div>
-        </div>
+      <div class="flex justify-center">
+        <img src="/images/phone-mock.png" alt="무서류 1차 진단 폰 화면 미리보기 — 채무금액 4,000~6,000만원, 세전연봉 3,200만원, 특이사항 주택경매없이·배우자 모르게, 예상변제방향 개인회생 검토우선. 진행률 57% (4/7 단계), 87% (6/7 단계) 배지." class="block max-w-[360px] w-full h-auto" />
       </div>
     </div>
   </section>
 
   <!-- ============== 7스텝 타임라인 (DARK) ============== -->
-  <section class="section section--dark timeline" id="process">
-    <div class="container center">
-      <h2 class="section__title on-dark">전국 어디서든<br />절차는 <span class="accent-blue2">간단하게</span> 시작할 수 있습니다.</h2>
-      <ol class="tline">
-        <li><span class="tline__no">Step 1</span><b>30초 진단신청</b><small>무서류 · 비대면</small></li>
-        <li><span class="tline__no">Step 2</span><b>상담 담당자 연락</b><small>무서류 비대면</small></li>
-        <li><span class="tline__no">Step 3</span><b>채무·소득·재산 확인</b><small>무서류 비대면</small></li>
-        <li><span class="tline__no">Step 4</span><b>가능 제도 안내</b><small>무서류 비대면</small></li>
-        <li><span class="tline__no">Step 5</span><b>서류 준비</b><small>무서류 비대면</small></li>
-        <li><span class="tline__no">Step 6</span><b>사건 접수 및 진행</b><small>무서류 비대면</small></li>
-        <li><span class="tline__no">Step 7</span><b>인가·면책까지 관리</b><small>무서류 비대면</small></li>
+  <section class="bg-[#161b25] text-[#e9edf5] py-[150px] max-lg:py-[100px] scroll-mt-[120px]" id="process">
+    <div class="max-w-[1200px] mx-auto px-6 text-center">
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(32px,4.2vw,48px)] leading-[1.34] tracking-[-0.02em] mb-6 text-white"><span class="text-[#6666f6] font-bold">간단한 절차</span>로<br />시작할 수 있습니다.</h2>
+      <ol class="tline-bar relative grid grid-cols-7 gap-1.5 mt-[54px] max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-[26px]">
+        <li class="relative text-center pt-10"><span class="absolute top-0 left-1/2 -translate-x-1/2 bg-[#B9803A]/20 text-[#B9803A] text-[13px] font-bold px-3 py-[5px] rounded-[20px] whitespace-nowrap">Step 1</span><b class="block text-[17px] text-white [font-family:var(--font-head)] font-bold">30초 진단신청</b><small class="block text-[13px] text-[#9aa6bc] mt-[6px]">무서류 · 비대면</small></li>
+        <li class="relative text-center pt-10"><span class="absolute top-0 left-1/2 -translate-x-1/2 bg-[#B9803A]/20 text-[#B9803A] text-[13px] font-bold px-3 py-[5px] rounded-[20px] whitespace-nowrap">Step 2</span><b class="block text-[17px] text-white [font-family:var(--font-head)] font-bold">상담 담당자 연락</b><small class="block text-[13px] text-[#9aa6bc] mt-[6px]">무서류 비대면</small></li>
+        <li class="relative text-center pt-10"><span class="absolute top-0 left-1/2 -translate-x-1/2 bg-[#B9803A]/20 text-[#B9803A] text-[13px] font-bold px-3 py-[5px] rounded-[20px] whitespace-nowrap">Step 3</span><b class="block text-[17px] text-white [font-family:var(--font-head)] font-bold">채무·소득·재산 확인</b><small class="block text-[13px] text-[#9aa6bc] mt-[6px]">무서류 비대면</small></li>
+        <li class="relative text-center pt-10"><span class="absolute top-0 left-1/2 -translate-x-1/2 bg-[#B9803A]/20 text-[#B9803A] text-[13px] font-bold px-3 py-[5px] rounded-[20px] whitespace-nowrap">Step 4</span><b class="block text-[17px] text-white [font-family:var(--font-head)] font-bold">가능 제도 안내</b><small class="block text-[13px] text-[#9aa6bc] mt-[6px]">무서류 비대면</small></li>
+        <li class="relative text-center pt-10"><span class="absolute top-0 left-1/2 -translate-x-1/2 bg-[#B9803A]/20 text-[#B9803A] text-[13px] font-bold px-3 py-[5px] rounded-[20px] whitespace-nowrap">Step 5</span><b class="block text-[17px] text-white [font-family:var(--font-head)] font-bold">서류 준비</b><small class="block text-[13px] text-[#9aa6bc] mt-[6px]">무서류 비대면</small></li>
+        <li class="relative text-center pt-10"><span class="absolute top-0 left-1/2 -translate-x-1/2 bg-[#B9803A]/20 text-[#B9803A] text-[13px] font-bold px-3 py-[5px] rounded-[20px] whitespace-nowrap">Step 6</span><b class="block text-[17px] text-white [font-family:var(--font-head)] font-bold">사건 접수 및 진행</b><small class="block text-[13px] text-[#9aa6bc] mt-[6px]">무서류 비대면</small></li>
+        <li class="relative text-center pt-10"><span class="absolute top-0 left-1/2 -translate-x-1/2 bg-[#B9803A]/20 text-[#B9803A] text-[13px] font-bold px-3 py-[5px] rounded-[20px] whitespace-nowrap">Step 7</span><b class="block text-[17px] text-white [font-family:var(--font-head)] font-bold">인가·면책까지 관리</b><small class="block text-[13px] text-[#9aa6bc] mt-[6px]">무서류 비대면</small></li>
       </ol>
     </div>
   </section>
 
   <!-- ============== FAQ (LIGHT) ============== -->
-  <section class="section section--light faq" id="faq">
-    <div class="container faq__inner">
-      <div class="faq__copy">
-        <h2 class="section__title">가장 많이 묻는<br />질문입니다</h2>
-        <p class="section__desc">정확한 판단은 상담을 통해<br />확인하는 것이 안전합니다.</p>
-        <a href="#contact" class="btn btn--navy">1:1 채팅 상담하기 →</a>
+  <section class="bg-[#f1f2f9] py-[150px] max-lg:py-[100px] scroll-mt-[120px]" id="faq">
+    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-[0.8fr_1.3fr] gap-[50px] items-start max-lg:grid-cols-1">
+      <div class="max-lg:text-center">
+        <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(32px,4.2vw,48px)] leading-[1.34] tracking-[-0.02em] mb-6 text-left max-lg:text-center">가장 많이 묻는<br />질문입니다</h2>
+        <p class="text-[clamp(16px,1.9vw,19px)] leading-[1.85] font-semibold text-[#171717] text-left max-lg:text-center">정확한 판단은 상담을 통해<br />확인하는 것이 안전합니다.</p>
+        <a href="#contact" class="inline-flex items-center justify-center bg-gradient-to-b from-[#4C55AA] to-[#1E2244] text-white px-[45px] py-3.5 rounded-[5px] font-semibold text-[15px] whitespace-nowrap hover:brightness-110 transition-all mt-7">1:1 채팅 상담하기 →</a>
       </div>
-      <div class="faq__list">
-        <details class="fitem" open>
-          <summary><span class="fitem__q">Q1</span>부산이 아닌 지역에서도 상담 가능한가요?<i class="fitem__ico">+</i></summary>
-          <div class="fitem__a">네, 가능합니다. 부산 본사 외에도 전화·카톡·비대면 상담을 통해 전국 어디서든 상담과 접수 안내가 가능합니다. 필요 시 일정 조율을 통해 대면 상담도 안내됩니다.</div>
+      <div class="flex flex-col gap-3">
+        <details class="fitem bg-white border border-[#e6e9f2] rounded-xl overflow-hidden" open>
+          <summary class="cursor-pointer flex items-center gap-3 px-[22px] py-5 text-[17px] font-semibold"><span class="fitem__q text-[#242954] font-bold [font-family:var(--font-head)] flex-none">Q1</span>부산이 아닌 지역에서도 상담 가능한가요?<i class="fitem__ico ml-auto not-italic text-xl text-[#b9c0d4] transition-transform duration-[0.25s]">+</i></summary>
+          <div class="px-[22px] pl-14 pb-[22px] text-black text-[16px] leading-[1.8]">네, 가능합니다. 부산 본사 외에도 전화·카톡·비대면 상담을 통해 전국 어디서든 상담과 접수 안내가 가능합니다. 필요 시 일정 조율을 통해 대면 상담도 안내됩니다.</div>
         </details>
-        <details class="fitem">
-          <summary><span class="fitem__q">Q2</span>개인회생 신청하면 독촉 전화가 멈추나요?<i class="fitem__ico">+</i></summary>
-          <div class="fitem__a">회생절차 개시 신청과 함께 금지·중지명령이 이루어지면 채권자의 추심과 독촉이 정지될 수 있습니다. 구체적인 시점과 효력은 사안에 따라 다르므로 상담에서 안내드립니다.</div>
+        <details class="fitem bg-white border border-[#e6e9f2] rounded-xl overflow-hidden">
+          <summary class="cursor-pointer flex items-center gap-3 px-[22px] py-5 text-[17px] font-semibold"><span class="fitem__q text-[#242954] font-bold [font-family:var(--font-head)] flex-none">Q2</span>개인회생 신청하면 독촉 전화가 멈추나요?<i class="fitem__ico ml-auto not-italic text-xl text-[#b9c0d4] transition-transform duration-[0.25s]">+</i></summary>
+          <div class="px-[22px] pl-14 pb-[22px] text-black text-[16px] leading-[1.8]">회생절차 개시 신청과 함께 금지·중지명령이 이루어지면 채권자의 추심과 독촉이 정지될 수 있습니다. 구체적인 시점과 효력은 사안에 따라 다르므로 상담에서 안내드립니다.</div>
         </details>
-        <details class="fitem">
-          <summary><span class="fitem__q">Q3</span>배우자 모르게 진행할 수 있나요?<i class="fitem__ico">+</i></summary>
-          <div class="fitem__a">가족에게 알리기 어려운 상황이라면 상담 단계에서 비밀 유지와 절차상 체크포인트를 먼저 안내합니다. 다만 절차상 고지가 필요한 경우가 있어 사전 검토가 중요합니다.</div>
+        <details class="fitem bg-white border border-[#e6e9f2] rounded-xl overflow-hidden">
+          <summary class="cursor-pointer flex items-center gap-3 px-[22px] py-5 text-[17px] font-semibold"><span class="fitem__q text-[#242954] font-bold [font-family:var(--font-head)] flex-none">Q3</span>배우자 모르게 진행할 수 있나요?<i class="fitem__ico ml-auto not-italic text-xl text-[#b9c0d4] transition-transform duration-[0.25s]">+</i></summary>
+          <div class="px-[22px] pl-14 pb-[22px] text-black text-[16px] leading-[1.8]">가족에게 알리기 어려운 상황이라면 상담 단계에서 비밀 유지와 절차상 체크포인트를 먼저 안내합니다. 다만 절차상 고지가 필요한 경우가 있어 사전 검토가 중요합니다.</div>
         </details>
-        <details class="fitem">
-          <summary><span class="fitem__q">Q4</span>주택담보대출이 있어도 가능한가요?<i class="fitem__ico">+</i></summary>
-          <div class="fitem__a">가능합니다. 시세, 담보잔액, 연체 여부를 기준으로 경매 위험과 회생 가능성을 함께 검토한 뒤 변제계획을 설계합니다.</div>
+        <details class="fitem bg-white border border-[#e6e9f2] rounded-xl overflow-hidden">
+          <summary class="cursor-pointer flex items-center gap-3 px-[22px] py-5 text-[17px] font-semibold"><span class="fitem__q text-[#242954] font-bold [font-family:var(--font-head)] flex-none">Q4</span>주택담보대출이 있어도 가능한가요?<i class="fitem__ico ml-auto not-italic text-xl text-[#b9c0d4] transition-transform duration-[0.25s]">+</i></summary>
+          <div class="px-[22px] pl-14 pb-[22px] text-black text-[16px] leading-[1.8]">가능합니다. 시세, 담보잔액, 연체 여부를 기준으로 경매 위험과 회생 가능성을 함께 검토한 뒤 변제계획을 설계합니다.</div>
         </details>
-        <details class="fitem">
-          <summary><span class="fitem__q">Q5</span>재회생도 가능한가요?<i class="fitem__ico">+</i></summary>
-          <div class="fitem__a">과거 면책 또는 회생 이력이 있더라도 기간, 채무 발생 사유, 현재 소득을 기준으로 다시 검토합니다. 상시 검토가 가능합니다.</div>
+        <details class="fitem bg-white border border-[#e6e9f2] rounded-xl overflow-hidden">
+          <summary class="cursor-pointer flex items-center gap-3 px-[22px] py-5 text-[17px] font-semibold"><span class="fitem__q text-[#242954] font-bold [font-family:var(--font-head)] flex-none">Q5</span>재회생도 가능한가요?<i class="fitem__ico ml-auto not-italic text-xl text-[#b9c0d4] transition-transform duration-[0.25s]">+</i></summary>
+          <div class="px-[22px] pl-14 pb-[22px] text-black text-[16px] leading-[1.8]">과거 면책 또는 회생 이력이 있더라도 기간, 채무 발생 사유, 현재 소득을 기준으로 다시 검토합니다. 상시 검토가 가능합니다.</div>
         </details>
-        <details class="fitem">
-          <summary><span class="fitem__q">Q6</span>도박·주식·코인 빚도 개인회생이 가능한가요?<i class="fitem__ico">+</i></summary>
-          <div class="fitem__a">원인이 불리하게 작용할 수 있으나 무조건 포기하기보다 소명 방향과 변제계획을 함께 살펴보는 것이 중요합니다. 사안별로 검토해 드립니다.</div>
+        <details class="fitem bg-white border border-[#e6e9f2] rounded-xl overflow-hidden">
+          <summary class="cursor-pointer flex items-center gap-3 px-[22px] py-5 text-[17px] font-semibold"><span class="fitem__q text-[#242954] font-bold [font-family:var(--font-head)] flex-none">Q6</span>최근대출이 많으면 기각되나요?<i class="fitem__ico ml-auto not-italic text-xl text-[#b9c0d4] transition-transform duration-[0.25s]">+</i></summary>
+          <div class="px-[22px] pl-14 pb-[22px] text-black text-[16px] leading-[1.8]">최근 대출 여부만으로 결과가 정해지지 않습니다. 자금 사용처와 변제 의사, 소명 자료를 기준으로 가능성을 검토합니다.</div>
         </details>
-        <details class="fitem">
-          <summary><span class="fitem__q">Q7</span>최근대출이 많으면 기각되나요?<i class="fitem__ico">+</i></summary>
-          <div class="fitem__a">최근 대출 여부만으로 결과가 정해지지 않습니다. 자금 사용처와 변제 의사, 소명 자료를 기준으로 가능성을 검토합니다.</div>
+        <details class="fitem bg-white border border-[#e6e9f2] rounded-xl overflow-hidden">
+          <summary class="cursor-pointer flex items-center gap-3 px-[22px] py-5 text-[17px] font-semibold"><span class="fitem__q text-[#242954] font-bold [font-family:var(--font-head)] flex-none">Q7</span>처음 상담할 때 서류가 필요한가요?<i class="fitem__ico ml-auto not-italic text-xl text-[#b9c0d4] transition-transform duration-[0.25s]">+</i></summary>
+          <div class="px-[22px] pl-14 pb-[22px] text-black text-[16px] leading-[1.8]">아니요. 성함·연락처·채무금액·소득만으로 무서류 1차 진단이 가능합니다. 진행이 필요한 경우에만 단계별로 서류를 안내합니다.</div>
         </details>
-        <details class="fitem">
-          <summary><span class="fitem__q">Q8</span>처음 상담할 때 서류가 필요한가요?<i class="fitem__ico">+</i></summary>
-          <div class="fitem__a">아니요. 성함·연락처·채무금액·소득만으로 무서류 1차 진단이 가능합니다. 진행이 필요한 경우에만 단계별로 서류를 안내합니다.</div>
+        <details class="fitem bg-white border border-[#e6e9f2] rounded-xl overflow-hidden">
+          <summary class="cursor-pointer flex items-center gap-3 px-[22px] py-5 text-[17px] font-semibold"><span class="fitem__q text-[#242954] font-bold [font-family:var(--font-head)] flex-none">Q8</span>감면율은 어떻게 산정되나요?<i class="fitem__ico ml-auto not-italic text-xl text-[#b9c0d4] transition-transform duration-[0.25s]">+</i></summary>
+          <div class="px-[22px] pl-14 pb-[22px] text-black text-[16px] leading-[1.8]">현재 소득과 생활비, 부양가족, 재산 등을 기준으로 변제 가능 금액을 산정하며, 무담보채무 원금 대비 감면 정도를 검토합니다. 실제 결과는 법원 판단에 따라 달라질 수 있습니다.</div>
         </details>
-        <details class="fitem">
-          <summary><span class="fitem__q">Q9</span>감면율은 어떻게 산정되나요?<i class="fitem__ico">+</i></summary>
-          <div class="fitem__a">현재 소득과 생활비, 부양가족, 재산 등을 기준으로 변제 가능 금액을 산정하며, 무담보채무 원금 대비 감면 정도를 검토합니다. 실제 결과는 법원 판단에 따라 달라질 수 있습니다.</div>
-        </details>
-        <details class="fitem">
-          <summary><span class="fitem__q">Q10</span>상담 신청만 해도 비용이 발생하나요?<i class="fitem__ico">+</i></summary>
-          <div class="fitem__a">상담 및 1차 진단은 부담 없이 진행하실 수 있도록 안내합니다. 진행 여부는 상담 후 직접 선택하시면 됩니다.</div>
+        <details class="fitem bg-white border border-[#e6e9f2] rounded-xl overflow-hidden">
+          <summary class="cursor-pointer flex items-center gap-3 px-[22px] py-5 text-[17px] font-semibold"><span class="fitem__q text-[#242954] font-bold [font-family:var(--font-head)] flex-none">Q9</span>상담 신청만 해도 비용이 발생하나요?<i class="fitem__ico ml-auto not-italic text-xl text-[#b9c0d4] transition-transform duration-[0.25s]">+</i></summary>
+          <div class="px-[22px] pl-14 pb-[22px] text-black text-[16px] leading-[1.8]">상담 및 1차 진단은 부담 없이 진행하실 수 있도록 안내합니다. 진행 여부는 상담 후 직접 선택하시면 됩니다.</div>
         </details>
       </div>
     </div>
   </section>
 
   <!-- ============== 비밀상담 CTA (DARK) ============== -->
-  <section class="section section--dark cta" id="contact">
-    <div class="container narrow center">
-      <h2 class="section__title on-dark">빚 문제,<br /><span class="grad-gold">전국 어디서든</span> 먼저 확인하세요.</h2>
-      <p class="section__desc on-dark-soft">
+  <section class="bg-[#0B1220] text-[#e9edf5] py-[150px] max-lg:py-[100px] scroll-mt-[120px]" id="contact">
+    <div class="max-w-[1440px] mx-auto px-6 text-center">
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(36px,4.8vw,56px)] leading-[1.34] tracking-[-0.02em] mb-6 text-white">빚 문제,<br /><span class="grad-gold">전국 어디서든</span> 먼저 확인하세요.</h2>
+      <p class="text-[clamp(17px,2.1vw,21px)] leading-[1.85] text-white">
         지금 필요한 건 모든 서류를 준비하는 것이 아니라,<br />
         내 상황이 개인회생으로 정리될 수 있는지 먼저 확인하는 것입니다.
       </p>
-      <div class="cta__badges">
-        <span class="cta__badge cta__badge--on"><i>✓</i> 부산 센텀 기반</span>
-        <span class="cta__badge">전국 접수 가능</span>
+      <div class="flex flex-col gap-3 max-w-[500px] mx-auto mt-7 mb-[34px]">
+        <span class="relative flex items-center justify-center bg-[#10192B] border border-white/15 text-white px-10 py-[18px] rounded-xl font-semibold text-[18px]"><img src="/images/ic-check.png" alt="" aria-hidden="true" class="absolute left-5 w-7 h-7" /> 비대면 문의 ∙ 상담 가능</span>
+        <span class="relative flex items-center justify-center bg-[#10192B] border border-white/10 text-white/10 px-10 py-[18px] rounded-xl font-semibold text-[18px]">전국 접수 가능</span>
       </div>
 
-      <div class="applyform">
-        <div class="applyform__head"><b>비밀상담신청서</b><span><i class="dot dot--live"></i> 현재 접수중 37건</span></div>
-        <form onsubmit="return false;">
-          <div class="af-row">
-            <div class="qf"><label>상담분야</label><select><option>개인회생</option><option>개인파산</option><option>재회생</option><option>채무조정</option></select></div>
-            <div class="qf"><label>신용채무액</label><select><option>4,000 ~ 6,000만 원</option><option>~ 2,000만 원</option><option>2,000 ~ 4,000만 원</option><option>6,000 ~ 1억 원</option><option>1억 원 이상</option></select></div>
-            <div class="qf"><label>상여포함 세전연봉</label><select><option>4,000 ~ 6,000만 원</option><option>~ 2,000만 원</option><option>2,000 ~ 4,000만 원</option><option>6,000만 원 이상</option></select></div>
-          </div>
-          <div class="af-row">
-            <div class="qf"><label>이름</label><input type="text" placeholder="홍길동" /></div>
-            <div class="qf"><label>연락처</label><input type="tel" placeholder="010-0000-0000" /></div>
-            <label class="qf__agree"><input type="checkbox" /> 개인정보 수집 및 활용 동의</label>
-          </div>
-          <button class="applyform__submit">30초 비밀진단<small>상담 비밀보장 · 무서류 가능</small></button>
+      <div class="bg-[#09152E] border border-white/10 rounded-2xl text-left overflow-hidden max-w-[1200px] mx-auto">
+        <div class="flex items-center gap-3 px-[28px] py-[22px]">
+          <b class="text-[22px] text-white [font-family:var(--font-head)] font-bold">비밀상담신청서</b>
+          <span class="text-[14px] text-white inline-flex items-center gap-[7px]"><i class="dot-live"></i> 현재 접수중 <b class="text-[#6666f6] font-bold">37건</b></span>
+        </div>
+        <form onsubmit="return false;" class="lead-form bg-[#18243C] grid grid-cols-[1fr_1fr_1fr_auto] gap-x-0 gap-y-4 items-center px-[28px] py-[28px] max-md:grid-cols-1">
+          <div class="flex items-center gap-1"><label class="text-[14px] text-white/60 font-semibold whitespace-nowrap w-[60px]">상담분야</label><select class="h-[44px] flex-1 min-w-0 max-w-[180px] mr-6 max-md:mr-0 max-md:max-w-none px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[15px]"><option>개인회생</option><option>개인파산</option><option>재회생</option><option>채무조정</option></select></div>
+          <div class="flex items-center gap-1"><label class="text-[14px] text-white/60 font-semibold whitespace-nowrap w-[76px]">신용채무액</label><select class="h-[44px] flex-1 min-w-0 max-w-[180px] mr-6 max-md:mr-0 max-md:max-w-none px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[15px]"><option>~ 2,000만 원</option><option>2,000 ~ 4,000만 원</option><option>4,000 ~ 6,000만 원</option><option>6,000 ~ 1억 원</option><option>1억 원 이상</option></select></div>
+          <div class="flex items-center gap-1"><label class="text-[14px] text-white/60 font-semibold whitespace-nowrap w-[120px]">상여포함 세전연봉</label><select class="h-[44px] flex-1 min-w-0 max-w-[180px] mr-6 max-md:mr-0 max-md:max-w-none px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[15px]"><option>~ 2,000만 원</option><option>2,000 ~ 4,000만 원</option><option>4,000 ~ 6,000만 원</option><option>6,000만 원 이상</option></select></div>
+          <button class="applyform__submit row-span-2 self-center bg-[#111430] text-white px-6 py-4 rounded-[8px] font-bold text-[22px] [font-family:var(--font-head)] flex flex-col items-center justify-center leading-[1.3] hover:brightness-110 transition-all whitespace-nowrap max-md:row-span-1"><span class="whitespace-nowrap">30초 비밀진단</span><small class="text-[13px] font-normal text-white/60 mt-2 whitespace-nowrap">상담 비밀보장 · 무서류 가능</small></button>
+          <div class="flex items-center gap-1"><label class="text-[14px] text-white/60 font-semibold whitespace-nowrap w-[60px]">이름</label><input type="text" placeholder="홍길동" class="h-[44px] flex-1 min-w-0 max-w-[180px] mr-6 max-md:mr-0 max-md:max-w-none px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[15px]" /></div>
+          <div class="flex items-center gap-1"><label class="text-[14px] text-white/60 font-semibold whitespace-nowrap w-[76px]">연락처</label><input type="tel" placeholder="010-0000-0000" class="h-[44px] flex-1 min-w-0 max-w-[180px] mr-6 max-md:mr-0 max-md:max-w-none px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[15px]" /></div>
+          <label class="flex items-center gap-[7px] text-[14px] text-white/60"><input type="checkbox" /> 개인정보 수집 및 활용 동의</label>
         </form>
       </div>
 
-      <div class="cta__contacts">
-        <a href="tel:010-9942-1150" class="cta__call">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg>
-          <span>대표전화 · 24시간</span><b>010-9942-1150</b>
+      <div class="grid grid-cols-[1fr_280px] gap-3.5 mt-5 max-w-[1200px] mx-auto max-md:grid-cols-1">
+        <a href="tel:010-9942-1150" class="flex items-center justify-center gap-5 bg-white text-[#1a1f2e] rounded-xl px-8 py-9 text-[20px]">
+          <img src="/images/ic-phone.png" alt="" aria-hidden="true" class="w-8 h-8" />
+          <span class="text-[#18243C]/80 text-[26px] font-semibold">대표전화 · 24시간</span><b class="text-[42px] [font-family:var(--font-head)] font-bold">010-9942-1150</b>
         </a>
-        <a href="#" class="cta__kakao"><i>TALK</i><span>카톡상담<br />바로가기</span></a>
+        <a href="#" class="flex items-center justify-center gap-4 bg-[#fae100] text-[#391b1b] rounded-xl px-8 py-9 font-bold text-[22px]"><img src="/images/ic-talk.png" alt="" aria-hidden="true" class="w-[67px] h-[62px]" /><span class="font-extrabold text-[30px] leading-[35.4px] tracking-[-0.02em] text-black">카톡상담<br />바로가기</span></a>
       </div>
     </div>
   </section>
 
   <!-- ============== 위치 (LIGHT) ============== -->
-  <section class="section section--white location">
-    <div class="container center">
-      <h2 class="section__title">부산 해운대 센텀,<br />전국 어디서든 연결됩니다.</h2>
+  <section class="bg-white py-[150px] max-lg:py-[100px]">
+    <div class="max-w-[1200px] mx-auto px-6 text-center">
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(27px,3.6vw,40px)] leading-[1.34] tracking-[-0.02em] mb-6">방문 없이도,<br /><span class="text-[#2E367C]">전국 어디서든</span> 상담 가능합니다.</h2>
     </div>
-    <div class="container location__inner">
-      <div class="location__map">
-        <img src="./images/location-map.png" alt="최의곤법률사무소 위치" onerror="this.style.display='none';this.parentElement.classList.add('is-empty')" />
+    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-[1.1fr_1fr] gap-[50px] items-center mt-[70px] max-lg:grid-cols-1">
+      <div class="rounded-[10px] overflow-hidden min-h-[400px] bg-[#e8eaf2]">
+        <iframe
+          src="https://maps.google.com/maps?q=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%ED%95%B4%EC%9A%B4%EB%8C%80%EA%B5%AC%20%EC%84%BC%ED%85%80%EB%B6%81%EB%8C%80%EB%A1%9C%2060&t=&z=17&ie=UTF8&iwloc=&output=embed"
+          class="w-full h-full min-h-[400px] border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="최의곤법률사무소 위치 지도"></iframe>
       </div>
-      <ul class="location__info">
-        <li><span class="location__ico">📍</span><div><b>주소</b><p>부산광역시 해운대구 센텀북대로 60 14층 1413호</p></div></li>
-        <li><span class="location__ico">📞</span><div><b>전화번호</b><p>010-9942-1150</p></div></li>
-        <li><span class="location__ico">🕐</span><div><b>운영시간</b><p>24시간 연중무휴 상담 접수</p></div></li>
-        <li><span class="location__ico">🎧</span><div><b>상담 방식</b><p>전화, 카톡, 비대면, 대면 (예약)</p></div></li>
+      <ul class="flex flex-col gap-[22px]">
+        <li class="flex gap-4"><img src="/images/ic-location.png" alt="" aria-hidden="true" class="w-6 h-6 flex-none mt-1" /><div><b class="text-[18px] font-bold text-[#364153]">주소</b><p class="text-[#4A5565] text-[16px] mt-1">부산광역시 해운대구 센텀북대로 60 14층 1413호</p></div></li>
+        <li class="flex gap-4"><img src="/images/ic-call.png" alt="" aria-hidden="true" class="w-6 h-6 flex-none mt-1" /><div><b class="text-[18px] font-bold text-[#364153]">전화번호</b><p class="text-[#4A5565] text-[16px] mt-1">010-9942-1150</p></div></li>
+        <li class="flex gap-4"><img src="/images/ic-clock.png" alt="" aria-hidden="true" class="w-6 h-6 flex-none mt-1" /><div><b class="text-[18px] font-bold text-[#364153]">운영시간</b><p class="text-[#4A5565] text-[16px] mt-1">24시간 연중무휴 상담 접수</p></div></li>
+        <li class="flex gap-4"><img src="/images/ic-headset.png" alt="" aria-hidden="true" class="w-6 h-6 flex-none mt-1" /><div><b class="text-[18px] font-bold text-[#364153]">상담 방식</b><p class="text-[#4A5565] text-[16px] mt-1">전화, 카톡, 비대면, 대면 (예약)</p></div></li>
       </ul>
     </div>
   </section>
 
   <!-- ============== FOOTER (DARK) ============== -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="#top" class="logo logo--footer">
-          <svg class="logo__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 5 L41 14.5 V33.5 L24 43 L7 33.5 V14.5 Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M7 14.5 L24 24 L41 14.5" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M24 24 V43" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
-          <span class="logo__text"><b>최의곤법률사무소</b><em>CHOI EUI GON Law Office</em></span>
+  <footer class="bg-[#151414] text-[#cfcfcf] pt-14 pb-[170px] max-md:pb-[30px] [font-family:Inter,sans-serif]">
+    <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-[1.8fr_1.1fr] gap-10 max-md:grid-cols-1 max-md:gap-7">
+      <div>
+        <a href="#top" class="inline-block mb-[18px]">
+          <img src="/images/logo-footer.png" alt="최의곤법률사무소" class="h-[44px] w-auto" />
         </a>
-        <p class="footer__desc">
+        <p class="text-[15px] leading-[1.8] text-white/80 font-semibold">
           결과로 말하는 최의곤 법률사무소.<br />
           개인회생 가능성을 데이터로 검토합니다.<br />
           부산에서 시작해 전국 접수까지 가능한 도산 전문 법률사무소입니다.
         </p>
       </div>
-      <div class="footer__cols">
-        <div class="footer__col">
-          <h4>SERVICE</h4>
-          <ul><li><a href="#about">개인회생</a></li><li><a href="#about">개인파산</a></li><li><a href="#review">재회생</a></li><li><a href="#nationwide">전국 접수</a></li><li><a href="#numbers">감면율 데이터</a></li></ul>
+      <div class="grid grid-cols-2 gap-10">
+        <div>
+          <h4 class="text-[15px] tracking-[0.08em] text-white mb-4">SERVICE</h4>
+          <ul class="flex flex-col gap-2.5">
+            <li class="footer-li relative pl-3"><a href="#about" class="text-[15px] text-white/50 hover:text-white/80">개인회생</a></li>
+            <li class="footer-li relative pl-3"><a href="#about" class="text-[15px] text-white/50 hover:text-white/80">개인파산</a></li>
+            <li class="footer-li relative pl-3"><a href="#review" class="text-[15px] text-white/50 hover:text-white/80">재회생</a></li>
+            <li class="footer-li relative pl-3"><a href="#nationwide" class="text-[15px] text-white/50 hover:text-white/80">전국 접수</a></li>
+            <li class="footer-li relative pl-3"><a href="#numbers" class="text-[15px] text-white/50 hover:text-white/80">감면율 데이터</a></li>
+          </ul>
         </div>
-        <div class="footer__col">
-          <h4>RESOURCES</h4>
-          <ul><li><a href="#cases">성공사례</a></li><li><a href="#reviews">고객 후기</a></li><li><a href="#faq">FAQ</a></li><li><a href="#diagnosis">30초 진단</a></li><li><a href="#location">오시는 길</a></li></ul>
+        <div>
+          <h4 class="text-[15px] tracking-[0.08em] text-white mb-4">RESOURCES</h4>
+          <ul class="flex flex-col gap-2.5">
+            <li class="footer-li relative pl-3"><a href="#cases" class="text-[15px] text-white/50 hover:text-white/80">성공사례</a></li>
+            <li class="footer-li relative pl-3"><a href="#reviews" class="text-[15px] text-white/50 hover:text-white/80">고객 후기</a></li>
+            <li class="footer-li relative pl-3"><a href="#faq" class="text-[15px] text-white/50 hover:text-white/80">FAQ</a></li>
+            <li class="footer-li relative pl-3"><a href="#diagnosis" class="text-[15px] text-white/50 hover:text-white/80">30초 진단</a></li>
+            <li class="footer-li relative pl-3"><a href="#location" class="text-[15px] text-white/50 hover:text-white/80">오시는 길</a></li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="container footer__copy">© 2026 최의곤법률사무소 (CHOI EUI GON Law Office). All rights reserved. · 부산광역시 해운대구 센텀북대로 60 14층 1413호</div>
   </footer>
 
   <!-- 모바일 하단 고정바 -->
-  <div class="mbar">
-    <a href="tel:010-9942-1150"><span>📞</span>전화상담</a>
-    <a href="#"><span>💬</span>카톡상담</a>
-    <a href="#contact" class="mbar--main"><span>⚡</span>30초 비밀진단</a>
+  <div class="hidden max-md:flex fixed bottom-0 left-0 right-0 z-[90] bg-white shadow-[0_-4px_20px_rgba(20,30,60,0.12)]">
+    <a href="tel:010-9942-1150" class="flex-1 flex flex-col items-center gap-[3px] py-2.5 px-1 text-[11px] font-semibold text-[#5a6478]"><span class="text-[17px]">📞</span>전화상담</a>
+    <a href="#" class="flex-1 flex flex-col items-center gap-[3px] py-2.5 px-1 text-[11px] font-semibold text-[#5a6478]"><span class="text-[17px]">💬</span>카톡상담</a>
+    <a href="#contact" class="flex-1 flex flex-col items-center gap-[3px] py-2.5 px-1 text-[11px] font-semibold text-white bg-[#353c78]"><span class="text-[17px]">⚡</span>30초 비밀진단</a>
   </div>
 
-  <script src="./script.js"></script>
 </body>
 </html>

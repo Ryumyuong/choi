@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+/* ============== WEB FONTS (큰 글자 = Gmarket Sans · 로컬) ============== */
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('/fonts/GmarketSansLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('/fonts/GmarketSansMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('/fonts/GmarketSansBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============== THEME ============== */
+@theme {
+  /* 폰트 */
+  --font-head: 'GmarketSans', 'Pretendard Variable', Pretendard, sans-serif;
+  --font-body: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+
+  /* 색상 (sampled palette) */
+  --color-gold: #ba803a;
+  --color-gold-l: #d3af84;
+  --color-gold-br: #dcb673;
+  --color-navy: #353c78;
+  --color-navy-h: #424a90;
+  --color-navy-btn-l: #3f4789;
+  --color-navy-btn-d: #2f3666;
+  --color-navy-deep: #1e2244;
+  --color-purple: #242954;
+  --color-purple-h: #2e3470;
+  --color-bg-dark: #161b25;
+  --color-bg-dark2: #0b1220;
+  --color-card-dark: #29303e;
+  --color-card-dark2: #1a2134;
+  --color-bg-lav: #f1f2f9;
+  --color-on-dark-soft: #9aa6bc;
+  --color-chip-navy: #333a73;
+  --color-card-purple-d: #2e367c;
+  --color-card-purple-m: #585e96;
+  --color-step3-l: #969abd;
+  --color-blue2: #6f7fe0;
+  --color-blue3: #6666f6;
+  --color-blue4: #5b6fd6;
+  --color-blue5: #4857d8;
+  --color-blue6: #4b51c9;
+  --color-text: #1a1f2e;
+  --color-text-soft: #5a6478;
+  --color-text-mute: #8b94a8;
+  --color-border-soft: #e6e9f2;
+  --color-live: #2ec27e;
+  --color-livered: #ff4d4d;
+  --color-warmamber: #ffcf6b;
+  --color-greenok: #7fd6a6;
+  --color-redup: #ff6b6b;
+  --color-redup2: #ff8a6b;
+  --color-teal: #2dd4bf;
+  --color-teal-d: #0f6c7a;
+
+  /* keyframes */
+  --animate-pulse-dot: pulse-dot 1.6s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+/* ============== BASE ============== */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; }
+}
+
+/* ============== UTILITIES (반복 패턴만) ============== */
+/* 골드 그라데이션 텍스트 */
+.grad-gold {
+  background: linear-gradient(180deg, #d9b27c, #b9803a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.grad-gold-bright {
+  background: linear-gradient(180deg, #dcb673, #ba803a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 라이브 도트 펄스 */
+.dot-live {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 9999px;
+  background: #2ec27e;
+  box-shadow: 0 0 0 3px rgba(46, 194, 126, 0.2);
+  animation: pulse-dot 1.6s infinite;
+}
+.dot-red {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 9999px;
+  background: #ff4d4d;
+  animation: pulse-dot 1.6s infinite;
+}
+
+/* details summary 마커 제거 */
+.fitem summary { list-style: none; }
+.fitem summary::-webkit-details-marker { display: none; }
+.fitem[open] .fitem__ico { transform: rotate(45deg); }
+
+/* 도넛 차트 (conic-gradient를 위한 마스크) */
+.donut-mask {
+  -webkit-mask: radial-gradient(transparent 46%, #000 47%);
+  mask: radial-gradient(transparent 46%, #000 47%);
+}
+
+/* 캐러셀 트랙 (스크롤바 숨김) */
+.numcards__track {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.numcards__track::-webkit-scrollbar { display: none; }
+.numcards__track.is-dragging { cursor: grabbing !important; scroll-behavior: auto !important; }
+
+/* livefeed 스크롤바 */
+.livefeed-scroll::-webkit-scrollbar { width: 6px; }
+.livefeed-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.04); border-radius: 8px; }
+.livefeed-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 8px; }
+
+/* baf 점선 분리선 (line + span 조합) */
+.baf-line::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  border-top: 2px dashed #c8cdd9;
+}
+
+/* 7스텝 타임라인 — 배지 사이마다 끊기는 가로선 */
+.tline-bar > li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: calc(50% + 38px);
+  width: calc(100% - 76px);
+  height: 1px;
+  background: #B9803A;
+}
+@media (max-width: 768px) {
+  .tline-bar > li::after { display: none; }
+}
+
+/* phone__badge 우측 상단 작은 녹점 */
+.phone-badge::after {
+  content: '';
+  position: absolute;
+  top: 16px; right: 12px;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #2ec27e;
+}
+
+/* footer 리스트 li::before · */
+.footer-li::before {
+  content: '·';
+  position: absolute;
+  left: 2px;
+  color: #777;
+}
+
+/* header scrolled 상태 (JS에서 .scrolled 토글) */
+.header.scrolled {
+  background: #0B1220 !important;
+  color: #fff !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+.header.scrolled .logo,
+.header.scrolled .nav a { color: #fff; }
+
+/* 모바일 nav 오픈 */
+@media (max-width: 1024px) {
+  .nav { display: none !important; }
+  .nav.is-open {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 76px; left: 0; right: 0;
+    background: #fff;
+    color: var(--color-text);
+    box-shadow: 0 12px 30px rgba(20, 30, 60, 0.12);
+    padding: 8px 0;
+    gap: 0;
+  }
+  .nav.is-open a {
+    padding: 14px 24px;
+    color: var(--color-text);
+    border-top: 1px solid #eef0f5;
+    opacity: 1;
+  }
+}
+
+/* 스크롤 진입 시 아래→위로 등장 (같은 줄은 JS가 왼쪽→오른쪽 지연) */
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 1s cubic-bezier(0.22, 0.7, 0.2, 1),
+              transform 1s cubic-bezier(0.22, 0.7, 0.2, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
