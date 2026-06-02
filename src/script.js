@@ -284,6 +284,27 @@ document.addEventListener('DOMContentLoaded', () => {
   /* 8) 상담신청 폼 → 구글 시트 연동 (Apps Script 웹앱으로 전송) */
   // ↓↓↓ 배포한 Apps Script 웹앱의 /exec URL 을 여기에 붙여넣으세요 ↓↓↓
   const SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxgpn-EMouXWQ1A84dZi5_RNnbIYYAksyPETR5qdMJf-64K-xkKCSsxhMfVGk3RFuTHvQ/exec';
+  // 유입경로(ref) 추적: ?ref= → ?utm_source= → 유입 사이트 → 직접유입
+  // 최초 진입 시점의 값을 sessionStorage에 보관(폼 제출까지 유지)
+  const getRef = () => {
+    try {
+      const KEY = 'lead_ref';
+      const saved = sessionStorage.getItem(KEY);
+      if (saved) return saved;
+      const q = new URLSearchParams(window.location.search);
+      let ref = (q.get('ref') || q.get('utm_source') || '').trim();
+      if (!ref) {
+        const r = document.referrer || '';
+        if (r) { try { ref = new URL(r).hostname; } catch (_) { ref = r; } }
+      }
+      if (!ref) ref = '직접유입';
+      sessionStorage.setItem(KEY, ref);
+      return ref;
+    } catch (_) {
+      return '직접유입';
+    }
+  };
+
   // 전화번호를 010-0000-0000 형태로 정규화 (하이픈/공백 입력도 허용)
   const formatPhone = (raw) => {
     const d = (raw || '').replace(/\D/g, '');
@@ -310,6 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
         이름: (form.querySelector('input[type="text"]')?.value || '').trim(),
         연락처: formatPhone(form.querySelector('input[type="tel"]')?.value),
         개인정보동의: form.querySelector('input[type="checkbox"]')?.checked ? 'Y' : 'N',
+        유입경로: getRef(),
       };
       // 간단 검증
       if (!payload.이름 || !payload.연락처) { alert('이름과 연락처를 입력해 주세요.'); return; }
