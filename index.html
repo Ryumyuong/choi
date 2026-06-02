@@ -530,9 +530,16 @@
         지금 필요한 건 모든 서류를<br class="hidden max-[420px]:inline" /> 준비하는 것이 아니라,<br />
         내 상황이 개인회생으로 정리될 수 있는지<br class="hidden max-[420px]:inline" /> 먼저 확인하는 것입니다.
       </p>
-      <div class="flex flex-col gap-3 max-w-[500px] mx-auto mt-7 mb-[34px]">
-        <span class="relative flex items-center justify-center bg-[#10192B] border border-white/15 text-white px-10 py-[18px] rounded-xl font-semibold text-[18px]"><img src="/images/ic-check.png" alt="" aria-hidden="true" class="absolute left-5 w-7 h-7" /> 비대면 문의 ∙ 상담 가능</span>
-        <span class="relative flex items-center justify-center bg-[#10192B] border border-white/10 text-white/10 px-10 py-[18px] rounded-xl font-semibold text-[18px]">전국 접수 가능</span>
+      <div id="strengthRoller" class="flex flex-col gap-3 max-w-[500px] mx-auto mt-7 mb-[34px]" aria-label="강점 안내">
+        <!-- 활성(밝음): 현재 강점 -->
+        <div class="relative flex items-center justify-center bg-[#10192B] border border-white/15 rounded-xl h-[58px] overflow-hidden">
+          <img src="/images/ic-check.png" alt="" aria-hidden="true" class="absolute left-5 w-7 h-7 z-10" />
+          <ul class="sr-strip sr-strip-front w-full text-white font-semibold text-[18px] will-change-transform"></ul>
+        </div>
+        <!-- 미리보기(흐림): 다음 강점 -->
+        <div class="relative flex items-center justify-center bg-[#10192B] border border-white/10 rounded-xl h-[58px] overflow-hidden">
+          <ul class="sr-strip sr-strip-back w-full text-white/15 font-semibold text-[18px] will-change-transform"></ul>
+        </div>
       </div>
 
       <div class="bg-[#09152E] border border-white/10 rounded-2xl text-left overflow-hidden max-w-[1200px] mx-auto">
