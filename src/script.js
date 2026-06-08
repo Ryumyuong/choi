@@ -315,7 +315,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let i = 0;
       let timer = null;
-      let expanded = false;
+      let hovering = false;
+      let openEl = null;          // 현재 펼쳐진 질문(없으면 null)
       const render = (animate) => {
         faqTrack.classList.toggle('faq-noanim', !animate);
         faqTrack.style.transform = `translateY(${-i * H}px)`;
@@ -327,32 +328,43 @@ document.addEventListener('DOMContentLoaded', () => {
         render(true);
         if (i >= N) setTimeout(() => { i = 0; render(false); }, RESET_MS);
       };
-      const start = () => { if (!expanded && !timer) timer = setInterval(tick, STEP_MS); };
+      const start = () => { if (!openEl && !hovering && !timer) timer = setInterval(tick, STEP_MS); };
       const stop = () => { clearInterval(timer); timer = null; };
       start();
 
       // 마우스를 올리면 잠시 멈춤(읽고 클릭할 수 있도록)
-      faqViewport.addEventListener('mouseenter', stop);
-      faqViewport.addEventListener('mouseleave', start);
+      faqViewport.addEventListener('mouseenter', () => { hovering = true; stop(); });
+      faqViewport.addEventListener('mouseleave', () => { hovering = false; start(); });
 
-      // 질문을 펼치면 롤링을 멈추고 전체 FAQ를 일반 아코디언으로 전환
-      const expand = () => {
-        if (expanded) return;
-        expanded = true;
-        stop();
-        clones.forEach((c) => c.remove());
-        faqTrack.classList.add('faq-noanim');
-        faqTrack.style.transform = 'none';
-        faqViewport.classList.add('faq-open');
+      // 펼친 질문을 맨 위로 올리고, 그 질문+답과 다음 2개만 보이도록 뷰포트 높이 조정
+      const showOpen = (el) => {
+        const idx = originals.indexOf(el);
+        i = idx;
+        render(true);
+        const endIdx = Math.min(idx + VISIBLE - 1, N - 1);
+        const h = originals[endIdx].offsetTop + originals[endIdx].offsetHeight - originals[idx].offsetTop;
+        faqViewport.style.setProperty('--faq-h', h + 'px');
       };
+
+      // 질문 클릭 시: 롤링 정지 + 한 번에 하나만 펼침(3개 창 유지)
       originals.forEach((el) => {
-        el.addEventListener('toggle', () => { if (el.open) expand(); });
+        el.addEventListener('toggle', () => {
+          if (el.open) {
+            if (openEl && openEl !== el) openEl.open = false;  // 다른 항목은 닫기
+            openEl = el;
+            stop();
+            requestAnimationFrame(() => showOpen(el));
+          } else if (openEl === el) {
+            openEl = null;
+            requestAnimationFrame(() => { measure(); render(false); start(); });
+          }
+        });
       });
 
       // 반응형: 폭이 바뀌면 칸 높이 재측정(펼치기 전 상태에서만)
       let rAF = null;
       window.addEventListener('resize', () => {
-        if (expanded) return;
+        if (openEl) return;
         cancelAnimationFrame(rAF);
         rAF = requestAnimationFrame(() => { measure(); render(false); });
       }, { passive: true });
