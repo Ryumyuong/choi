@@ -281,59 +281,78 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* 8.6) LIVE 실시간 상담사례 — 강점 롤러와 동일한 세로 롤링 (3줄 노출, 한 칸씩 위로 순환) */
-  const liveFeed = document.getElementById('liveFeed');
-  const liveTrack = document.getElementById('liveTrack');
-  if (liveFeed && liveTrack) {
-    const VISIBLE = 3;          // 위쪽에 노출할 줄 수
+  /* 8.6) FAQ — 강점 롤러와 동일한 세로 롤링 (3개 노출, 한 칸씩 위로 순환 / hover 정지 / 클릭하면 전체 펼침) */
+  const faqViewport = document.getElementById('faqViewport');
+  const faqTrack = document.getElementById('faqTrack');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (faqViewport && faqTrack && !reduceMotion) {
+    const VISIBLE = 3;          // 위쪽에 노출할 질문 수
     const STEP_MS = 2600;       // 한 칸 올라가는 간격(강점 롤러와 동일)
     const RESET_MS = 650;       // 마지막에서 처음으로 되돌리는 시간(강점 롤러와 동일)
-    const originals = Array.from(liveTrack.children);
+    const originals = Array.from(faqTrack.querySelectorAll('.fitem'));
     const N = originals.length;
 
     if (N > VISIBLE) {
-      // 끊김 없는 순환을 위해 목록을 한 벌 더 복제
-      originals.forEach((li) => {
-        const c = li.cloneNode(true);
+      // 끊김 없는 순환을 위해 목록을 한 벌 더 복제(복제본은 클릭 불가)
+      const clones = originals.map((el) => {
+        const c = el.cloneNode(true);
         c.setAttribute('aria-hidden', 'true');
-        liveTrack.appendChild(c);
+        c.removeAttribute('open');
+        c.style.pointerEvents = 'none';
+        faqTrack.appendChild(c);
+        return c;
       });
 
       let H = 0;
       const measure = () => {
-        // 일반 행(2번째) 높이를 기준으로 한 칸 높이를 잡음
-        const row = originals[1] || originals[0];
-        H = row.getBoundingClientRect().height;
-        liveFeed.style.setProperty('--lf-h', H * VISIBLE + 'px');
+        // 항목 간격(gap) 포함 한 칸 높이 = 다음 항목 top - 현재 항목 top
+        H = originals[1].offsetTop - originals[0].offsetTop;
+        // 정확히 3개가 보이도록 뷰포트 높이 = 3번째 항목 하단까지
+        const h = originals[VISIBLE - 1].offsetTop + originals[VISIBLE - 1].offsetHeight - originals[0].offsetTop;
+        faqViewport.style.setProperty('--faq-h', h + 'px');
       };
       measure();
 
       let i = 0;
+      let timer = null;
+      let expanded = false;
       const render = (animate) => {
-        liveTrack.classList.toggle('lf-noanim', !animate);
-        liveTrack.style.transform = `translateY(${-i * H}px)`;
+        faqTrack.classList.toggle('faq-noanim', !animate);
+        faqTrack.style.transform = `translateY(${-i * H}px)`;
       };
       render(false);
 
-      let timer = null;
       const tick = () => {
         i += 1;
         render(true);
-        if (i >= N) {
-          setTimeout(() => { i = 0; render(false); }, RESET_MS);
-        }
+        if (i >= N) setTimeout(() => { i = 0; render(false); }, RESET_MS);
       };
-      const start = () => { if (!timer) timer = setInterval(tick, STEP_MS); };
+      const start = () => { if (!expanded && !timer) timer = setInterval(tick, STEP_MS); };
       const stop = () => { clearInterval(timer); timer = null; };
       start();
 
-      // 마우스를 올리면 잠시 멈춤
-      liveFeed.addEventListener('mouseenter', stop);
-      liveFeed.addEventListener('mouseleave', start);
+      // 마우스를 올리면 잠시 멈춤(읽고 클릭할 수 있도록)
+      faqViewport.addEventListener('mouseenter', stop);
+      faqViewport.addEventListener('mouseleave', start);
 
-      // 반응형: 폭이 바뀌면 칸 높이 재측정
+      // 질문을 펼치면 롤링을 멈추고 전체 FAQ를 일반 아코디언으로 전환
+      const expand = () => {
+        if (expanded) return;
+        expanded = true;
+        stop();
+        clones.forEach((c) => c.remove());
+        faqTrack.classList.add('faq-noanim');
+        faqTrack.style.transform = 'none';
+        faqViewport.classList.add('faq-open');
+      };
+      originals.forEach((el) => {
+        el.addEventListener('toggle', () => { if (el.open) expand(); });
+      });
+
+      // 반응형: 폭이 바뀌면 칸 높이 재측정(펼치기 전 상태에서만)
       let rAF = null;
       window.addEventListener('resize', () => {
+        if (expanded) return;
         cancelAnimationFrame(rAF);
         rAF = requestAnimationFrame(() => { measure(); render(false); });
       }, { passive: true });
