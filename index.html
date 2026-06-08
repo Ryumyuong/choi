@@ -104,6 +104,49 @@
     </div>
   </section>
 
+  <!-- ============== 빠른 문의 폼 (LIGHT) ============== -->
+  <section class="bg-[#f1f2f9] py-[90px] max-lg:py-[64px] scroll-mt-[120px]" id="quick-inquiry">
+    <div class="max-w-[760px] mx-auto px-6">
+      <div class="bg-white border border-[#e6e9f2] rounded-2xl shadow-[0_12px_40px_rgba(20,30,60,0.08)] overflow-hidden">
+        <div class="bg-gradient-to-r from-[#242954] to-[#1e2244] px-7 py-6 max-sm:px-5">
+          <b class="block text-white text-[clamp(20px,3.2vw,26px)] [font-family:var(--font-head)] font-bold">무서류 간편 상담 신청</b>
+          <span class="block text-[#aeb8cc] text-[14px] max-sm:text-[12.5px] mt-1.5">이름·연락처만 남기시면 빠르게 연락드립니다 · 상담 비밀보장</span>
+        </div>
+        <form class="lead-form px-7 py-7 max-sm:px-5 grid grid-cols-2 gap-x-5 gap-y-4 items-end max-sm:grid-cols-1" onsubmit="return false;">
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[13px] font-semibold text-[#5a6478]">이름</label>
+            <input type="text" placeholder="홍길동" class="h-[46px] px-3.5 rounded-[8px] border border-[#dfe3ee] bg-white text-[#1a2230] text-[15px] focus:border-[#5b6fd6] outline-none" />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[13px] font-semibold text-[#5a6478]">연락처</label>
+            <input type="tel" placeholder="010-0000-0000" class="h-[46px] px-3.5 rounded-[8px] border border-[#dfe3ee] bg-white text-[#1a2230] text-[15px] focus:border-[#5b6fd6] outline-none" />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[13px] font-semibold text-[#5a6478]">상담 분야</label>
+            <select class="h-[46px] px-3 rounded-[8px] border border-[#dfe3ee] bg-white text-[#1a2230] text-[15px] focus:border-[#5b6fd6] outline-none">
+              <option value="개인회생">개인회생</option>
+              <option value="재회생">재회생</option>
+              <option value="주택경매 없이">주택경매 없이</option>
+              <option value="배우자 모르게">배우자 모르게</option>
+              <option value="기타">기타</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[13px] font-semibold text-[#5a6478]">채무 금액</label>
+            <select class="h-[46px] px-3 rounded-[8px] border border-[#dfe3ee] bg-white text-[#1a2230] text-[15px] focus:border-[#5b6fd6] outline-none">
+              <option value="3,000만원 이하">3,000만원 이하</option>
+              <option value="3,000~6,000만원">3,000~6,000만원</option>
+              <option value="6,000만원~1억">6,000만원~1억</option>
+              <option value="1억 이상">1억 이상</option>
+            </select>
+          </div>
+          <label class="flex items-center gap-2 text-[13px] text-[#5a6478] col-span-2 max-sm:col-span-1 mt-1"><input type="checkbox" /> 개인정보 수집 및 활용 동의</label>
+          <button class="btn-shine col-span-2 max-sm:col-span-1 w-full bg-[#242954] hover:bg-[#2e3470] text-white py-4 rounded-[10px] font-bold text-[19px] [font-family:var(--font-head)] flex flex-col items-center justify-center leading-[1.3] transition-colors whitespace-nowrap">상담 신청<small class="text-[12px] font-normal text-[#aeb8cc] mt-1">상담 비밀보장 · 무서류 가능</small></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- ============== 데이터 증명 (DARK) ============== -->
   <section class="bg-[#161b25] text-[#e9edf5] py-[150px] max-lg:py-[100px] scroll-mt-[120px]" id="numbers">
     <div class="max-w-[1200px] mx-auto px-6 text-center">
