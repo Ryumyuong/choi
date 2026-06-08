@@ -18,6 +18,18 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('is-open')));
   }
 
+  /* 2.5) #contact 링크 클릭 시 문의 폼이 화면 중앙에 오도록 스크롤 */
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    document.querySelectorAll('a[href="#contact"]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        nav?.classList.remove('is-open');
+        contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    });
+  }
+
   /* 3) 스크롤 진입 시 차트/카운터 애니메이션 (1회) */
   const animated = new WeakSet();
 
