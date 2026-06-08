@@ -281,6 +281,65 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /* 8.6) LIVE 실시간 상담사례 — 강점 롤러와 동일한 세로 롤링 (3줄 노출, 한 칸씩 위로 순환) */
+  const liveFeed = document.getElementById('liveFeed');
+  const liveTrack = document.getElementById('liveTrack');
+  if (liveFeed && liveTrack) {
+    const VISIBLE = 3;          // 위쪽에 노출할 줄 수
+    const STEP_MS = 2600;       // 한 칸 올라가는 간격(강점 롤러와 동일)
+    const RESET_MS = 650;       // 마지막에서 처음으로 되돌리는 시간(강점 롤러와 동일)
+    const originals = Array.from(liveTrack.children);
+    const N = originals.length;
+
+    if (N > VISIBLE) {
+      // 끊김 없는 순환을 위해 목록을 한 벌 더 복제
+      originals.forEach((li) => {
+        const c = li.cloneNode(true);
+        c.setAttribute('aria-hidden', 'true');
+        liveTrack.appendChild(c);
+      });
+
+      let H = 0;
+      const measure = () => {
+        // 일반 행(2번째) 높이를 기준으로 한 칸 높이를 잡음
+        const row = originals[1] || originals[0];
+        H = row.getBoundingClientRect().height;
+        liveFeed.style.setProperty('--lf-h', H * VISIBLE + 'px');
+      };
+      measure();
+
+      let i = 0;
+      const render = (animate) => {
+        liveTrack.classList.toggle('lf-noanim', !animate);
+        liveTrack.style.transform = `translateY(${-i * H}px)`;
+      };
+      render(false);
+
+      let timer = null;
+      const tick = () => {
+        i += 1;
+        render(true);
+        if (i >= N) {
+          setTimeout(() => { i = 0; render(false); }, RESET_MS);
+        }
+      };
+      const start = () => { if (!timer) timer = setInterval(tick, STEP_MS); };
+      const stop = () => { clearInterval(timer); timer = null; };
+      start();
+
+      // 마우스를 올리면 잠시 멈춤
+      liveFeed.addEventListener('mouseenter', stop);
+      liveFeed.addEventListener('mouseleave', start);
+
+      // 반응형: 폭이 바뀌면 칸 높이 재측정
+      let rAF = null;
+      window.addEventListener('resize', () => {
+        cancelAnimationFrame(rAF);
+        rAF = requestAnimationFrame(() => { measure(); render(false); });
+      }, { passive: true });
+    }
+  }
+
   /* 8) 상담신청 폼 → 구글 시트 연동 (Apps Script 웹앱으로 전송) */
   // ↓↓↓ 배포한 Apps Script 웹앱의 /exec URL 을 여기에 붙여넣으세요 ↓↓↓
   const SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxgpn-EMouXWQ1A84dZi5_RNnbIYYAksyPETR5qdMJf-64K-xkKCSsxhMfVGk3RFuTHvQ/exec';

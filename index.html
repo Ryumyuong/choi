@@ -147,7 +147,8 @@
           <span class="font-bold text-white text-[15px] inline-flex items-center gap-2"><i class="dot-live"></i> LIVE 실시간 상담사례 <em class="not-italic text-[10px] font-semibold text-[#9fb0ff] bg-[#5b6fd6]/20 px-2 py-[3px] rounded-[20px]">실시간 업데이트</em></span>
           <span class="text-[12px] text-[#9aa6bc]">최근 상담 사례가 실시간으로 업데이트 됩니다.</span>
         </div>
-        <ul class="livefeed-scroll flex flex-col max-h-[210px] overflow-y-auto">
+        <div class="livefeed-viewport relative overflow-hidden" id="liveFeed">
+        <ul class="livefeed-track flex flex-col will-change-transform" id="liveTrack">
           <li class="is-active grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] rounded-[10px] text-[14px] text-[#d6ddea] bg-white/5 ring-1 ring-inset ring-[#5b6fd6]/55 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc] flex items-center gap-1.5">1분 전 <b class="text-[9px] bg-[#5b6fd6] text-white px-1.5 py-0.5 rounded-[10px] font-bold">NEW</b></span><span>서울 · 30대 여성</span><span>자영업자</span><span>주택경매없이</span><span class="text-right font-bold text-[#ffcf6b] max-md:text-left">접수중</span></li>
           <li class="grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] text-[14px] text-[#d6ddea] border-t border-white/5 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc] flex items-center gap-1.5">20분 전 <b class="text-[9px] bg-[#5b6fd6] text-white px-1.5 py-0.5 rounded-[10px] font-bold">NEW</b></span><span>서울 · 50대 여성</span><span>무직</span><span>배우자 모르게</span><span class="text-right font-bold text-[#7fd6a6] max-md:text-left">접수완료</span></li>
           <li class="grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] text-[14px] text-[#d6ddea] border-t border-white/5 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc]">3시간 전</span><span>서울 · 30대 남성</span><span>회사원</span><span>최근대출 다수</span><span class="text-right font-bold text-[#7fd6a6] max-md:text-left">접수완료</span></li>
@@ -157,6 +158,7 @@
           <li class="grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] text-[14px] text-[#d6ddea] border-t border-white/5 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc]">7시간 전</span><span>부산 · 50대 남성</span><span>자영업자</span><span>주택경매없이</span><span class="text-right font-bold text-[#7fd6a6] max-md:text-left">접수완료</span></li>
           <li class="grid grid-cols-[110px_160px_95px_150px_1fr] items-center gap-2.5 px-4 py-[15px] text-[14px] text-[#d6ddea] border-t border-white/5 max-md:grid-cols-2 max-md:gap-x-2.5 max-md:gap-y-1"><span class="text-[#9aa6bc]">9시간 전</span><span>대구 · 40대 여성</span><span>회사원</span><span>최근대출 다수</span><span class="text-right font-bold text-[#7fd6a6] max-md:text-left">접수완료</span></li>
         </ul>
+        </div>
         <p class="mt-4 text-[12px] text-[#9aa6bc] text-left pl-9">상담 내용은 철저히 비공개로 보호되며, 개인 정보는 익명으로 처리됩니다.</p>
       </div>
 
