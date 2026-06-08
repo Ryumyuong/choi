@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (faqViewport && faqTrack && !reduceMotion) {
     const VISIBLE = 3;          // 위쪽에 노출할 질문 수
-    const STEP_MS = 2600;       // 한 칸 올라가는 간격(강점 롤러와 동일)
+    const STEP_MS = 4000;       // 한 칸 올라가는 간격
     const RESET_MS = 650;       // 마지막에서 처음으로 되돌리는 시간(강점 롤러와 동일)
     const originals = Array.from(faqTrack.querySelectorAll('.fitem'));
     const N = originals.length;
