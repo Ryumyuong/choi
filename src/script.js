@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return c;
       });
 
-      const PEEK = 40;            // 다음 질문이 살짝 보이는 높이(넘어가는 중 표시)
+      const PEEK = 90;            // 다음 질문이 살짝 보이는 높이(넘어가는 중 표시)
       let H = 0;
       const measure = () => {
         // 항목 간격(gap) 포함 한 칸 높이 = 다음 항목 top - 현재 항목 top
