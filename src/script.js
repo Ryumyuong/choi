@@ -315,13 +315,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return c;
       });
 
+      const PEEK = 40;            // 다음 질문이 살짝 보이는 높이(넘어가는 중 표시)
       let H = 0;
       const measure = () => {
         // 항목 간격(gap) 포함 한 칸 높이 = 다음 항목 top - 현재 항목 top
         H = originals[1].offsetTop - originals[0].offsetTop;
-        // 정확히 3개가 보이도록 뷰포트 높이 = 3번째 항목 하단까지
+        // 3개 + 다음 질문 살짝(PEEK)이 보이도록 뷰포트 높이 설정 → 하단 페이드로 흐릿하게 처리
         const h = originals[VISIBLE - 1].offsetTop + originals[VISIBLE - 1].offsetHeight - originals[0].offsetTop;
-        faqViewport.style.setProperty('--faq-h', h + 'px');
+        faqViewport.style.setProperty('--faq-h', (h + PEEK) + 'px');
       };
       measure();
 
@@ -355,7 +356,7 @@ document.addEventListener('DOMContentLoaded', () => {
         render(true);
         const endIdx = Math.min(idx + VISIBLE - 1, N - 1);
         const h = originals[endIdx].offsetTop + originals[endIdx].offsetHeight - originals[idx].offsetTop;
-        faqViewport.style.setProperty('--faq-h', h + 'px');
+        faqViewport.style.setProperty('--faq-h', (h + PEEK) + 'px');
       };
 
       // 질문 클릭 시: 롤링 정지 + 한 번에 하나만 펼침(3개 창 유지)
