@@ -213,8 +213,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ].join(',');
 
     let items = Array.from(document.querySelectorAll(selector))
-      // 헤더·플로팅 고정바(.fixed) 내부 요소는 제외
-      .filter((el) => !el.closest('.fixed') && !el.closest('header'));
+      // 헤더·플로팅 고정바(.fixed)·개별 시퀀스(data-reveal-skip) 내부 요소는 제외
+      .filter((el) => !el.closest('.fixed') && !el.closest('header') && !el.closest('[data-reveal-skip]'));
     // 가장 바깥 요소만 유지 → 카드는 통째로 등장(내부 텍스트는 따로 움직이지 않음)
     items = items.filter((el) => !items.some((o) => o !== el && o.contains(el)));
 
@@ -241,6 +241,31 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { rootMargin: '0px 0px -12% 0px', threshold: 0.05 });
     items.forEach((el) => io.observe(el));
+
+    /* 7.1) 그룹 단위 순차 등장 — 같은 부모 안의 항목을 아래→위로 하나씩 (Step 카드, 핸드폰 3분할) */
+    [['.step-card', 170], ['.phone-part', 220]].forEach(([sel, step]) => {
+      const groups = new Map();
+      document.querySelectorAll(sel).forEach((el) => {
+        const parent = el.parentElement;
+        if (!groups.has(parent)) groups.set(parent, []);
+        groups.get(parent).push(el);
+      });
+      groups.forEach((groupItems) => {
+        groupItems.forEach((el, idx) => {
+          el.classList.add('reveal');
+          el.style.transitionDelay = `${idx * step}ms`;
+        });
+        const gio = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              groupItems.forEach((el) => el.classList.add('is-visible'));
+              gio.disconnect();
+            }
+          });
+        }, { rootMargin: '0px 0px -15% 0px', threshold: 0.05 });
+        gio.observe(groupItems[0].parentElement);
+      });
+    });
   }
 
   /* 8.5) 강점 롤러 — 흐린 칸에서 하나씩 위로 올라오는 세로 티커 (여러 개 지원) */

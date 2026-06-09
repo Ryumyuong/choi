@@ -468,8 +468,8 @@
       <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(27px,3.6vw,40px)] leading-[1.34] tracking-[-0.02em] mb-6">처음부터 서류를<br />준비하지 않아도 됩니다.</h2>
     </div>
     <div class="max-w-[1200px] mx-auto px-6 grid grid-cols-2 gap-[50px] items-center mt-10 max-lg:grid-cols-1">
-      <div class="flex flex-col gap-5">
-        <div class="relative bg-[#2E367C]/10 rounded-[6px] overflow-hidden pl-12 pr-8 py-9">
+      <div class="flex flex-col gap-5" data-reveal-skip>
+        <div class="step-card relative bg-[#2E367C]/10 rounded-[6px] overflow-hidden pl-12 pr-8 py-9">
           <span class="absolute left-0 inset-y-0 w-[14px] rounded-[6px] bg-[#2E367C]/30"></span>
           <div class="flex items-center gap-3 mb-2.5">
             <b class="text-[#2E367C] text-[24px] font-bold [font-family:var(--font-head)]">Step 1</b>
@@ -478,7 +478,7 @@
           </div>
           <p class="text-[#141414] text-[19px] leading-[1.75]">성함 · 연락처 · 채무금액 · 소득만으로<br />먼저 가능성을 확인합니다.</p>
         </div>
-        <div class="relative bg-[#2E367C]/10 rounded-[6px] overflow-hidden pl-12 pr-8 py-9">
+        <div class="step-card relative bg-[#2E367C]/10 rounded-[6px] overflow-hidden pl-12 pr-8 py-9">
           <span class="absolute left-0 inset-y-0 w-[14px] rounded-[6px] bg-[#2E367C]/60"></span>
           <div class="flex items-center gap-3 mb-2.5">
             <b class="text-[#2E367C] text-[24px] font-bold [font-family:var(--font-head)]">Step 2</b>
@@ -487,7 +487,7 @@
           </div>
           <p class="text-[#141414] text-[19px] leading-[1.75]">부산이 아니어도 전화 · 카톡으로<br />상담을 시작할 수 있습니다.</p>
         </div>
-        <div class="relative bg-[#2E367C]/10 rounded-[6px] overflow-hidden pl-12 pr-8 py-9">
+        <div class="step-card relative bg-[#2E367C]/10 rounded-[6px] overflow-hidden pl-12 pr-8 py-9">
           <span class="absolute left-0 inset-y-0 w-[14px] rounded-[6px] bg-[#2E367C]"></span>
           <div class="flex items-center gap-3 mb-2.5">
             <b class="text-[#2E367C] text-[24px] font-bold [font-family:var(--font-head)]">Step 3</b>
@@ -498,8 +498,10 @@
         </div>
       </div>
       <div class="flex justify-center max-md:overflow-hidden">
-        <a href="#contact" aria-label="무서류 1차 진단 신청하기" class="block max-w-[360px] w-full max-md:max-w-[300px] max-md:translate-x-[12%] cursor-pointer transition-transform hover:scale-[1.02]">
-          <img src="/images/phone-mock.png" alt="무서류 1차 진단 폰 화면 미리보기 — 채무금액 4,000~6,000만원, 세전연봉 3,200만원, 특이사항 주택경매없이·배우자 모르게, 예상변제방향 개인회생 검토우선. 진행률 57% (4/7 단계), 87% (6/7 단계) 배지." class="block w-full h-auto" />
+        <a href="#contact" aria-label="무서류 1차 진단 신청하기" data-reveal-skip class="relative block max-w-[360px] w-full aspect-[665/1016] max-md:max-w-[300px] cursor-pointer">
+          <img src="/images/phone-body.png" alt="무서류 1차 진단 폰 화면 — 채무금액 4,000~6,000만원, 세전연봉 3,200만원, 특이사항 주택경매없이·배우자 모르게, 예상변제방향 개인회생 검토우선" class="phone-part absolute left-[2.7%] top-[3.9%] w-[73.7%] h-auto" />
+          <img src="/images/phone-prog57.png" alt="진행률 57% (4/7 단계)" class="phone-part absolute right-0 top-[0.4%] w-[56.4%] h-auto drop-shadow-[0_14px_30px_rgba(20,30,60,0.16)]" />
+          <img src="/images/phone-prog87.png" alt="진행률 87% (6/7 단계)" class="phone-part absolute right-0 top-[21.5%] w-[56.4%] h-auto drop-shadow-[0_14px_30px_rgba(20,30,60,0.16)]" />
         </a>
       </div>
     </div>
