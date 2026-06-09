@@ -30,6 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* 2.6) 히어로 상담신청 클릭 시 바로 아래 문의 폼으로 이동 + 포커스 */
+  const quickInquiryForm = document.getElementById('quickInquiryForm');
+  if (quickInquiryForm) {
+    document.querySelectorAll('a[href="#quick-inquiry"]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        nav?.classList.remove('is-open');
+        quickInquiryForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const firstInput = quickInquiryForm.querySelector('input[type="text"]');
+        if (firstInput) {
+          setTimeout(() => firstInput.focus({ preventScroll: true }), 600);
+        }
+      });
+    });
+  }
+
   /* 3) 스크롤 진입 시 차트/카운터 애니메이션 (1회) */
   const animated = new WeakSet();
 
