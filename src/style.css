@@ -262,7 +262,7 @@
 /* 순차 등장(Step 카드·핸드폰 3분할) — 더 천천히, 더 크게 이동 */
 .reveal--slow {
   transform: translateY(52px);
-  transition-duration: 1.3s;
+  transition-duration: 1.05s;
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }

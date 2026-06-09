@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* 7.1) 그룹 단위 순차 등장 — 같은 부모 안의 항목을 아래→위로 하나씩 (Step 카드, 핸드폰 3분할) */
     // base: 그룹 시작 지연 — 왼쪽 Step 카드(0) 먼저, 오른쪽 핸드폰(1300ms) 나중에
-    [['.step-card', 420, 0], ['.phone-part', 480, 1300]].forEach(([sel, step, base]) => {
+    [['.step-card', 340, 0], ['.phone-part', 380, 1000]].forEach(([sel, step, base]) => {
       const groups = new Map();
       document.querySelectorAll(sel).forEach((el) => {
         const parent = el.parentElement;
