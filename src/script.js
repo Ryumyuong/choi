@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
     items.forEach((el) => io.observe(el));
 
     /* 7.1) 그룹 단위 순차 등장 — 같은 부모 안의 항목을 아래→위로 하나씩 (Step 카드, 핸드폰 3분할) */
-    [['.step-card', 170], ['.phone-part', 220]].forEach(([sel, step]) => {
+    [['.step-card', 420], ['.phone-part', 480]].forEach(([sel, step]) => {
       const groups = new Map();
       document.querySelectorAll(sel).forEach((el) => {
         const parent = el.parentElement;
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       groups.forEach((groupItems) => {
         groupItems.forEach((el, idx) => {
-          el.classList.add('reveal');
+          el.classList.add('reveal', 'reveal--slow');
           el.style.transitionDelay = `${idx * step}ms`;
         });
         const gio = new IntersectionObserver((entries) => {
