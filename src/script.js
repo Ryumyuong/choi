@@ -243,55 +243,53 @@ document.addEventListener('DOMContentLoaded', () => {
     items.forEach((el) => io.observe(el));
   }
 
-  /* 8.5) 강점 롤러 — 흐린 칸에서 하나씩 위로 올라오는 세로 티커 */
-  const roller = document.getElementById('strengthRoller');
-  if (roller) {
-    const STRENGTHS = [
-      '비대면 문의 ∙ 상담 가능',
-      '전국 접수 가능',
-      '99% 성공률',
-      '완료까지 책임 관리',
-      '배우자 모르게 가능',
-      '면책 이력 있어도 가능',
-      '집경매 위험 없이 가능',
-    ];
+  /* 8.5) 강점 롤러 — 흐린 칸에서 하나씩 위로 올라오는 세로 티커 (여러 개 지원) */
+  const STRENGTHS = [
+    '비대면 문의 ∙ 상담 가능',
+    '전국 접수 가능',
+    '99% 성공률',
+    '완료까지 책임 관리',
+    '배우자 모르게 가능',
+    '면책 이력 있어도 가능',
+    '집경매 위험 없이 가능',
+  ];
+  document.querySelectorAll('.js-roller').forEach((roller) => {
     const front = roller.querySelector('.sr-strip-front');
     const back = roller.querySelector('.sr-strip-back');
     const N = STRENGTHS.length;
     const H = 58; // 칸 높이(px) — .sr-strip > li 와 일치
+    if (!(front && back && N > 1)) return;
 
-    if (front && back && N > 1) {
-      // 끊김 없는 순환을 위해 목록을 두 번 이어 붙임
-      const build = (strip) => {
-        strip.innerHTML = '';
-        STRENGTHS.concat(STRENGTHS).forEach((t) => {
-          const li = document.createElement('li');
-          li.textContent = t;
-          strip.appendChild(li);
-        });
-      };
-      build(front);
-      build(back);
+    // 끊김 없는 순환을 위해 목록을 두 번 이어 붙임
+    const build = (strip) => {
+      strip.innerHTML = '';
+      STRENGTHS.concat(STRENGTHS).forEach((t) => {
+        const li = document.createElement('li');
+        li.textContent = t;
+        strip.appendChild(li);
+      });
+    };
+    build(front);
+    build(back);
 
-      let i = 0;
-      const render = (animate) => {
-        front.classList.toggle('sr-noanim', !animate);
-        back.classList.toggle('sr-noanim', !animate);
-        front.style.transform = `translateY(${-i * H}px)`;      // 밝은 칸: 현재 강점
-        back.style.transform = `translateY(${-(i + 1) * H}px)`;  // 흐린 칸: 다음 강점(미리보기)
-      };
-      render(false);
+    let i = 0;
+    const render = (animate) => {
+      front.classList.toggle('sr-noanim', !animate);
+      back.classList.toggle('sr-noanim', !animate);
+      front.style.transform = `translateY(${-i * H}px)`;      // 밝은 칸: 현재 강점
+      back.style.transform = `translateY(${-(i + 1) * H}px)`;  // 흐린 칸: 다음 강점(미리보기)
+    };
+    render(false);
 
-      setInterval(() => {
-        i += 1;
-        render(true);
-        if (i >= N) {
-          // 클론 위치까지 올라간 뒤, 애니메이션 없이 처음으로 되돌려 무한 순환
-          setTimeout(() => { i = 0; render(false); }, 650);
-        }
-      }, 2600);
-    }
-  }
+    setInterval(() => {
+      i += 1;
+      render(true);
+      if (i >= N) {
+        // 클론 위치까지 올라간 뒤, 애니메이션 없이 처음으로 되돌려 무한 순환
+        setTimeout(() => { i = 0; render(false); }, 650);
+      }
+    }, 2600);
+  });
 
   /* 8.6) FAQ — 강점 롤러와 동일한 세로 롤링 (3개 노출, 한 칸씩 위로 순환 / hover 정지 / 클릭하면 전체 펼침) */
   const faqViewport = document.getElementById('faqViewport');

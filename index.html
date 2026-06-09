@@ -104,26 +104,44 @@
     </div>
   </section>
 
-  <!-- ============== 빠른 문의 폼 (LIGHT) ============== -->
-  <section class="bg-[#f1f2f9] py-[90px] max-lg:py-[64px] scroll-mt-[120px]" id="quick-inquiry">
-    <div class="max-w-[760px] mx-auto px-6">
-      <div class="bg-white border border-[#e6e9f2] rounded-2xl shadow-[0_12px_40px_rgba(20,30,60,0.08)] overflow-hidden">
-        <div class="bg-gradient-to-r from-[#242954] to-[#1e2244] px-7 py-6 max-sm:px-5">
-          <b class="block text-white text-[clamp(20px,3.2vw,26px)] [font-family:var(--font-head)] font-bold">무서류 간편 상담 신청</b>
-          <span class="block text-[#aeb8cc] text-[14px] max-sm:text-[12.5px] mt-1.5">이름·연락처만 남기시면 빠르게 연락드립니다 · 상담 비밀보장</span>
+  <!-- ============== 빠른 문의 CTA (DARK) — #contact 복제 ============== -->
+  <section class="bg-[#0B1220] text-[#e9edf5] py-[150px] max-lg:py-[100px] scroll-mt-[120px]" id="quick-inquiry">
+    <div class="max-w-[1440px] mx-auto px-6 text-center">
+      <h2 class="[font-family:var(--font-head)] font-bold text-[clamp(36px,4.8vw,56px)] leading-[1.34] tracking-[-0.02em] mb-6 text-white">빚 문제,<br /><span class="grad-gold">전국 어디서든</span> 먼저 확인하세요.</h2>
+      <p class="text-[clamp(17px,2.1vw,21px)] leading-[1.85] text-white">
+        지금 필요한 건 모든 서류를<br class="hidden max-[420px]:inline" /> 준비하는 것이 아니라,<br />
+        내 상황이 개인회생으로 정리될 수 있는지<br class="hidden max-[420px]:inline" /> 먼저 확인하는 것입니다.
+      </p>
+      <div class="js-roller flex flex-col gap-3 max-w-[500px] mx-auto mt-7 mb-[34px]" aria-label="강점 안내">
+        <!-- 활성(밝음): 현재 강점 -->
+        <div class="relative flex items-center justify-center bg-[#10192B] border border-white/15 rounded-xl h-[58px] overflow-hidden">
+          <img src="/images/ic-check.png" alt="" aria-hidden="true" class="absolute left-5 w-7 h-7 z-10" />
+          <ul class="sr-strip sr-strip-front w-full text-white font-semibold text-[18px] will-change-transform"></ul>
         </div>
-        <form class="lead-form px-7 py-7 max-sm:px-5 grid grid-cols-2 gap-x-5 gap-y-4 items-end max-sm:grid-cols-1" onsubmit="return false;">
-          <div class="flex flex-col gap-1.5">
-            <label class="text-[13px] font-semibold text-[#5a6478]">이름</label>
-            <input type="text" placeholder="홍길동" class="h-[46px] px-3.5 rounded-[8px] border border-[#dfe3ee] bg-white text-[#1a2230] text-[15px] focus:border-[#5b6fd6] outline-none" />
-          </div>
-          <div class="flex flex-col gap-1.5">
-            <label class="text-[13px] font-semibold text-[#5a6478]">연락처</label>
-            <input type="tel" placeholder="010-0000-0000" class="h-[46px] px-3.5 rounded-[8px] border border-[#dfe3ee] bg-white text-[#1a2230] text-[15px] focus:border-[#5b6fd6] outline-none" />
-          </div>
-          <label class="flex items-center gap-2 text-[13px] text-[#5a6478] col-span-2 max-sm:col-span-1 mt-1"><input type="checkbox" /> 개인정보 수집 및 활용 동의</label>
-          <button class="btn-shine col-span-2 max-sm:col-span-1 w-full bg-[#242954] hover:bg-[#2e3470] text-white py-4 rounded-[10px] font-bold text-[19px] [font-family:var(--font-head)] flex flex-col items-center justify-center leading-[1.3] transition-colors whitespace-nowrap">상담 신청<small class="text-[12px] font-normal text-[#aeb8cc] mt-1">상담 비밀보장 · 무서류 가능</small></button>
+        <!-- 미리보기(흐림): 다음 강점 -->
+        <div class="relative flex items-center justify-center bg-[#10192B] border border-white/10 rounded-xl h-[58px] overflow-hidden">
+          <ul class="sr-strip sr-strip-back w-full text-white/15 font-semibold text-[18px] will-change-transform"></ul>
+        </div>
+      </div>
+
+      <div class="bg-[#09152E] border border-white/10 rounded-2xl text-left overflow-hidden max-w-[1200px] mx-auto">
+        <div class="flex items-center gap-3 max-[420px]:gap-2 px-[28px] max-[420px]:px-4 py-[22px]">
+          <b class="text-[22px] max-[420px]:text-[16px] text-white [font-family:var(--font-head)] font-bold whitespace-nowrap">비밀상담신청서</b>
+          <span class="text-[14px] max-[420px]:text-[11px] text-white inline-flex items-center gap-[7px] whitespace-nowrap"><i class="dot-live"></i> 현재 접수중 <b class="text-[#6666f6] font-bold">37건</b></span>
+        </div>
+        <form onsubmit="return false;" class="lead-form bg-[#18243C] grid grid-cols-2 gap-x-6 gap-y-4 items-center px-[28px] py-[28px] max-sm:grid-cols-1">
+          <div class="flex items-center gap-2"><label class="text-[14px] text-white/60 font-semibold whitespace-nowrap w-[120px] max-sm:w-[80px]">이름</label><input type="text" placeholder="홍길동" class="h-[44px] flex-1 min-w-0 px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[15px]" /></div>
+          <div class="flex items-center gap-2"><label class="text-[14px] text-white/60 font-semibold whitespace-nowrap w-[88px] max-sm:w-[80px]">연락처</label><input type="tel" placeholder="010-0000-0000" class="h-[44px] flex-1 min-w-0 px-3 rounded-[7px] border border-white/15 bg-white/95 text-[#1a2230] text-[15px]" /></div>
+          <label class="flex items-center gap-[7px] text-[14px] text-white/60 col-span-2 max-sm:col-span-1"><input type="checkbox" /> 개인정보 수집 및 활용 동의</label>
+          <button class="btn-shine applyform__submit col-span-2 max-sm:col-span-1 max-sm:order-2 w-full mt-2 bg-[#111430] text-white px-6 py-4 rounded-[8px] font-bold text-[22px] [font-family:var(--font-head)] flex flex-col items-center justify-center leading-[1.3] hover:brightness-110 transition-all whitespace-nowrap"><span class="whitespace-nowrap">상담 신청</span><small class="text-[13px] font-normal text-white/60 mt-2 whitespace-nowrap">상담 비밀보장 · 무서류 가능</small></button>
         </form>
+      </div>
+
+      <div class="mt-5 max-w-[1200px] mx-auto">
+        <a href="tel:0507-1480-2545" class="flex items-center justify-center gap-5 bg-white text-[#1a1f2e] rounded-xl px-8 py-9 text-[20px]">
+          <img src="/images/ic-phone.png" alt="" aria-hidden="true" class="w-[clamp(15px,2.4vw,28px)] h-[clamp(15px,2.4vw,28px)]" />
+          <span class="text-[#18243C]/80 text-[clamp(11px,1.9vw,26px)] font-semibold whitespace-nowrap">대표전화 · 24시간</span><b class="text-[clamp(15px,3.2vw,42px)] [font-family:var(--font-head)] font-bold whitespace-nowrap">0507-1480-2545</b>
+        </a>
       </div>
     </div>
   </section>
@@ -563,7 +581,7 @@
         지금 필요한 건 모든 서류를<br class="hidden max-[420px]:inline" /> 준비하는 것이 아니라,<br />
         내 상황이 개인회생으로 정리될 수 있는지<br class="hidden max-[420px]:inline" /> 먼저 확인하는 것입니다.
       </p>
-      <div id="strengthRoller" class="flex flex-col gap-3 max-w-[500px] mx-auto mt-7 mb-[34px]" aria-label="강점 안내">
+      <div id="strengthRoller" class="js-roller flex flex-col gap-3 max-w-[500px] mx-auto mt-7 mb-[34px]" aria-label="강점 안내">
         <!-- 활성(밝음): 현재 강점 -->
         <div class="relative flex items-center justify-center bg-[#10192B] border border-white/15 rounded-xl h-[58px] overflow-hidden">
           <img src="/images/ic-check.png" alt="" aria-hidden="true" class="absolute left-5 w-7 h-7 z-10" />
