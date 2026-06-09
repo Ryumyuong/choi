@@ -216,6 +216,22 @@
   color: #777;
 }
 
+/* 최상단(투명) 상태: 헤더 뒤 어두운 그라데이션 박스로 흰 텍스트 가독성 확보 */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150%;
+  background: linear-gradient(180deg, rgba(8, 14, 28, 0.6) 0%, rgba(8, 14, 28, 0.32) 50%, rgba(8, 14, 28, 0) 100%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.header.scrolled::before { opacity: 0; }
+
 /* header scrolled 상태 (JS에서 .scrolled 토글) */
 .header.scrolled {
   background: #0B1220 !important;
