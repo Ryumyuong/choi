@@ -79,6 +79,8 @@
 
 /* ============== BASE ============== */
 @layer base {
+  /* OS 다크모드여도 라이트(기본값) 고정 — 폼 컨트롤·기본 색상 자동 반전 방지 */
+  html { color-scheme: light; }
   html { scroll-behavior: smooth; }
   body {
     font-family: var(--font-body);
