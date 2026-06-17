@@ -58,4 +58,4 @@ Allow: /
 User-agent: ia_archiver
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://www.ceglaw.co.kr/sitemap.xml
