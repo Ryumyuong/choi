@@ -94,12 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* 5) 폼 제출(데모) — 실제 전송 로직 연결 전까지 안내 */
-  document.querySelectorAll('.quickbar__submit, .applyform__submit').forEach(btn => {
-    btn.addEventListener('click', () => {
-      alert('상담 신청이 접수되었습니다.\n빠른 시일 내에 연락드리겠습니다.\n(데모: 실제 전송 연동 필요)');
-    });
-  });
+  /* 5) (제거됨) 폼 제출 데모 안내 → 모든 lead-form은 섹션 8에서 구글 시트로 전송 */
 
   /* 6) numcards 자동 + 드래그 슬라이드 */
   const numTrack = document.getElementById('numTrack');
