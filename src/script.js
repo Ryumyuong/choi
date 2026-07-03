@@ -459,6 +459,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (d.length === 9 && d.startsWith('02')) return d.replace(/(\d{2})(\d{3})(\d{4})/, '$1-$2-$3');
     return (raw || '').trim();
   };
+  // 입력하는 동안에도 010-0000-0000 형태로 자동 하이픈 (숫자만 남긴 뒤 3-4-4로 구분)
+  const liveFormatPhone = (d) => {
+    d = d.slice(0, 11);
+    if (d.length < 4) return d;
+    if (d.length < 8) return d.replace(/(\d{3})(\d+)/, '$1-$2');
+    return d.replace(/(\d{3})(\d{4})(\d+)/, '$1-$2-$3');
+  };
+  document.querySelectorAll('input[type="tel"]').forEach((input) => {
+    input.addEventListener('input', () => {
+      input.value = liveFormatPhone(input.value.replace(/\D/g, ''));
+    });
+  });
   document.querySelectorAll('form.lead-form').forEach((form) => {
     // 제출 버튼이 폼 안에 있을 수도(신청서), 폼 밖 형제일 수도(하단 플로팅) 있음
     const btn = form.querySelector('button') ||
