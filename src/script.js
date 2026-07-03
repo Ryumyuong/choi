@@ -459,6 +459,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (d.length === 9 && d.startsWith('02')) return d.replace(/(\d{2})(\d{3})(\d{4})/, '$1-$2-$3');
     return (raw || '').trim();
   };
+  // 유효한 전화번호인지 (휴대폰 010/011/016~019, 서울 02, 그 외 지역번호 0XX)
+  const isValidPhone = (raw) => {
+    const d = (raw || '').replace(/\D/g, '');
+    if (/^01[016789]\d{7,8}$/.test(d)) return true;       // 휴대폰
+    if (/^02\d{7,8}$/.test(d)) return true;               // 서울 (02)
+    if (/^0(3[1-3]|4[1-4]|5[1-5]|6[1-4])\d{6,7}$/.test(d)) return true; // 지역번호
+    return false;
+  };
   // 입력하는 동안에도 010-0000-0000 형태로 자동 하이픈 (숫자만 남긴 뒤 3-4-4로 구분)
   const liveFormatPhone = (d) => {
     d = d.slice(0, 11);
@@ -488,8 +496,13 @@ document.addEventListener('DOMContentLoaded', () => {
         개인정보동의: form.querySelector('input[type="checkbox"]')?.checked ? 'Y' : 'N',
         유입경로: getRef(),
       };
-      // 간단 검증
-      if (!payload.이름 || !payload.연락처) { alert('이름과 연락처를 입력해 주세요.'); return; }
+      // 유효성 검사
+      const nameInput = form.querySelector('input[type="text"]');
+      const telInput = form.querySelector('input[type="tel"]');
+      if (!payload.이름) { alert('이름을 입력해 주세요.'); nameInput?.focus(); return; }
+      if (payload.이름.length < 2) { alert('이름을 정확히 입력해 주세요.'); nameInput?.focus(); return; }
+      if (!payload.연락처) { alert('연락처를 입력해 주세요.'); telInput?.focus(); return; }
+      if (!isValidPhone(payload.연락처)) { alert('연락처를 정확히 입력해 주세요. (예: 010-0000-0000)'); telInput?.focus(); return; }
       if (payload.개인정보동의 !== 'Y') { alert('개인정보 수집 및 활용에 동의해 주세요.'); return; }
       if (!SHEETS_ENDPOINT) { alert('상담 신청이 접수되었습니다. 빠르게 연락드리겠습니다.'); form.reset(); return; }
 
