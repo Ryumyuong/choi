@@ -429,6 +429,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxgpn-EMouXWQ1A84dZi5_RNnbIYYAksyPETR5qdMJf-64K-xkKCSsxhMfVGk3RFuTHvQ/exec';
   // 유입경로(ref) 추적: ?ref= → ?utm_source= → 유입 사이트 → 직접유입
   // 최초 진입 시점의 값을 sessionStorage에 보관(폼 제출까지 유지)
+  // 유입 사이트(hostname)를 알아보기 쉬운 한글 이름으로 변환
+  // 위에서부터 순서대로 검사하며, 주소에 해당 키워드가 포함되면 그 이름으로 남김
+  const REF_LABELS = [
+    ['place.naver.com', '네이버플레이스'],
+    ['blog.naver.com', '네이버블로그'],
+    ['cafe.naver.com', '네이버카페'],
+    ['search.naver.com', '네이버검색'],
+    ['naver.com', '네이버'],
+    ['google', '구글'],
+    ['instagram', '인스타그램'],
+    ['kakao', '카카오'],
+    ['daum', '다음'],
+    ['youtube', '유튜브'],
+  ];
+  const prettyRef = (host) => {
+    const h = (host || '').toLowerCase();
+    for (const [key, label] of REF_LABELS) {
+      if (h.includes(key)) return label;
+    }
+    return host;
+  };
   const getRef = () => {
     try {
       const KEY = 'lead_ref';
@@ -438,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let ref = (q.get('ref') || q.get('utm_source') || '').trim();
       if (!ref) {
         const r = document.referrer || '';
-        if (r) { try { ref = new URL(r).hostname; } catch (_) { ref = r; } }
+        if (r) { try { ref = prettyRef(new URL(r).hostname); } catch (_) { ref = r; } }
       }
       if (!ref) ref = '직접유입';
       sessionStorage.setItem(KEY, ref);
